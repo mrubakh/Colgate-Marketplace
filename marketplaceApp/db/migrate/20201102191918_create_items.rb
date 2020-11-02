@@ -8,7 +8,7 @@ class CreateItems < ActiveRecord::Migration[6.0]
       t.boolean :listed
       t.string :status
       t.boolean :deliverable
-      t.integer :seller
+      t.references 'user' #association to seller
 
       t.timestamps
     end
