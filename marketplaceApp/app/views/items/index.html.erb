@@ -1,0 +1,42 @@
+  <div class="row">
+    <div class="col-md-3">
+      <h3>Items</h3>
+    </div>
+  </div>
+  <table class="table">
+    <thead class="thead-light">
+      <tr class="items_header">
+        <th>
+          <%= link_to('Name', items_path(:order => 'name')) %>
+        </th>
+        <th>Description</th>
+        <th>
+          <%= link_to('Listed', items_path(:order => 'listed')) %>
+        </th>
+        <th>
+          <%= link_to('Status', items_path(:order => 'status')) %>
+        </th>
+        <th>
+          <%= link_to('Deliverable', items_path(:order => 'deliverable')) %>
+        </th>
+        <th>
+          <%= link_to('Price', items_path(:order => 'price')) %>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @items.each do |p| %>
+        <tr class="item">
+          <td class="itemname">
+            <%= link_to "#{p.name}", item_path(p) %>
+          </td>
+          <td class="itemdesc">
+            <%= p.description %>
+          </td>
+          <td class="itemprice">
+            <%= number_to_currency(p.price) %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
