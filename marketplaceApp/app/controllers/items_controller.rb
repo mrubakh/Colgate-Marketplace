@@ -1,13 +1,12 @@
 class ItemsController < ApplicationController
   def index
-    #order = "name"
-    #@items = Item.sorted_by(order)
-    @items = Item.all
+    order = params[:order] || "name"
+    @items = Item.all.order(order)
   end
     
   def show
-    id = params[:id]
-    @item = Item.find(id)
+    if params[:id]
+      @item = Item.find(params[:id])
+    end
   end
-    
 end

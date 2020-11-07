@@ -11,9 +11,6 @@
         </th>
         <th>Description</th>
         <th>
-          <%= link_to('Listed', items_path(:order => 'listed')) %>
-        </th>
-        <th>
           <%= link_to('Status', items_path(:order => 'status')) %>
         </th>
         <th>
@@ -27,13 +24,23 @@
     <tbody>
       <% @items.each do |p| %>
         <tr class="item">
-          <td class="itemname">
+          <td id="itemname">
             <%= link_to "#{p.name}", item_path(p) %>
           </td>
-          <td class="itemdesc">
+          <td id="item-desc">
             <%= p.description %>
           </td>
-          <td class="itemprice">
+          <td id="item-status">
+            <%= p.status %>
+          </td>
+          <td id="item-deliverable">
+            <% if p.listed %> 
+              <%= "yes"%>
+            <% else %>
+              <%= "no" %>
+            <% end %>
+          </td>
+          <td id="item-price">
             <%= number_to_currency(p.price) %>
           </td>
         </tr>
