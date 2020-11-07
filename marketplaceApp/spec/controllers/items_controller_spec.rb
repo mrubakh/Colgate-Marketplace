@@ -42,7 +42,7 @@ RSpec.describe ItemsController, type: :controller do
             get :show, :params => { :id => 1 }
             
             expect(response).to render_template("show")
-            expect(page).to have_content "shoes"
+            expect(page).to have_content("shoes")
         end
     end
 end
