@@ -22,6 +22,9 @@
   <p><%= number_to_currency(@item.price) %></p>
 </div>
 
+<h4>Sold by: </h4>
+<p> <%= @seller %> </p>
+
 <div>
   <%= link_to("Back to product list", items_path, :class => "btn btn-primary") %>
 </div>
