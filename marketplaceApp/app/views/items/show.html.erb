@@ -9,7 +9,6 @@
     <thead class="thead-light">
       <tr class="items_header">
         <th>Description</th>
-        <th>Listed</th>
         <th>Status</th>
         <th>Deliverable</th>
         <th>Price</th>
@@ -17,13 +16,23 @@
     </thead>
     <tbody>
       <tr class="item">
-        <td class="itemdesc">
-          <%= @item.description %>
-        </td>
-        <td class="itemprice">
-          <%= number_to_currency(@item.price) %>
-        </td>
-      </tr>
+          <td class="item-desc">
+            <%= @item.description %>
+          </td>
+          <td class="item-status">
+            <%= @item.status %>
+          </td>
+          <td class="item-deliverable">
+            <% if @item.listed %> 
+              <%= "yes"%>
+            <% else %>
+              <%= "no" %>
+            <% end %>
+          </td>
+          <td class="item-price">
+            <%= number_to_currency(@item.price) %>
+          </td>
+        </tr>
     </tbody>
   </table>
   <%= link_to("Back to product list", items_path, :class => "btn btn-primary") %>

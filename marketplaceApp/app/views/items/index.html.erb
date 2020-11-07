@@ -24,23 +24,23 @@
     <tbody>
       <% @items.each do |p| %>
         <tr class="item">
-          <td id="itemname">
+          <td class="itemname">
             <%= link_to "#{p.name}", item_path(p) %>
           </td>
-          <td id="item-desc">
+          <td class="item-desc">
             <%= p.description %>
           </td>
-          <td id="item-status">
+          <td class="item-status">
             <%= p.status %>
           </td>
-          <td id="item-deliverable">
+          <td class="item-deliverable">
             <% if p.listed %> 
               <%= "yes"%>
             <% else %>
               <%= "no" %>
             <% end %>
           </td>
-          <td id="item-price">
+          <td class="item-price">
             <%= number_to_currency(p.price) %>
           </td>
         </tr>
