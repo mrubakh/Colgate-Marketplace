@@ -25,6 +25,21 @@
       </p>
     <% end %>
     
+    <% if flash[:notice] %>
+        <div class="row">
+          <div class="col-md-4 alert alert-primary notice">
+            <%= "#{flash[:notice]}" %>
+          </div>
+        </div>
+    <% end %>
+    <% if flash[:alert] %>
+        <div class="row">
+          <div class="col-md-4 alert alert-warning alert">
+            <%= "#{flash[:alert]}" %>
+          </div>
+        </div>
+     <% end %>
+    
     <%= yield %>
     
   </body>
