@@ -12,12 +12,19 @@
   <body>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-    <% if !user_signed_in? %>
-      <%= link_to "Sign in", new_user_session_path %>
+    <% if user_signed_in? %>
+      <p>
+      Logged in as <%= current_user.email %>.
+      <%= link_to 'Edit profile', edit_user_registration_path%> |
+      <%= link_to "Log out", destroy_user_session_path, method: :delete%>
+      </p>
     <% else %>
-      <p>You are logged in as <%= current_user.name %>.</p>
-      <%= link_to "Log out", destroy_user_session_path, :method => :delete%>
+      <p>
+      <%= link_to "Sign up", new_user_registration_path%> |
+      <%= link_to "Login", new_user_session_path%>
+      </p>
     <% end %>
+    
     <%= yield %>
     
   </body>
