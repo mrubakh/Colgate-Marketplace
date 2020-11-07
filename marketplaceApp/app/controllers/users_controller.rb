@@ -9,7 +9,7 @@ class UsersController < ApplicationController
             flash[:notice] = "New user #{@user.email} created"
             redirect_to root_path and return
         else
-            flash[:alert] = "Failed to save new product"
+            flash[:alert] = "Failed to save new user"
             redirect_to new_user_path and return
         end
     end
