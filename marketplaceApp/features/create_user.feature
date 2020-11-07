@@ -20,7 +20,7 @@ Feature: Create a new user for Colgate Marketplace app
     Then I should see "Sign up"
     When I press "Sign up"
     Then I should be on the create user page
-    When I fill in the following:
+    When I fill in the following initializers:
       | Field | Value |
       | Name | allegra |
       | payment | venmo |

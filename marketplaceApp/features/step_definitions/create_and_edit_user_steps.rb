@@ -1,3 +1,6 @@
+require 'simplecov'
+SimpleCov.start
+
 Given('these Users:') do |table|
   # table is a Cucumber::MultilineArgument::DataTable
   table.hashes.each do |h|
@@ -33,7 +36,7 @@ end
 Then('I should be on the create user page') do
   expect(page).to have_current_path('/users/sign_up')
 end
-When('I fill in the following:') do |table|
+When('I fill in the following initializers:') do |table|
   # table is a Cucumber::MultilineArgument::DataTable
   page.fill_in "Name", :with => "allegra"
   page.fill_in "user_payment", :with => "venmo"
@@ -41,11 +44,19 @@ When('I fill in the following:') do |table|
   page.fill_in "Password", :with => "password"
   page.fill_in "Password confirmation", :with => "password"
 end
-Then('I should see that {string} has a price of {string}') do |string, string2|
-  prd = Product.where("name == ?", string)
-  visit "products/#{prd.ids[0]}" #there is probably a better way to get product ID... cheating the system for now since I know there is only going to be 1 resulting from "title == treehouse" for now.
-  page.has_content? string
-  page.has_content? string2
+When('I fill in the following credentials:') do |table|
+  page.fill_in "Email", :with => "a@email.com"
+  page.fill_in "Password", :with => "password"
+end
+Then('I should be on the sign in page') do 
+  expect(page).to have_current_path("/users/sign_in")
+end 
+Then('I should be on the edit profile page') do
+ expect(page).to have_current_path("/users/edit")
+end
+When('I edit my name and re-enter my password') do  |table|
+  page.fill_in "Name", :with => "Allegra Knox"
+  page.fill_in "user_current_password", :with => "password"
 end
 Given('I am on the new user page') do
   visit new_user_session_path
