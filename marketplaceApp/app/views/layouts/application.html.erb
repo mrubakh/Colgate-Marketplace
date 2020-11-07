@@ -12,18 +12,21 @@
   <body>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-    <% if user_signed_in? %>
-      <p>
-      Logged in as <%= current_user.name %>.
-      <%= link_to 'Edit profile', edit_user_registration_path%> |
-      <%= link_to "Log out", destroy_user_session_path, method: :delete%>
-      </p>
-    <% else %>
-      <p>
-      <%= link_to "Sign up", new_user_registration_path%> |
-      <%= link_to "Login", new_user_session_path%>
-      </p>
+    
+    <% if flash[:notice] %>
+        <div class="row">
+          <div class="col-md-4 alert alert-primary notice">
+            <%= "#{flash[:notice]}" %>
+          </div>
+        </div>
     <% end %>
+    <% if flash[:alert] %>
+        <div class="row">
+          <div class="col-md-4 alert alert-warning alert">
+            <%= "#{flash[:alert]}" %>
+          </div>
+        </div>
+     <% end %>
     
     <%= yield %>
     
