@@ -1,39 +1,28 @@
-  <div class="row">
-    <div class="col-md">
-      <h4 class="itemname">
-        <%= "Item details for #{@item.name}" %>
-      </h4>
-    </div>
-  </div>
-  <table class="table">
-    <thead class="thead-light">
-      <tr class="items_header">
-        <th>Description</th>
-        <th>Status</th>
-        <th>Deliverable</th>
-        <th>Price</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr class="item">
-          <td class="item-desc">
-            <%= @item.description %>
-          </td>
-          <td class="item-status">
-            <%= @item.status %>
-          </td>
-          <td class="item-deliverable">
-            <% if @item.listed %> 
-              <%= "yes"%>
-            <% else %>
-              <%= "no" %>
-            <% end %>
-          </td>
-          <td class="item-price">
-            <%= number_to_currency(@item.price) %>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+
+<h2 class="itemname"><%= "Item details for #{@item.name}" %></h2>
+
+<h4>Description</h4>
+<div class="item-desc">
+  <p><%= @item.description %> </p>
+</div>
+<h4>Status</h4>
+<div class="item-status">
+  <p><%= @item.status %></p>
+</div>
+<h4>Deliverable</h4>
+<div class="item-deliverable">
+  <% if @item.listed %> 
+    <p><%= "yes"%></p>
+  <% else %>
+    <p><%= "no" %></p>
+  <% end %>
+</div>
+<h4>Price</h4>
+<div class="item-price">
+  <p><%= number_to_currency(@item.price) %></p>
+</div>
+
+<div>
   <%= link_to("Back to product list", items_path, :class => "btn btn-primary") %>
+</div>
 
