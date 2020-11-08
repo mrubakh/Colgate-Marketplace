@@ -15,4 +15,12 @@ RSpec.describe UsersController, type: :controller do
     u.save
     expect(User.new :name=>"alle", :payment=>"venmo", :email=>"aknox@email.com", :id=>1, :password=>"password").to eq u
   end
+  
+  it 'should display user page' do
+      u = User.create(name: 'noahj', email: 'n@colgate.edu', password: "password", payment: "venmo" )
+      i = u.items.create(name: "toy", price: 25.55, description: "Good toy")
+      #u = i.user.create(name: 'allegra', email: 'aknox@colgate.edu', password: "password", payment: "allegra-knox" )
+      get :show, params: {:id=> u.id, :email=> u.email, :payment=> u.payment}
+      response.code.should eql("200")
+  end
 end

@@ -1,4 +1,5 @@
 require 'rails_helper'
+require 'capybara/rails'
 
 RSpec.describe ItemsController, type: :controller do
     context "root route" do
@@ -20,6 +21,20 @@ RSpec.describe ItemsController, type: :controller do
             # expect(page).to_have content y
             expect(response).to render_template("index")
         end
+        
+        it "should only show products that have been searched" do
+            ## need to set up capybara for this
+            
+            
+            #u = User.create(name: 'noahj', email: 'n@colgate.edu', password: "password", payment: "venmo" )
+            #i = u.items.create(name: "toy", price: 25.55, description: "Good toy")
+            #x, y = Item.create(name: 'mask', price: 10.00, user_id: 1), Item.create(name: 'phone', price: 109.90, user_id: 1)
+            #x, y = Item.create(name: 'toy', price: 10.00, user_id: 1), Item.create(name: 'books', price: 109.90, user_id: 1)
+            #names = []
+            #get :search, params: {:search => "mask"}
+            #page.all(".productname").each { |x| names << x.text }
+            #expect(names).to match_array(["mask"])
+         end
     end
 
     context "show" do
