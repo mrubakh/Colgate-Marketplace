@@ -12,6 +12,13 @@
       </p>
     <% end %>
   </div>
+  
+  <%= form_tag(items_search_path, :method => "get") do %>  
+  <div class="input-group">  
+    <%= search_field_tag :search, params[:search], placeholder: "Search", class: "form-control" %>  
+  </div>  
+  <% end %>
+
   <div class="row">
     <div class="col-md-3">
       <h3>Items</h3>
@@ -33,6 +40,8 @@
         <th>
           <%= link_to('Price', items_path(:order => 'price')) %>
         </th>
+        
+        
       </tr>
     </thead>
     <tbody>

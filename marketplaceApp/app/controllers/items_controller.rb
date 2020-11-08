@@ -8,6 +8,7 @@ class ItemsController < ApplicationController
     if params[:id]
       @item = Item.find(params[:id])
       @seller = User.find(@item.user_id).name
+      @sellerID = @item.user_id
     end
   end
   
@@ -24,6 +25,17 @@ class ItemsController < ApplicationController
     else
       flash[:alert] = "Failed to list new item"
       redirect_to new_item_path and return
+    end
+  end
+  
+  def search
+    if !params[:search].empty?
+      @phrase = params[:search]
+      @items = Item.all.where("lower(name) LIKE :phrase", phrase: @phrase) 
+      render "items/index" and return
+    else
+      flash[:alert] = "Empty Search"
+      redirect_to root_path and return
     end
   end
 

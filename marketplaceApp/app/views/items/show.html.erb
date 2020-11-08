@@ -23,7 +23,7 @@
 </div>
 
 <h4>Sold by: </h4>
-<p> <%= @seller %> </p>
+<p> <%= link_to(@seller , user_path(:userID => @sellerID)) %> </p>
 
 <div>
   <%= link_to("Back to item list", items_path, :class => "btn btn-primary") %>

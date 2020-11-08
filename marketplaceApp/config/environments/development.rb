@@ -64,4 +64,5 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
   config.hosts << "41e81f201ccf4ef7ae2cc76de19eb154.vfs.cloud9.us-east-1.amazonaws.com"
   config.hosts << "79d7873481b94c4d8c9d6428428b578d.vfs.cloud9.us-east-1.amazonaws.com"
+  config.hosts << "a39ad15c1554449c8dc41e6e9e51d34e.vfs.cloud9.us-east-1.amazonaws.com"
 end
