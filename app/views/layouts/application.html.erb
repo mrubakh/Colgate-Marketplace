@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MarketplaceApp</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+    
+    <% if flash[:notice] %>
+        <div class="row">
+          <div class="col-md-4 alert alert-primary notice">
+            <%= "#{flash[:notice]}" %>
+          </div>
+        </div>
+    <% end %>
+    <% if flash[:alert] %>
+        <div class="row">
+          <div class="col-md-4 alert alert-warning alert">
+            <%= "#{flash[:alert]}" %>
+          </div>
+        </div>
+     <% end %>
+    
+    <%= yield %>
+    
+  </body>
+</html>
