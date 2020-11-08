@@ -3950,3 +3950,105 @@ Processing by ItemsController#index as HTML
 Completed 200 OK in 23ms (Views: 20.8ms | ActiveRecord: 1.0ms | Allocations: 13350)
 
 
+Started GET "/" for 149.43.114.173 at 2020-11-08 22:56:54 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY name LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY name LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY name LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY name LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY name LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY name LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY name LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY name LIMIT ?[0m  [["LIMIT", 11]]
+  Rendered items/index.html.erb within layouts/application (Duration: 370.7ms | Allocations: 184806)
+Completed 500 Internal Server Error in 383ms (ActiveRecord: 1.1ms | Allocations: 188337)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `items_search_path' for #<#<Class:0x000055a7eeb06f30>:0x000055a7eeb05108>
+Did you mean?  items_path):
+    13:     <% end %>
+    14:   </div>
+    15:   
+    16:   <%= form_tag(items_search_path, :method => "get") do %>  
+    17:   <div class="input-group">  
+    18:     <%= search_field_tag :search, params[:search], placeholder: "Search", class: "form-control" %>  
+    19:   </div>  
+  
+app/views/items/index.html.erb:16
+Started GET "/" for 149.43.114.173 at 2020-11-08 22:57:12 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:2
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY name LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY name LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY name LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY name LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY name LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY name LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY name LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY name LIMIT ?[0m  [["LIMIT", 11]]
+  Rendered items/index.html.erb within layouts/application (Duration: 324.2ms | Allocations: 184653)
+Completed 500 Internal Server Error in 327ms (ActiveRecord: 1.1ms | Allocations: 185198)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `items_search_path' for #<#<Class:0x000055a7eeb06f30>:0x000055a7edf854e0>
+Did you mean?  items_path):
+    13:     <% end %>
+    14:   </div>
+    15:   
+    16:   <%= form_tag(items_search_path, :method => "get") do %>  
+    17:   <div class="input-group">  
+    18:     <%= search_field_tag :search, params[:search], placeholder: "Search", class: "form-control" %>  
+    19:   </div>  
+  
+app/views/items/index.html.erb:16
+Started GET "/" for 149.43.114.173 at 2020-11-08 22:59:16 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY name[0m
+  ↳ app/views/items/index.html.erb:48
+  Rendered items/index.html.erb within layouts/application (Duration: 20.9ms | Allocations: 12902)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /home/ubuntu/environment/Colgate-Marketplace/public/packs
+[Webpacker] Hash: 15d1bb7b54cf6326b9ba
+Version: webpack 4.44.2
+Time: 2891ms
+Built at: 11/08/2020 10:59:21 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-9afcbb5693aa87623e69.js    124 KiB  application  [emitted] [immutable]  application
+js/application-9afcbb5693aa87623e69.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-9afcbb5693aa87623e69.js js/application-9afcbb5693aa87623e69.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+Completed 200 OK in 4539ms (Views: 4531.0ms | ActiveRecord: 0.7ms | Allocations: 23857)
+
+
+Started GET "/" for 149.43.114.173 at 2020-11-08 22:59:21 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:2
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY name[0m
+  ↳ app/views/items/index.html.erb:48
+  Rendered items/index.html.erb within layouts/application (Duration: 17.3ms | Allocations: 9783)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 24ms (Views: 21.8ms | ActiveRecord: 1.0ms | Allocations: 13362)
+
+
