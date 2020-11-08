@@ -7,8 +7,7 @@ class ItemsController < ApplicationController
   def show
     if params[:id]
       @item = Item.find(params[:id])
-      @seller = User.find(@item.user_id).name
-      @sellerID = @item.user_id
+      @seller = User.find(@item.user_id)
     end
   end
   
