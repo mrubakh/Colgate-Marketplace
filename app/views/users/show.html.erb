@@ -19,7 +19,13 @@
 
 
 <div> <%= "Email: " + @user[:email] %> </div>
+<div> <%= "Email: " + @user[:email] %> </div>
+<% if @user.payment == nil %>
+  <p>no payment listed</p>
+<% else %>
 <div> <%= "Payment: " + @user[:payment] %> </div>
+<%end %>
+
 
 <%= link_to("Back to item list", items_path, :class => "btn btn-primary") %>
 
