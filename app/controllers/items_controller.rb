@@ -1,4 +1,19 @@
 class ItemsController < ApplicationController
+  
+  # before_action :has_user, :only => [:new, :create]
+  
+  # protected
+  # def has_user
+  #   unless @user
+  #     flash[:warning] = 'You must be logged in to list an item.'
+  #     redirect_to new_user_path
+  #   end
+  #   unless (@user = User.where(:id => params[:user_id]))
+  #     flash[:warning ] = 'An item must be listed for an existed User.'
+  #     # redirect_to items_path
+  #   end
+  # end
+  
   def index
     order = params[:order] || "name"
     @items = Item.all.order(order)
@@ -13,19 +28,16 @@ class ItemsController < ApplicationController
   end
   
   def new 
-    @item = Item.new 
+    @item = current_user.items.build
   end
   
   def create
+    
     @item = Item.new(item_params)
-    @item.status = "available"
-    if @item.save!
-      flash[:notice] = "New item \"#{@item.name}\" listed"
-      redirect_to items_path and return
-    else
-      flash[:alert] = "Failed to list new item"
-      redirect_to new_item_path and return
-    end
+    params[:item][:status] = "available"
+    current_user.items << current_user.items.build(item_params)
+    flash[:notice] = "New item \"#{@item.name}\" listed"
+    redirect_to items_path and return
   end
   
   def search
