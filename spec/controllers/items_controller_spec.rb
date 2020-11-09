@@ -6,7 +6,7 @@ RSpec.describe ItemsController, type: :controller do
         User.create!(name: "mariam", email: "mariam@colgate.edu", password: "colgate")
     end
     context "root route" do
-        it "routes to rental_properties#index" do
+        it "routes to items#index" do
             expect(:get => '/').to route_to(:controller => 'items', :action => 'index')
         end
     end
