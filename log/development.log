@@ -4881,3 +4881,304 @@ Processing by ItemsController#index as HTML
 Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.2ms | Allocations: 5329)
 
 
+Started GET "/items" for 69.204.14.112 at 2020-11-09 01:07:54 +0000
+Cannot render console from 69.204.14.112! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY name[0m
+  ↳ app/views/items/index.html.erb:48
+  Rendered items/index.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1759)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.2ms | Allocations: 5330)
+
+
+Started GET "/search?search=" for 69.204.14.112 at 2020-11-09 01:07:55 +0000
+Cannot render console from 69.204.14.112! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ItemsController#search as HTML
+  Parameters: {"search"=>""}
+Redirected to https://a39ad15c1554449c8dc41e6e9e51d34e.vfs.cloud9.us-east-1.amazonaws.com/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 325)
+
+
+Started GET "/" for 69.204.14.112 at 2020-11-09 01:07:55 +0000
+Cannot render console from 69.204.14.112! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY name[0m
+  ↳ app/views/items/index.html.erb:48
+  Rendered items/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1756)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 8.7ms | ActiveRecord: 0.2ms | Allocations: 5352)
+
+
+Started GET "/" for 69.204.14.112 at 2020-11-09 01:12:08 +0000
+Cannot render console from 69.204.14.112! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (1.1ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY name[0m
+  ↳ app/views/items/index.html.erb:48
+  Rendered items/index.html.erb within layouts/application (Duration: 6.0ms | Allocations: 2460)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 15.0ms | ActiveRecord: 1.1ms | Allocations: 7209)
+
+
+Started GET "/search?search=sd" for 69.204.14.112 at 2020-11-09 01:12:09 +0000
+Cannot render console from 69.204.14.112! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ItemsController#search as HTML
+  Parameters: {"search"=>"sd"}
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE (lower(name) LIKE 'sd')[0m
+  ↳ app/views/items/index.html.erb:48
+  Rendered items/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1099)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 0.2ms | Allocations: 4663)
+
+
+Started GET "/search?search=Book" for 69.204.14.112 at 2020-11-09 01:26:40 +0000
+Cannot render console from 69.204.14.112! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ItemsController#search as HTML
+  Parameters: {"search"=>"Book"}
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.9ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE (lower(name) LIKE 'Book')[0m
+  ↳ app/views/items/index.html.erb:48
+  Rendered items/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1093)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 0.9ms | Allocations: 4652)
+
+
+Started GET "/items?order=name" for 69.204.14.112 at 2020-11-09 01:26:43 +0000
+Cannot render console from 69.204.14.112! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ItemsController#index as HTML
+  Parameters: {"order"=>"name"}
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY name[0m
+  ↳ app/views/items/index.html.erb:48
+  Rendered items/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1759)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.2ms | Allocations: 5321)
+
+
+Started GET "/search?search=Book" for 69.204.14.112 at 2020-11-09 01:26:46 +0000
+Cannot render console from 69.204.14.112! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ItemsController#search as HTML
+  Parameters: {"search"=>"Book"}
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE (lower(name) LIKE 'Book')[0m
+  ↳ app/views/items/index.html.erb:48
+  Rendered items/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1090)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 7.9ms | ActiveRecord: 0.2ms | Allocations: 4643)
+
+
+Started GET "/items?order=name" for 69.204.14.112 at 2020-11-09 01:26:47 +0000
+Cannot render console from 69.204.14.112! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ItemsController#index as HTML
+  Parameters: {"order"=>"name"}
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY name[0m
+  ↳ app/views/items/index.html.erb:48
+  Rendered items/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1758)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 8.8ms | ActiveRecord: 0.2ms | Allocations: 5329)
+
+
+Started GET "/items/3" for 69.204.14.112 at 2020-11-09 01:37:36 +0000
+Cannot render console from 69.204.14.112! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:9:in `show'
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:10:in `show'
+  Rendering items/show.html.erb within layouts/application
+  Rendered items/show.html.erb within layouts/application (Duration: 1.6ms | Allocations: 521)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 6.8ms | ActiveRecord: 1.0ms | Allocations: 5340)
+
+
+Started GET "/items" for 69.204.14.112 at 2020-11-09 01:37:37 +0000
+Cannot render console from 69.204.14.112! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY name[0m
+  ↳ app/views/items/index.html.erb:48
+  Rendered items/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1766)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 0.2ms | Allocations: 5340)
+
+
+Started GET "/search?search=" for 69.204.14.112 at 2020-11-09 01:44:32 +0000
+Cannot render console from 69.204.14.112! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ItemsController#search as HTML
+  Parameters: {"search"=>""}
+Redirected to https://a39ad15c1554449c8dc41e6e9e51d34e.vfs.cloud9.us-east-1.amazonaws.com/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 329)
+
+
+Started GET "/" for 69.204.14.112 at 2020-11-09 01:44:32 +0000
+Cannot render console from 69.204.14.112! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY name[0m
+  ↳ app/views/items/index.html.erb:48
+  Rendered items/index.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1761)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.2ms | Allocations: 5351)
+
+
+Started GET "/search?search=%5Cn" for 69.204.14.112 at 2020-11-09 01:46:00 +0000
+Cannot render console from 69.204.14.112! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ItemsController#search as HTML
+  Parameters: {"search"=>"\\n"}
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE (lower(name) LIKE '\n')[0m
+  ↳ app/views/items/index.html.erb:48
+  Rendered items/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1091)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 8.5ms | ActiveRecord: 0.2ms | Allocations: 4657)
+
+
+Started GET "/search?search=" for 69.204.14.112 at 2020-11-09 01:46:02 +0000
+Cannot render console from 69.204.14.112! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ItemsController#search as HTML
+  Parameters: {"search"=>""}
+Redirected to https://a39ad15c1554449c8dc41e6e9e51d34e.vfs.cloud9.us-east-1.amazonaws.com/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 335)
+
+
+Started GET "/" for 69.204.14.112 at 2020-11-09 01:46:03 +0000
+Cannot render console from 69.204.14.112! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY name[0m
+  ↳ app/views/items/index.html.erb:48
+  Rendered items/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1758)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.2ms | Allocations: 5346)
+
+
+Started GET "/search?search=" for 69.204.14.112 at 2020-11-09 01:46:04 +0000
+Cannot render console from 69.204.14.112! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ItemsController#search as HTML
+  Parameters: {"search"=>""}
+Redirected to https://a39ad15c1554449c8dc41e6e9e51d34e.vfs.cloud9.us-east-1.amazonaws.com/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 317)
+
+
+Started GET "/" for 69.204.14.112 at 2020-11-09 01:46:04 +0000
+Cannot render console from 69.204.14.112! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY name[0m
+  ↳ app/views/items/index.html.erb:48
+  Rendered items/index.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1758)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.2ms | Allocations: 5349)
+
+
+Started GET "/search?search=" for 69.204.14.112 at 2020-11-09 01:46:06 +0000
+Cannot render console from 69.204.14.112! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ItemsController#search as HTML
+  Parameters: {"search"=>""}
+Redirected to https://a39ad15c1554449c8dc41e6e9e51d34e.vfs.cloud9.us-east-1.amazonaws.com/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 332)
+
+
+Started GET "/" for 69.204.14.112 at 2020-11-09 01:46:06 +0000
+Cannot render console from 69.204.14.112! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY name[0m
+  ↳ app/views/items/index.html.erb:48
+  Rendered items/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1758)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.2ms | Allocations: 5343)
+
+
+Started GET "/search?search=" for 69.204.14.112 at 2020-11-09 01:52:18 +0000
+Cannot render console from 69.204.14.112! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ItemsController#search as HTML
+  Parameters: {"search"=>""}
+Redirected to https://a39ad15c1554449c8dc41e6e9e51d34e.vfs.cloud9.us-east-1.amazonaws.com/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 333)
+
+
+Started GET "/" for 69.204.14.112 at 2020-11-09 01:52:18 +0000
+Cannot render console from 69.204.14.112! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY name[0m
+  ↳ app/views/items/index.html.erb:48
+  Rendered items/index.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1761)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.3ms | Allocations: 5345)
+
+
+Started GET "/search?search=" for 69.204.14.112 at 2020-11-09 01:54:27 +0000
+Cannot render console from 69.204.14.112! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ItemsController#search as HTML
+  Parameters: {"search"=>""}
+Redirected to https://a39ad15c1554449c8dc41e6e9e51d34e.vfs.cloud9.us-east-1.amazonaws.com/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 327)
+
+
+Started GET "/" for 69.204.14.112 at 2020-11-09 01:54:27 +0000
+Cannot render console from 69.204.14.112! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY name[0m
+  ↳ app/views/items/index.html.erb:48
+  Rendered items/index.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1758)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 16.7ms | ActiveRecord: 0.2ms | Allocations: 5344)
+
+
+Started GET "/items/3" for 69.204.14.112 at 2020-11-09 01:54:30 +0000
+Cannot render console from 69.204.14.112! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:9:in `show'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:10:in `show'
+  Rendering items/show.html.erb within layouts/application
+  Rendered items/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 228)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 6.0ms | ActiveRecord: 0.4ms | Allocations: 4901)
+
+
+Started GET "/items" for 69.204.14.112 at 2020-11-09 01:54:31 +0000
+Cannot render console from 69.204.14.112! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY name[0m
+  ↳ app/views/items/index.html.erb:48
+  Rendered items/index.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1758)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.2ms | Allocations: 5335)
+
+
+Started GET "/search?search=" for 69.204.14.112 at 2020-11-09 01:54:33 +0000
+Cannot render console from 69.204.14.112! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ItemsController#search as HTML
+  Parameters: {"search"=>""}
+Redirected to https://a39ad15c1554449c8dc41e6e9e51d34e.vfs.cloud9.us-east-1.amazonaws.com/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 333)
+
+
+Started GET "/" for 69.204.14.112 at 2020-11-09 01:54:33 +0000
+Cannot render console from 69.204.14.112! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY name[0m
+  ↳ app/views/items/index.html.erb:48
+  Rendered items/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1758)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 9.6ms | ActiveRecord: 0.2ms | Allocations: 5342)
+
+
