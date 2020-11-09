@@ -35,7 +35,3 @@ Feature: Create a new user for Colgate Marketplace app
     And I should see "Log out"
     And I should see "Edit profile"
     But I should not see "Login"
-
-#   Scenario: Non-admins shouldn't be allowed on the new toy page
-#     Given I am on the new toy page
-#     Then I should see "Only admin users can create new toys"
