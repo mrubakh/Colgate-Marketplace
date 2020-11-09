@@ -18,8 +18,9 @@ RSpec.describe UsersController, type: :controller do
   
   it 'should display user page' do
       u = User.create(name: 'noahj', email: 'n@colgate.edu', password: "password", payment: "venmo" )
-      u.items << Item.new(name: "toy", price: 25.55, description: "Good toy")
-      get :show, params: {:id=> u.id, :email=> u.email, :payment=> u.payment}
+      i = Item.new(name: "toy", price: 25.55, description: "Good toy", user_id:1)
+      u.items << i
+      get :show, params: {:id=> i.id, :email=> u.email, :payment=> u.payment, :userID=>1}
       response.code.should eql("200")
   end
 end
