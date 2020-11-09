@@ -1,3 +1,6 @@
+
+
+
 require 'simplecov'
 SimpleCov.start
 
@@ -61,3 +64,15 @@ end
 Given('I am on the new user page') do
   visit new_user_session_path
 end
+# Capybara.current_driver = :webkit
+Then('I should accept the popup to confirm') do
+  accept_alert do
+   click_link('OK')
+  end
+end 
+
+
+
+
+
+

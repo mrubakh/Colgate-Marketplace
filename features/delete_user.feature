@@ -1,7 +1,7 @@
-  Feature: Edit existing user for Colgate Marketplace app
+Feature: Delete my marketplace account
   As a user
-  so that I can correct or update my profile,
-  I want to be able to edit my account information.
+  so that I can delete my profile when I no longer want to participate,
+  I want to be able to delete my account.
 
   Background: the has been registered
     Given these Users:
@@ -28,12 +28,13 @@
     But I should not see "Login"
     When I press "Edit profile"
     Then I should be on the edit profile page
-    And I should see "Edit profile"
-    When I edit my name and re-enter my password
-    | Field | Value |
-      | name | Allegra Knox |
-      | password | password |
-    And I press "Update"
+    And I should see "Delete my account"
+    When I press "Delete my account"
+    Then I should accept the popup to confirm
     Then I should be on the items index page
-    And I should see "Your account has been updated successfully."
-    And I should see "Logged in as Allegra Knox."
+    And I should see "Bye! Your account has been successfully cancelled. We hope to see you again soon."
+    
+    
+    
+    
+    

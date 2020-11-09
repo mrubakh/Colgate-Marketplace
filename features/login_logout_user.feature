@@ -1,7 +1,7 @@
-  Feature: Edit existing user for Colgate Marketplace app
+Feature: Log in and log out of marketplace app
   As a user
-  so that I can correct or update my profile,
-  I want to be able to edit my account information.
+  so that I can (eventually) have more permissions when I'm logged in,
+  I want to be able to access the site both with and without an account.
 
   Background: the has been registered
     Given these Users:
@@ -26,14 +26,12 @@
     And I should see "Log out"
     And I should see "Edit profile"
     But I should not see "Login"
-    When I press "Edit profile"
-    Then I should be on the edit profile page
-    And I should see "Edit profile"
-    When I edit my name and re-enter my password
-    | Field | Value |
-      | name | Allegra Knox |
-      | password | password |
-    And I press "Update"
+    When I press "Log out"
     Then I should be on the items index page
-    And I should see "Your account has been updated successfully."
-    And I should see "Logged in as Allegra Knox."
+    And I should see "Signed out successfully."
+    And I should see "Sign up"
+    And I should see "Login"
+
+
+
+
