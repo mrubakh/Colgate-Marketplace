@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+    #devise takes care of these
     def new
         @user = User.new
     end
