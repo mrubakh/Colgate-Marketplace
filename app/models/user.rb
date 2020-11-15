@@ -7,6 +7,7 @@ class User < ApplicationRecord
          
   has_many :items
 
+#USER GETS CHECKED AND CREATED HERE UPON LOGGING IN WITH SSO
   def self.from_omniauth(access_token)
       data = access_token.info
       user = User.where(email: data['email']).first
