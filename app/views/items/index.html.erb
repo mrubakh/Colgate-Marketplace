@@ -31,27 +31,29 @@
     </thead>
     <tbody>
       <% @items.each do |p| %>
-        <tr class="item">
-          <td class="itemname">
-            <%= link_to "#{p.name}", item_path(p) %>
-          </td>
-          <td class="item-desc">
-            <%= p.description %>
-          </td>
-          <td class="item-status">
-            <%= p.status %>
-          </td>
-          <td class="item-deliverable">
-            <% if p.deliverable %> 
-              <%= "yes"%>
-            <% else %>
-              <%= "no" %>
-            <% end %>
-          </td>
-          <td class="item-price">
-            <%= number_to_currency(p.price) %>
-          </td>
-        </tr>
+        <% if p.listed %>
+          <tr class="item">
+            <td class="itemname">
+              <%= link_to "#{p.name}", item_path(p) %>
+            </td>
+            <td class="item-desc">
+              <%= p.description %>
+            </td>
+            <td class="item-status">
+              <%= p.status %>
+            </td>
+            <td class="item-deliverable">
+              <% if p.deliverable %> 
+                <%= "yes"%>
+              <% else %>
+                <%= "no" %>
+              <% end %>
+            </td>
+            <td class="item-price">
+              <%= number_to_currency(p.price) %>
+            </td>
+          </tr>
+        <% end %>
       <% end %>
     </tbody>
   </table>
