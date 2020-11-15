@@ -1,10 +1,12 @@
 require 'rails_helper'
 require 'capybara/rails'
 
+
 RSpec.describe ItemsController, type: :controller do
     before :each do
-        User.create!(name: "mariam", email: "mariam@colgate.edu", password: "colgate")
+        @u1 = User.create!(name: "mariam", email: "mariam@colgate.edu", password: "colgate")
     end
+
     context "root route" do
         it "routes to items#index" do
             expect(:get => '/').to route_to(:controller => 'items', :action => 'index')
@@ -18,7 +20,8 @@ RSpec.describe ItemsController, type: :controller do
         end
 
         it "renders the index template and does default sorting" do
-            x, y = Item.create!(name: 'apple', price: 10, user_id: 1), Item.create!(name: 'zebra', price: 20, user_id: 1)
+            x = Item.create!(name: 'apple', description: "fruit", price: 10, user_id: @u1.id)
+            y = Item.create!(name: 'zebra', description: "animal", price: 20, user_id: @u1.id)
             get :index
             expect(assigns(:items)).to match_array([x,y])
             expect(response).to render_template("index")
