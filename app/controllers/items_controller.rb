@@ -1,18 +1,13 @@
 class ItemsController < ApplicationController
   
-  # before_action :has_user, :only => [:new, :create]
+  before_action :has_user, :only => [:new, :create]
   
-  # protected
-  # def has_user
-  #   unless @user
-  #     flash[:warning] = 'You must be logged in to list an item.'
-  #     redirect_to new_user_path
-  #   end
-  #   unless (@user = User.where(:id => params[:user_id]))
-  #     flash[:warning ] = 'An item must be listed for an existed User.'
-  #     # redirect_to items_path
-  #   end
-  # end
+  def has_user
+    unless current_user
+      flash[:warning] = 'You must be logged in to list an item.'
+      redirect_to new_user_path
+    end
+  end
   
   def index
     order = params[:order] || "name"
@@ -32,12 +27,19 @@ class ItemsController < ApplicationController
   end
   
   def create
-    
-    @item = Item.new(item_params)
     params[:item][:status] = "available"
-    current_user.items << current_user.items.build(item_params)
-    flash[:notice] = "New item \"#{@item.name}\" listed"
-    redirect_to items_path and return
+    i = current_user.items.build(item_params)
+    current_user.items << i
+    if i.valid?
+      i.image.attach(params[:item][:image])
+      flash[:notice] = "New item \"#{i.name}\" listed"
+      redirect_to items_path and return
+    else
+      errmsg = i.errors.full_messages.join(', ')
+      flash[:error] = "Error creating new product: #{errmsg}"
+      redirect_to new_item_path and return
+    end
+    
   end
   
   def search
@@ -51,7 +53,7 @@ class ItemsController < ApplicationController
     end
   end
 
-private
+  private
     def record_not_found
       redirect_to action: "index"
     end

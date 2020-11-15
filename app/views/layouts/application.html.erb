@@ -27,6 +27,13 @@
           </div>
         </div>
      <% end %>
+     <% if flash[:error] %>
+        <div class="row">
+          <div class="col-md-4 alert alert-error alert">
+            <%= "#{flash[:error]}" %>
+          </div>
+        </div>
+     <% end %>
     
     <%= yield %>
     
