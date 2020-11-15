@@ -35,7 +35,11 @@
     <div>
       <% if user_signed_in? %>
       <p>
-      Logged in as <%= current_user.name %>.
+        <% if current_user.name == nil || current_user.name =="" %>
+          Logged in as <%= current_user.email %>. |
+        <%else%>
+          Logged in as <%= current_user.name %>. |
+        <%end%>
       <%= link_to 'Edit profile', edit_user_path(current_user.id)%> |
       <%= link_to "Log out", destroy_user_session_path, method: :delete%>
       </p>
