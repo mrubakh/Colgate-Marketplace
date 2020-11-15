@@ -33,4 +33,11 @@ RSpec.describe "index page", type: :feature do
     page.all(".itemname").each { |x| names << x.text }
     expect(names).to match_array(names.sort)
   end
+  
+  it "should not show items where listed is false" do
+    Item.create!(name: "Backpack", price: 5.00, image: "pack.jpg", description: "Holds things.", listed: false, status: "unavailable", deliverable: true, user_id:2)
+    names = []
+    page.all(".itemname").each { |x| names << x.text }
+    expect(names).not_to include("Backpack")
+  end
 end
