@@ -12,7 +12,6 @@ class ItemsController < ApplicationController
   def index
     order = params[:order] || "name"
     @items = Item.all.order(order)
-    @users = User.all
   end
     
   def show
