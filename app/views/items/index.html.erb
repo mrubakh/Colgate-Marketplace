@@ -65,3 +65,40 @@
       <% end %>
     </div>
   </div>
+  
+  
+  
+  <table class="table">
+    <thead class="thead-light">
+      <tr class="items_header">
+        <th>
+          Name
+        </th>
+          <th>email</th>
+        <th>
+          id
+        </th>
+        <th>
+          payment
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @users.each do |p| %>
+          <tr class="item">
+            <td class="itemname">
+              <%= p.name %>
+            </td>
+            <td class="item-desc">
+              <%= p.email %>
+            </td>
+            <td class="item-status">
+              <%= p.id %>
+            </td>
+            <td class="item-deliverable">
+              <%=p.payment %>
+            </td>
+          </tr>
+      <% end %>
+    </tbody>
+  </table>

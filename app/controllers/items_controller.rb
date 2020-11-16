@@ -12,6 +12,7 @@ class ItemsController < ApplicationController
   def index
     order = params[:order] || "name"
     @items = Item.all.order(order)
+    @users = User.all
   end
     
   def show
@@ -28,8 +29,10 @@ class ItemsController < ApplicationController
   
   def create
     params[:item][:status] = "available"
+    params[:item][:listed] = true
     i = current_user.items.build(item_params)
     current_user.items << i
+    
     if i.valid?
       i.image.attach(params[:item][:image])
       flash[:notice] = "New item \"#{i.name}\" listed"
@@ -59,6 +62,6 @@ class ItemsController < ApplicationController
     end
     
     def item_params
-      params.require(:item).permit(:name, :description, :price, :image, :deliverable, :status)
+      params.require(:item).permit(:name, :description, :price, :image, :deliverable, :listed, :status)
     end
 end
