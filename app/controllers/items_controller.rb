@@ -54,9 +54,16 @@ class ItemsController < ApplicationController
   end
   
   def send_interest_email
+    logger.debug("HERE")
+    logger.debug(params)
     @item = Item.find(params[:id])
-    @seller = User.find(@item.user_id).name
+    @seller = User.find(@item.user_id)
     @buyer = current_user
+    logger.debug(@seller.email)
+    if EmailMailer.interest_email(@seller, @buyer, @item).deliver
+      flash[:notice] = "Email has been sent."
+    end
+    redirect_to item_path(@item.id)
   end
 
   private

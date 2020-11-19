@@ -8447,3 +8447,2152 @@ Completed 404 Not Found in 1ms (ActiveRecord: 0.0ms | Allocations: 682)
 ActiveRecord::RecordNotFound (Couldn't find Item without an ID):
   
 app/controllers/items_controller.rb:57:in `send_interest_email'
+Started GET "/" for 149.43.114.173 at 2020-11-19 23:09:27 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.5ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY name[0m
+  ↳ app/views/items/index.html.erb:48
+  Rendered items/index.html.erb within layouts/application (Duration: 45.1ms | Allocations: 17042)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 250ms (Views: 226.0ms | ActiveRecord: 1.1ms | Allocations: 35675)
+
+
+Started GET "/items/6" for 149.43.114.173 at 2020-11-19 23:09:29 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:19:in `show'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:20:in `show'
+  Rendering items/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 6], ["record_type", "Item"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/items/show.html.erb:13
+  Rendered items/show.html.erb within layouts/application (Duration: 24.1ms | Allocations: 6595)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 53ms (Views: 29.0ms | ActiveRecord: 2.2ms | Allocations: 18952)
+
+
+Started GET "/send_interest_email" for 149.43.114.173 at 2020-11-19 23:09:31 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ItemsController#send_interest_email as HTML
+Completed 404 Not Found in 1ms (ActiveRecord: 0.0ms | Allocations: 693)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Item without an ID):
+  
+app/controllers/items_controller.rb:57:in `send_interest_email'
+Started GET "/items/6" for 149.43.114.173 at 2020-11-19 23:09:34 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:19:in `show'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:20:in `show'
+  Rendering items/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 6], ["record_type", "Item"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/items/show.html.erb:13
+  Rendered items/show.html.erb within layouts/application (Duration: 4.6ms | Allocations: 1856)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 10.3ms | ActiveRecord: 0.5ms | Allocations: 6466)
+
+
+Started GET "/items/6" for 149.43.114.173 at 2020-11-19 23:14:29 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:19:in `show'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:20:in `show'
+  Rendering items/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 6], ["record_type", "Item"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/items/show.html.erb:13
+  Rendered items/show.html.erb within layouts/application (Duration: 6.8ms | Allocations: 3982)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 49ms (Views: 13.0ms | ActiveRecord: 2.1ms | Allocations: 26121)
+
+
+Started GET "/send_interest_email.6" for 149.43.114.173 at 2020-11-19 23:14:30 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ItemsController#send_interest_email as 
+Completed 404 Not Found in 1ms (ActiveRecord: 0.0ms | Allocations: 694)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Item without an ID):
+  
+app/controllers/items_controller.rb:57:in `send_interest_email'
+Started GET "/send_interest_email.6" for 149.43.114.173 at 2020-11-19 23:14:50 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ItemsController#send_interest_email as 
+HERE
+{"controller"=>"items", "action"=>"send_interest_email", "format"=>"6"}
+Completed 404 Not Found in 7ms (ActiveRecord: 0.6ms | Allocations: 3745)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Item without an ID):
+  
+app/controllers/items_controller.rb:59:in `send_interest_email'
+Started GET "/send_interest_email.6" for 149.43.114.173 at 2020-11-19 23:15:30 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ItemsController#send_interest_email as 
+HERE
+{"controller"=>"items", "action"=>"send_interest_email", "format"=>"6"}
+Completed 404 Not Found in 2ms (ActiveRecord: 0.0ms | Allocations: 720)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Item without an ID):
+  
+app/controllers/items_controller.rb:59:in `send_interest_email'
+Started GET "/send_interest_email.6" for 149.43.114.173 at 2020-11-19 23:16:21 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ItemsController#send_interest_email as 
+HERE
+{"controller"=>"items", "action"=>"send_interest_email", "format"=>"6"}
+Completed 404 Not Found in 2ms (ActiveRecord: 0.0ms | Allocations: 716)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Item without an ID):
+  
+app/controllers/items_controller.rb:59:in `send_interest_email'
+Started GET "/send_interest_email.6" for 149.43.114.173 at 2020-11-19 23:16:45 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ItemsController#send_interest_email as 
+HERE
+{"controller"=>"items", "action"=>"send_interest_email", "format"=>"6"}
+Completed 404 Not Found in 1ms (ActiveRecord: 0.0ms | Allocations: 727)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Item without an ID):
+  
+app/controllers/items_controller.rb:59:in `send_interest_email'
+Started GET "/items/6" for 149.43.114.173 at 2020-11-19 23:16:55 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:19:in `show'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:20:in `show'
+  Rendering items/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 6], ["record_type", "Item"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/items/show.html.erb:13
+  Rendered items/show.html.erb within layouts/application (Duration: 13.2ms | Allocations: 5962)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 46ms (Views: 19.7ms | ActiveRecord: 1.5ms | Allocations: 25029)
+
+
+Started GET "/items/6" for 149.43.114.173 at 2020-11-19 23:17:12 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:19:in `show'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:20:in `show'
+  Rendering items/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 6], ["record_type", "Item"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/items/show.html.erb:13
+  Rendered items/show.html.erb within layouts/application (Duration: 4.8ms | Allocations: 2230)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 26ms (Views: 20.3ms | ActiveRecord: 0.3ms | Allocations: 8025)
+
+
+Started GET "/send_interest_email" for 149.43.114.173 at 2020-11-19 23:17:14 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ItemsController#send_interest_email as HTML
+HERE
+{"controller"=>"items", "action"=>"send_interest_email"}
+Completed 404 Not Found in 2ms (ActiveRecord: 0.0ms | Allocations: 717)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Item without an ID):
+  
+app/controllers/items_controller.rb:59:in `send_interest_email'
+Started GET "/send_interest_email" for 149.43.114.173 at 2020-11-19 23:17:40 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ItemsController#send_interest_email as HTML
+HERE
+{"controller"=>"items", "action"=>"send_interest_email"}
+Completed 404 Not Found in 2ms (ActiveRecord: 0.0ms | Allocations: 711)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Item without an ID):
+  
+app/controllers/items_controller.rb:59:in `send_interest_email'
+Started GET "/items/6" for 149.43.114.173 at 2020-11-19 23:17:51 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:19:in `show'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:20:in `show'
+  Rendering items/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 6], ["record_type", "Item"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/items/show.html.erb:13
+  Rendered items/show.html.erb within layouts/application (Duration: 4.8ms | Allocations: 2260)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 11.4ms | ActiveRecord: 0.3ms | Allocations: 8059)
+
+
+Started GET "/send_interest_email.6" for 149.43.114.173 at 2020-11-19 23:17:53 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ItemsController#send_interest_email as 
+HERE
+{"controller"=>"items", "action"=>"send_interest_email", "format"=>"6"}
+Completed 404 Not Found in 2ms (ActiveRecord: 0.0ms | Allocations: 712)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Item without an ID):
+  
+app/controllers/items_controller.rb:59:in `send_interest_email'
+Started GET "/send_interest_email.6" for 149.43.114.173 at 2020-11-19 23:18:14 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ItemsController#send_interest_email as 
+HERE
+{"controller"=>"items", "action"=>"send_interest_email", "format"=>"6"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:59:in `send_interest_email'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:60:in `send_interest_email'
+No template found for ItemsController#send_interest_email, rendering head :no_content
+Completed 204 No Content in 41ms (ActiveRecord: 1.4ms | Allocations: 19925)
+
+
+Started GET "/send_interest_email.6" for 149.43.114.173 at 2020-11-19 23:18:16 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ItemsController#send_interest_email as 
+HERE
+{"controller"=>"items", "action"=>"send_interest_email", "format"=>"6"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:59:in `send_interest_email'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:60:in `send_interest_email'
+No template found for ItemsController#send_interest_email, rendering head :no_content
+Completed 204 No Content in 8ms (ActiveRecord: 0.2ms | Allocations: 1557)
+
+
+Started GET "/items/6" for 149.43.114.173 at 2020-11-19 23:18:20 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:19:in `show'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:20:in `show'
+  Rendering items/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 6], ["record_type", "Item"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/items/show.html.erb:13
+  Rendered items/show.html.erb within layouts/application (Duration: 7.0ms | Allocations: 3612)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 12.3ms | ActiveRecord: 0.7ms | Allocations: 8254)
+
+
+Started GET "/send_interest_email.6" for 149.43.114.173 at 2020-11-19 23:18:21 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ItemsController#send_interest_email as 
+HERE
+{"controller"=>"items", "action"=>"send_interest_email", "format"=>"6"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:59:in `send_interest_email'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:60:in `send_interest_email'
+No template found for ItemsController#send_interest_email, rendering head :no_content
+Completed 204 No Content in 7ms (ActiveRecord: 0.2ms | Allocations: 1553)
+
+
+Started GET "/send_interest_email.6" for 149.43.114.173 at 2020-11-19 23:18:44 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ItemsController#send_interest_email as 
+HERE
+{"controller"=>"items", "action"=>"send_interest_email", "format"=>"6"}
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:59:in `send_interest_email'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:60:in `send_interest_email'
+No template found for ItemsController#send_interest_email, rendering head :no_content
+Completed 204 No Content in 7ms (ActiveRecord: 0.2ms | Allocations: 1558)
+
+
+Started GET "/items" for 149.43.114.173 at 2020-11-19 23:18:57 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY name[0m
+  ↳ app/views/items/index.html.erb:48
+  Rendered items/index.html.erb within layouts/application (Duration: 4.8ms | Allocations: 2322)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 10.3ms | ActiveRecord: 0.2ms | Allocations: 6075)
+
+
+Started GET "/items/5" for 149.43.114.173 at 2020-11-19 23:18:58 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:19:in `show'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:20:in `show'
+  Rendering items/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Item"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/items/show.html.erb:13
+  Rendered items/show.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1826)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 9.2ms | ActiveRecord: 0.3ms | Allocations: 6401)
+
+
+Started GET "/send_interest_email.5" for 149.43.114.173 at 2020-11-19 23:18:59 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ItemsController#send_interest_email as 
+HERE
+{"controller"=>"items", "action"=>"send_interest_email", "format"=>"5"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:59:in `send_interest_email'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:60:in `send_interest_email'
+No template found for ItemsController#send_interest_email, rendering head :no_content
+Completed 204 No Content in 6ms (ActiveRecord: 0.2ms | Allocations: 1556)
+
+
+Started GET "/send_interest_email.5" for 149.43.114.173 at 2020-11-19 23:19:00 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ItemsController#send_interest_email as 
+HERE
+{"controller"=>"items", "action"=>"send_interest_email", "format"=>"5"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:59:in `send_interest_email'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:60:in `send_interest_email'
+No template found for ItemsController#send_interest_email, rendering head :no_content
+Completed 204 No Content in 7ms (ActiveRecord: 0.2ms | Allocations: 1556)
+
+
+Started GET "/send_interest_email.5" for 149.43.114.173 at 2020-11-19 23:19:00 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ItemsController#send_interest_email as 
+HERE
+{"controller"=>"items", "action"=>"send_interest_email", "format"=>"5"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:59:in `send_interest_email'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:60:in `send_interest_email'
+No template found for ItemsController#send_interest_email, rendering head :no_content
+Completed 204 No Content in 7ms (ActiveRecord: 0.2ms | Allocations: 1564)
+
+
+Started GET "/send_interest_email.5" for 149.43.114.173 at 2020-11-19 23:19:00 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ItemsController#send_interest_email as 
+HERE
+{"controller"=>"items", "action"=>"send_interest_email", "format"=>"5"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:59:in `send_interest_email'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:60:in `send_interest_email'
+No template found for ItemsController#send_interest_email, rendering head :no_content
+Completed 204 No Content in 6ms (ActiveRecord: 0.2ms | Allocations: 1556)
+
+
+Started GET "/items/5" for 149.43.114.173 at 2020-11-19 23:19:55 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:19:in `show'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:20:in `show'
+  Rendering items/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Item"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/items/show.html.erb:13
+  Rendered items/show.html.erb within layouts/application (Duration: 6.5ms | Allocations: 3582)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 49ms (Views: 11.6ms | ActiveRecord: 1.9ms | Allocations: 24621)
+
+
+Started GET "/send_interest_email.5" for 149.43.114.173 at 2020-11-19 23:19:56 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ItemsController#send_interest_email as 
+HERE
+{"controller"=>"items", "action"=>"send_interest_email", "format"=>"5"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:59:in `send_interest_email'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:60:in `send_interest_email'
+No template found for ItemsController#send_interest_email, rendering head :no_content
+Completed 204 No Content in 7ms (ActiveRecord: 0.2ms | Allocations: 1565)
+
+
+Started GET "/send_interest_email.5" for 149.43.114.173 at 2020-11-19 23:19:57 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ItemsController#send_interest_email as 
+HERE
+{"controller"=>"items", "action"=>"send_interest_email", "format"=>"5"}
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:59:in `send_interest_email'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:60:in `send_interest_email'
+No template found for ItemsController#send_interest_email, rendering head :no_content
+Completed 204 No Content in 8ms (ActiveRecord: 0.3ms | Allocations: 1559)
+
+
+Started GET "/items/5" for 149.43.114.173 at 2020-11-19 23:21:16 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:19:in `show'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:20:in `show'
+  Rendering items/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Item"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/items/show.html.erb:13
+  Rendered items/show.html.erb within layouts/application (Duration: 6.2ms | Allocations: 3583)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 39ms (Views: 11.2ms | ActiveRecord: 1.7ms | Allocations: 24611)
+
+
+Started GET "/send_interest_email.5" for 149.43.114.173 at 2020-11-19 23:21:19 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (uninitialized constant EmailMailersController):
+  
+actionpack (6.0.3.4) lib/action_dispatch/http/request.rb:92:in `rescue in controller_class_for'
+actionpack (6.0.3.4) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (6.0.3.4) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:44:in `controller'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.3.4) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:19:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/items/5" for 149.43.114.173 at 2020-11-19 23:26:58 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ArgumentError ('emailMailer' is not a supported controller name. This can lead to potential routing problems. See https://guides.rubyonrails.org/routing.html#specifying-a-controller-to-use):
+  
+config/routes.rb:9:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/" for 149.43.114.173 at 2020-11-19 23:27:48 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.6ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY name[0m
+  ↳ app/views/items/index.html.erb:48
+  Rendered items/index.html.erb within layouts/application (Duration: 30.0ms | Allocations: 12768)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 78ms (Views: 60.6ms | ActiveRecord: 1.2ms | Allocations: 23962)
+
+
+Started GET "/" for 149.43.114.173 at 2020-11-19 23:27:49 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY name[0m
+  ↳ app/views/items/index.html.erb:48
+  Rendered items/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1612)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 11.5ms | ActiveRecord: 0.2ms | Allocations: 5236)
+
+
+Started GET "/items/5" for 149.43.114.173 at 2020-11-19 23:27:52 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:19:in `show'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:20:in `show'
+  Rendering items/show.html.erb within layouts/application
+  Rendered items/show.html.erb within layouts/application (Duration: 4.7ms | Allocations: 1662)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 1.3ms | Allocations: 10699)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h2 class="itemname"><%= "Item details for #{@item.name}" %></h2>
+
+<h4>Description</h4>
+<div class="item-desc">
+  <p><%= @item.description %> </p>
+</div>
+<h4>Status</h4>
+<div class="item-status">
+  <p><%= @item.status %></p>
+</div>
+<h4>Image</h4>
+<div class="item-image">
+   <% if @item.image.attached?%> 
+   <%= image_tag(@item.image)%> 
+   <% else %>
+   <%= image_tag('image_placeholder.jpg',size: '300')%> 
+   <% end %>
+</div>
+<h4>Deliverable</h4>
+<div class="item-deliverable">
+  <% if @item.listed %> 
+    <p><%= "yes"%></p>
+  <% else %>
+    <p><%= "no" %></p>
+  <% end %>
+</div>
+<h4>Price</h4>
+<div class="item-price">
+  <p><%= number_to_currency(@item.price) %></p>
+</div>
+
+<h4>Sold by: </h4>
+<p> <%= link_to(@seller , user_path(:userID => @sellerID)) %> </p>
+<%= @item %>
+<% params[:id] = @item.id %>
+<p> <%= link_to("contact seller",:controller => "items", :action => "send_interest_email", :id => @item.id  :class => "btn btn-secondary") %> </p>
+
+<div>
+  <%= link_to("Back to item list", items_path, :class => "btn btn-primary") %>
+</div>
+):
+1:    <h2 class="itemname"><%= "Item details for #{@item.name}" %></h2>
+2:    
+3:    <h4>Description</h4>
+4:    <div class="item-desc">
+5:      <p><%= @item.description %> </p>
+6:    </div>
+7:    <h4>Status</h4>
+8:    <div class="item-status">
+9:      <p><%= @item.status %></p>
+10:    </div>
+11:    <h4>Image</h4>
+12:    <div class="item-image">
+13:       <% if @item.image.attached?%> 
+14:       <%= image_tag(@item.image)%> 
+15:       <% else %>
+16:       <%= image_tag('image_placeholder.jpg',size: '300')%> 
+17:       <% end %>
+18:    </div>
+19:    <h4>Deliverable</h4>
+20:    <div class="item-deliverable">
+21:      <% if @item.listed %> 
+22:        <p><%= "yes"%></p>
+23:      <% else %>
+24:        <p><%= "no" %></p>
+25:      <% end %>
+26:    </div>
+27:    <h4>Price</h4>
+28:    <div class="item-price">
+29:      <p><%= number_to_currency(@item.price) %></p>
+30:    </div>
+31:    
+32:    <h4>Sold by: </h4>
+33:    <p> <%= link_to(@seller , user_path(:userID => @sellerID)) %> </p>
+34:    <%= @item %>
+35:    <% params[:id] = @item.id %>
+36:    <p> <%= link_to("contact seller",:controller => "items", :action => "send_interest_email", :id => @item.id  :class => "btn btn-secondary") %> </p>
+37:    
+38:    <div>
+39:      <%= link_to("Back to item list", items_path, :class => "btn btn-primary") %>
+40:    </div>
+  
+app/views/items/show.html.erb:36: syntax error, unexpected tSYMBEG, expecting ')'
+app/views/items/show.html.erb:36: syntax error, unexpected ')', expecting end
+app/views/items/show.html.erb:36: syntax error, unexpected tSYMBEG, expecting ')'
+app/views/items/show.html.erb:36: syntax error, unexpected ')', expecting end
+app/views/items/show.html.erb:36: syntax error, unexpected tSYMBEG, expecting ')'
+app/views/items/show.html.erb:36: syntax error, unexpected ')', expecting end
+app/views/items/show.html.erb:36: syntax error, unexpected tSYMBEG, expecting ')'
+app/views/items/show.html.erb:36: syntax error, unexpected ')', expecting end
+app/views/items/show.html.erb:36: syntax error, unexpected tSYMBEG, expecting ')'
+app/views/items/show.html.erb:36: syntax error, unexpected ')', expecting end
+app/views/items/show.html.erb:36: syntax error, unexpected tSYMBEG, expecting ')'
+app/views/items/show.html.erb:36: syntax error, unexpected ')', expecting end
+Started GET "/items/5" for 149.43.114.173 at 2020-11-19 23:28:16 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:19:in `show'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:20:in `show'
+  Rendering items/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.8ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Item"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/items/show.html.erb:13
+  Rendered items/show.html.erb within layouts/application (Duration: 23.3ms | Allocations: 7848)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 35ms (Views: 29.0ms | ActiveRecord: 1.3ms | Allocations: 13618)
+
+
+Started GET "/send_interest_email?class=btn+btn-secondary&id=5" for 149.43.114.173 at 2020-11-19 23:28:18 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ItemsController#send_interest_email as HTML
+  Parameters: {"class"=>"btn btn-secondary", "id"=>"5"}
+HERE
+{"class"=>"btn btn-secondary", "id"=>"5", "controller"=>"items", "action"=>"send_interest_email"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:59:in `send_interest_email'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:60:in `send_interest_email'
+EmailMailer#interest_email: processed outbound mail in 1.6ms
+Completed 500 Internal Server Error in 64ms (ActiveRecord: 0.2ms | Allocations: 16030)
+
+
+  
+NoMethodError (undefined method `email' for "Brian Casey":String):
+  
+app/mailers/email_mailer.rb:7:in `interest_email'
+app/controllers/items_controller.rb:63:in `send_interest_email'
+Started GET "/items/5" for 149.43.114.173 at 2020-11-19 23:28:38 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:19:in `show'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:20:in `show'
+  Rendering items/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Item"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/items/show.html.erb:13
+  Rendered items/show.html.erb within layouts/application (Duration: 6.8ms | Allocations: 4132)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 40ms (Views: 11.8ms | ActiveRecord: 2.5ms | Allocations: 25194)
+
+
+Started GET "/items/5" for 149.43.114.173 at 2020-11-19 23:28:52 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:19:in `show'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:20:in `show'
+  Rendering items/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Item"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/items/show.html.erb:13
+  Rendered items/show.html.erb within layouts/application (Duration: 13.3ms | Allocations: 2300)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 26ms (Views: 20.0ms | ActiveRecord: 0.3ms | Allocations: 8111)
+
+
+Started GET "/send_interest_email?class=btn+btn-secondary&id=5" for 149.43.114.173 at 2020-11-19 23:28:54 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ItemsController#send_interest_email as HTML
+  Parameters: {"class"=>"btn btn-secondary", "id"=>"5"}
+HERE
+{"class"=>"btn btn-secondary", "id"=>"5", "controller"=>"items", "action"=>"send_interest_email"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:59:in `send_interest_email'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:60:in `send_interest_email'
+EmailMailer#interest_email: processed outbound mail in 0.8ms
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.2ms | Allocations: 8061)
+
+
+  
+NoMethodError (undefined method `name' for nil:NilClass):
+  
+app/mailers/email_mailer.rb:7:in `interest_email'
+app/controllers/items_controller.rb:63:in `send_interest_email'
+Started GET "/items/5" for 149.43.114.173 at 2020-11-19 23:29:33 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:19:in `show'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:20:in `show'
+  Rendering items/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Item"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/items/show.html.erb:13
+  Rendered items/show.html.erb within layouts/application (Duration: 4.6ms | Allocations: 2287)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 23ms (Views: 16.8ms | ActiveRecord: 0.3ms | Allocations: 8094)
+
+
+Started GET "/send_interest_email?id=5" for 149.43.114.173 at 2020-11-19 23:29:35 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ItemsController#send_interest_email as HTML
+  Parameters: {"id"=>"5"}
+HERE
+{"id"=>"5", "controller"=>"items", "action"=>"send_interest_email"}
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:59:in `send_interest_email'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:60:in `send_interest_email'
+EmailMailer#interest_email: processed outbound mail in 0.9ms
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.3ms | Allocations: 2678)
+
+
+  
+NoMethodError (undefined method `name' for nil:NilClass):
+  
+app/mailers/email_mailer.rb:7:in `interest_email'
+app/controllers/items_controller.rb:63:in `send_interest_email'
+Started GET "/items/5" for 149.43.114.173 at 2020-11-19 23:30:50 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:19:in `show'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:20:in `show'
+  Rendering items/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Item"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/items/show.html.erb:13
+  Rendered items/show.html.erb within layouts/application (Duration: 10.2ms | Allocations: 4099)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 53ms (Views: 21.8ms | ActiveRecord: 2.0ms | Allocations: 25123)
+
+
+Started GET "/users/5?userID=4" for 149.43.114.173 at 2020-11-19 23:30:52 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#show as HTML
+  Parameters: {"userID"=>"4", "id"=>"5"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 1.4ms | Allocations: 595)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 7.4ms | ActiveRecord: 0.1ms | Allocations: 5447)
+
+
+Started GET "/send_interest_email?id=5" for 149.43.114.173 at 2020-11-19 23:30:55 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ItemsController#send_interest_email as HTML
+  Parameters: {"id"=>"5"}
+HERE
+{"id"=>"5", "controller"=>"items", "action"=>"send_interest_email"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:59:in `send_interest_email'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:60:in `send_interest_email'
+item
+#<Item:0x000055cda3ea7628>
+seller
+#<User:0x000055cda3f30608>
+buyer
+
+EmailMailer#interest_email: processed outbound mail in 0.8ms
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.2ms | Allocations: 6040)
+
+
+  
+NoMethodError (undefined method `name' for nil:NilClass):
+  
+app/mailers/email_mailer.rb:7:in `interest_email'
+app/controllers/items_controller.rb:68:in `send_interest_email'
+Started GET "/items/5" for 149.43.114.173 at 2020-11-19 23:32:11 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:19:in `show'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:20:in `show'
+  Rendering items/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Item"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/items/show.html.erb:13
+  Rendered items/show.html.erb within layouts/application (Duration: 7.0ms | Allocations: 4097)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 47ms (Views: 12.1ms | ActiveRecord: 1.9ms | Allocations: 25106)
+
+
+Started GET "/items/5" for 149.43.114.173 at 2020-11-19 23:32:12 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:19:in `show'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:20:in `show'
+  Rendering items/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Item"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/items/show.html.erb:13
+  Rendered items/show.html.erb within layouts/application (Duration: 5.3ms | Allocations: 1852)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 15.3ms | ActiveRecord: 0.3ms | Allocations: 6430)
+
+
+Started GET "/send_interest_email?id=5" for 149.43.114.173 at 2020-11-19 23:32:14 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ItemsController#send_interest_email as HTML
+  Parameters: {"id"=>"5"}
+HERE
+{"id"=>"5", "controller"=>"items", "action"=>"send_interest_email"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:59:in `send_interest_email'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:60:in `send_interest_email'
+item
+#<Item:0x000055cda5e63318>
+seller
+#<User:0x000055cda5ee8040>
+buyer
+
+EmailMailer#interest_email: processed outbound mail in 1.4ms
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.2ms | Allocations: 6068)
+
+
+  
+NoMethodError (undefined method `name' for nil:NilClass):
+  
+app/mailers/email_mailer.rb:7:in `interest_email'
+app/controllers/items_controller.rb:68:in `send_interest_email'
+Started GET "/send_interest_email?id=5" for 149.43.114.173 at 2020-11-19 23:35:10 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ItemsController#send_interest_email as HTML
+  Parameters: {"id"=>"5"}
+HERE
+{"id"=>"5", "controller"=>"items", "action"=>"send_interest_email"}
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:59:in `send_interest_email'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:60:in `send_interest_email'
+item
+#<Item:0x000055cda5fa01b8>
+seller
+#<User:0x000055cda60622e0>
+buyer
+
+EmailMailer#interest_email: processed outbound mail in 6.4ms
+Completed 500 Internal Server Error in 46ms (ActiveRecord: 2.2ms | Allocations: 25200)
+
+
+  
+NameError (undefined local variable or method `current_user' for #<EmailMailer:0x00007f0c18970358>):
+  
+app/mailers/email_mailer.rb:5:in `interest_email'
+app/controllers/items_controller.rb:68:in `send_interest_email'
+Started GET "/items/5" for 149.43.114.173 at 2020-11-19 23:35:34 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"5"}
+Completed 500 Internal Server Error in 175ms (ActiveRecord: 0.0ms | Allocations: 109752)
+
+
+  
+NameError (undefined local variable or method `new_user_path' for #<ItemsController:0x000055cda60068c8>
+Did you mean?  new_item_path):
+  
+app/controllers/items_controller.rb:8:in `has_user'
+Started GET "/items/5" for 149.43.114.173 at 2020-11-19 23:35:37 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"5"}
+Completed 500 Internal Server Error in 176ms (ActiveRecord: 0.0ms | Allocations: 108828)
+
+
+  
+NameError (undefined local variable or method `new_user_path' for #<ItemsController:0x000055cda63b8408>
+Did you mean?  new_item_path):
+  
+app/controllers/items_controller.rb:8:in `has_user'
+Started GET "/items/5" for 149.43.114.173 at 2020-11-19 23:35:39 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"5"}
+Completed 500 Internal Server Error in 177ms (ActiveRecord: 0.0ms | Allocations: 108840)
+
+
+  
+NameError (undefined local variable or method `new_user_path' for #<ItemsController:0x000055cda4c810a0>
+Did you mean?  new_item_path):
+  
+app/controllers/items_controller.rb:8:in `has_user'
+Started GET "/items/5" for 149.43.114.173 at 2020-11-19 23:37:19 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"5"}
+Completed 500 Internal Server Error in 189ms (ActiveRecord: 0.0ms | Allocations: 109730)
+
+
+  
+NameError (undefined local variable or method `new_user_path' for #<ItemsController:0x000055cda3caf4b0>
+Did you mean?  new_item_path):
+  
+app/controllers/items_controller.rb:8:in `has_user'
+Started GET "/items/5" for 149.43.114.173 at 2020-11-19 23:37:33 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:19:in `show'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:20:in `show'
+  Rendering items/show.html.erb within layouts/application
+  Rendered items/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 1347)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 1.5ms | Allocations: 20138)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h2 class="itemname"><%= "Item details for #{@item.name}" %></h2>
+
+<h4>Description</h4>
+<div class="item-desc">
+  <p><%= @item.description %> </p>
+</div>
+<h4>Status</h4>
+<div class="item-status">
+  <p><%= @item.status %></p>
+</div>
+<h4>Image</h4>
+<div class="item-image">
+   <% if @item.image.attached?%> 
+   <%= image_tag(@item.image)%> 
+   <% else %>
+   <%= image_tag('image_placeholder.jpg',size: '300')%> 
+   <% end %>
+</div>
+<h4>Deliverable</h4>
+<div class="item-deliverable">
+  <% if @item.listed %> 
+    <p><%= "yes"%></p>
+  <% else %>
+    <p><%= "no" %></p>
+  <% end %>
+</div>
+<h4>Price</h4>
+<div class="item-price">
+  <p><%= number_to_currency(@item.price) %></p>
+</div>
+
+<h4>Sold by: </h4>
+<p> <%= link_to(@seller , user_path(:userID => @sellerID)) %> </p>
+<%= @item %>
+<% params[:id] = @item.id %>
+<p> <%= link_to("contact seller" ,:controller => "items", :action => "send_interest_email", :id => @item.id), :user_id => current_user.id %> </p>
+
+<div>
+  <%= link_to("Back to item list", items_path, :class => "btn btn-primary") %>
+</div>
+):
+1:    <h2 class="itemname"><%= "Item details for #{@item.name}" %></h2>
+2:    
+3:    <h4>Description</h4>
+4:    <div class="item-desc">
+5:      <p><%= @item.description %> </p>
+6:    </div>
+7:    <h4>Status</h4>
+8:    <div class="item-status">
+9:      <p><%= @item.status %></p>
+10:    </div>
+11:    <h4>Image</h4>
+12:    <div class="item-image">
+13:       <% if @item.image.attached?%> 
+14:       <%= image_tag(@item.image)%> 
+15:       <% else %>
+16:       <%= image_tag('image_placeholder.jpg',size: '300')%> 
+17:       <% end %>
+18:    </div>
+19:    <h4>Deliverable</h4>
+20:    <div class="item-deliverable">
+21:      <% if @item.listed %> 
+22:        <p><%= "yes"%></p>
+23:      <% else %>
+24:        <p><%= "no" %></p>
+25:      <% end %>
+26:    </div>
+27:    <h4>Price</h4>
+28:    <div class="item-price">
+29:      <p><%= number_to_currency(@item.price) %></p>
+30:    </div>
+31:    
+32:    <h4>Sold by: </h4>
+33:    <p> <%= link_to(@seller , user_path(:userID => @sellerID)) %> </p>
+34:    <%= @item %>
+35:    <% params[:id] = @item.id %>
+36:    <p> <%= link_to("contact seller" ,:controller => "items", :action => "send_interest_email", :id => @item.id), :user_id => current_user.id %> </p>
+37:    
+38:    <div>
+39:      <%= link_to("Back to item list", items_path, :class => "btn btn-primary") %>
+40:    </div>
+  
+app/views/items/show.html.erb:36: syntax error, unexpected ',', expecting ')'
+app/views/items/show.html.erb:36: syntax error, unexpected ',', expecting ')'
+app/views/items/show.html.erb:36: syntax error, unexpected ',', expecting ')'
+app/views/items/show.html.erb:36: syntax error, unexpected ',', expecting ')'
+app/views/items/show.html.erb:36: syntax error, unexpected ',', expecting ')'
+app/views/items/show.html.erb:36: syntax error, unexpected ',', expecting ')'
+Started GET "/items/5" for 149.43.114.173 at 2020-11-19 23:37:47 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:19:in `show'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:20:in `show'
+  Rendering items/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Item"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/items/show.html.erb:13
+  Rendered items/show.html.erb within layouts/application (Duration: 8.2ms | Allocations: 5210)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.6ms | Allocations: 7621)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    33: <p> <%= link_to(@seller , user_path(:userID => @sellerID)) %> </p>
+    34: <%= @item %>
+    35: <% params[:id] = @item.id %>
+    36: <p> <%= link_to("contact seller" ,:controller => "items", :action => "send_interest_email", :id => @item.id, :user_id => current_user.id) %> </p>
+    37: 
+    38: <div>
+    39:   <%= link_to("Back to item list", items_path, :class => "btn btn-primary") %>
+  
+app/views/items/show.html.erb:36
+Started GET "/items/5" for 149.43.114.173 at 2020-11-19 23:38:55 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:19:in `show'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:20:in `show'
+  Rendering items/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Item"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/items/show.html.erb:13
+  Rendered items/show.html.erb within layouts/application (Duration: 7.0ms | Allocations: 4518)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 44ms (Views: 15.8ms | ActiveRecord: 1.8ms | Allocations: 26610)
+
+
+Started GET "/send_interest_email?id=5" for 149.43.114.173 at 2020-11-19 23:38:57 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ItemsController#send_interest_email as HTML
+  Parameters: {"id"=>"5"}
+Completed 500 Internal Server Error in 220ms (ActiveRecord: 0.0ms | Allocations: 108887)
+
+
+  
+NameError (undefined local variable or method `new_user_path' for #<ItemsController:0x00007f0c24247ca0>
+Did you mean?  new_item_path):
+  
+app/controllers/items_controller.rb:8:in `has_user'
+Started GET "/send_interest_email?id=5" for 149.43.114.173 at 2020-11-19 23:39:53 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ItemsController#send_interest_email as HTML
+  Parameters: {"id"=>"5"}
+HERE
+{"id"=>"5", "controller"=>"items", "action"=>"send_interest_email"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:59:in `send_interest_email'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:60:in `send_interest_email'
+
+EmailMailer#interest_email: processed outbound mail in 0.8ms
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 1.6ms | Allocations: 22431)
+
+
+  
+NoMethodError (undefined method `name' for nil:NilClass):
+  
+app/mailers/email_mailer.rb:7:in `interest_email'
+app/controllers/items_controller.rb:63:in `send_interest_email'
+Started GET "/send_interest_email?id=5" for 149.43.114.173 at 2020-11-19 23:40:07 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ItemsController#send_interest_email as HTML
+  Parameters: {"id"=>"5"}
+HERE
+{"id"=>"5", "controller"=>"items", "action"=>"send_interest_email"}
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:59:in `send_interest_email'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:60:in `send_interest_email'
+
+EmailMailer#interest_email: processed outbound mail in 0.9ms
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.3ms | Allocations: 2726)
+
+
+  
+NoMethodError (undefined method `name' for nil:NilClass):
+  
+app/mailers/email_mailer.rb:7:in `interest_email'
+app/controllers/items_controller.rb:63:in `send_interest_email'
+Started GET "/" for 149.43.114.173 at 2020-11-19 23:40:18 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY name[0m
+  ↳ app/views/items/index.html.erb:48
+  Rendered items/index.html.erb within layouts/application (Duration: 4.7ms | Allocations: 2359)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.2ms | Allocations: 6272)
+
+
+Started GET "/items/5" for 149.43.114.173 at 2020-11-19 23:40:19 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:19:in `show'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:20:in `show'
+  Rendering items/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Item"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/items/show.html.erb:13
+  Rendered items/show.html.erb within layouts/application (Duration: 7.3ms | Allocations: 4111)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 12.1ms | ActiveRecord: 0.6ms | Allocations: 8591)
+
+
+Started GET "/users/sign_up" for 149.43.114.173 at 2020-11-19 23:40:22 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_error_messages.html.erb (Duration: 1.0ms | Allocations: 216)
+  Rendered users/shared/_links.html.erb (Duration: 1.2ms | Allocations: 540)
+  Rendered users/registrations/new.html.erb within layouts/application (Duration: 18.4ms | Allocations: 4482)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 28ms (Views: 25.4ms | ActiveRecord: 0.0ms | Allocations: 9813)
+
+
+Started GET "/users/sign_in" for 149.43.114.173 at 2020-11-19 23:40:24 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (Duration: 0.4ms | Allocations: 205)
+  Rendered users/sessions/new.html.erb within layouts/application (Duration: 6.5ms | Allocations: 1996)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 12.7ms | ActiveRecord: 0.0ms | Allocations: 6541)
+
+
+Started GET "/users/sign_up" for 149.43.114.173 at 2020-11-19 23:40:27 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered users/shared/_links.html.erb (Duration: 0.1ms | Allocations: 79)
+  Rendered users/registrations/new.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1454)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.0ms | Allocations: 5222)
+
+
+Started POST "/users" for 149.43.114.173 at 2020-11-19 23:40:36 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"uU50l+hobVkp5QMI4rc9+MdR2MJQ7Uq828Vm1njn+6SUU29ugm1lxek60F1rQOrYB7zzv6oKGFIX5jlemnBQow==", "user"=>{"name"=>"amy", "payment"=>"venmo", "email"=>"asong@colgate.edu", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+[31mUnpermitted parameters: :payment, :password_confirmation[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "asong@colgate.edu"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_error_messages.html.erb (Duration: 0.5ms | Allocations: 227)
+  Rendered users/shared/_links.html.erb (Duration: 0.1ms | Allocations: 78)
+  Rendered users/registrations/new.html.erb within layouts/application (Duration: 13.0ms | Allocations: 1677)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 325ms (Views: 18.6ms | ActiveRecord: 1.3ms | Allocations: 14243)
+
+
+Started GET "/users/sign_in" for 149.43.114.173 at 2020-11-19 23:40:41 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (Duration: 0.2ms | Allocations: 134)
+  Rendered users/sessions/new.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1050)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.0ms | Allocations: 4860)
+
+
+Started POST "/users/sign_in" for 149.43.114.173 at 2020-11-19 23:40:45 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"VyRcRYjjsTC4pvCPkIh0zZK5glPVB9JUZS/CA9KzvAyY34+TpEodTjrGXnl5/1dvV6KF1bTXZNlv8UPSbgTUwQ==", "user"=>{"email"=>"asong@colgate.edu", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "asong@colgate.edu"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 279ms (ActiveRecord: 0.2ms | Allocations: 2119)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"VyRcRYjjsTC4pvCPkIh0zZK5glPVB9JUZS/CA9KzvAyY34+TpEodTjrGXnl5/1dvV6KF1bTXZNlv8UPSbgTUwQ==", "user"=>{"email"=>"asong@colgate.edu", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (Duration: 0.2ms | Allocations: 134)
+  Rendered users/sessions/new.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1057)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 285ms (Views: 8.1ms | ActiveRecord: 0.0ms | Allocations: 4767)
+
+
+Started POST "/users/sign_in" for 149.43.114.173 at 2020-11-19 23:40:50 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"1O4ZCBkRg3qvgXN8ShGzPc8G2vDF/JEtfItmpMpWWJgDgICcZ2s6pGQ1YNifc1PkPtDnLo7hWJPYTxuDveutRg==", "user"=>{"email"=>"asong@colgate.edu", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "asong@colgate.edu"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 283ms (ActiveRecord: 0.1ms | Allocations: 1917)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"1O4ZCBkRg3qvgXN8ShGzPc8G2vDF/JEtfItmpMpWWJgDgICcZ2s6pGQ1YNifc1PkPtDnLo7hWJPYTxuDveutRg==", "user"=>{"email"=>"asong@colgate.edu", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (Duration: 0.2ms | Allocations: 134)
+  Rendered users/sessions/new.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1057)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 288ms (Views: 8.3ms | ActiveRecord: 0.0ms | Allocations: 4738)
+
+
+Started GET "/users/sign_up" for 149.43.114.173 at 2020-11-19 23:40:52 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered users/shared/_links.html.erb (Duration: 0.1ms | Allocations: 78)
+  Rendered users/registrations/new.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1445)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.0ms | Allocations: 5203)
+
+
+Started POST "/users" for 149.43.114.173 at 2020-11-19 23:41:01 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"+Kc1xMaZTc0tSjCmfuYo2KfqtC8dWxYAU/AWwI9t/aDVui49rJxFUe2V4/P3Ef/4ZwefUue8RO6f00lIbfpWpw==", "user"=>{"name"=>"amy", "payment"=>"", "email"=>"amy@amy.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+[31mUnpermitted parameters: :payment, :password_confirmation[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "amy@amy.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (1.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password") VALUES (?, ?, ?, ?, ?)[0m  [["name", "amy"], ["email", "amy@amy.com"], ["created_at", "2020-11-19 23:41:01.812853"], ["updated_at", "2020-11-19 23:41:01.812853"], ["encrypted_password", "$2a$12$TCZ7AKKHjQ23wE99yL6w6OBpbAc772bIoebjl6QW9LGxc9NTZJYie"]]
+  [1m[35m (4.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://41e81f201ccf4ef7ae2cc76de19eb154.vfs.cloud9.us-east-1.amazonaws.com/
+Completed 302 Found in 295ms (ActiveRecord: 6.1ms | Allocations: 8314)
+
+
+Started GET "/" for 149.43.114.173 at 2020-11-19 23:41:01 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:2
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY name[0m
+  ↳ app/views/items/index.html.erb:48
+  Rendered items/index.html.erb within layouts/application (Duration: 6.0ms | Allocations: 2461)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 21ms (Views: 20.0ms | ActiveRecord: 0.4ms | Allocations: 6105)
+
+
+Started GET "/items/5" for 149.43.114.173 at 2020-11-19 23:41:05 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:19:in `show'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:20:in `show'
+  Rendering items/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Item"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/items/show.html.erb:13
+  Rendered items/show.html.erb within layouts/application (Duration: 4.4ms | Allocations: 1861)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 9.8ms | ActiveRecord: 0.3ms | Allocations: 6434)
+
+
+Started GET "/send_interest_email?id=5" for 149.43.114.173 at 2020-11-19 23:41:07 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ItemsController#send_interest_email as HTML
+  Parameters: {"id"=>"5"}
+HERE
+{"id"=>"5", "controller"=>"items", "action"=>"send_interest_email"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:59:in `send_interest_email'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:60:in `send_interest_email'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:61:in `send_interest_email'
+#<User:0x000055cda5350098>
+  Rendering email_mailer/interest_email.html.erb within layouts/mailer
+  Rendered email_mailer/interest_email.html.erb within layouts/mailer (Duration: 0.4ms | Allocations: 180)
+  Rendering email_mailer/interest_email.text.erb within layouts/mailer
+  Rendered email_mailer/interest_email.text.erb within layouts/mailer (Duration: 0.3ms | Allocations: 157)
+EmailMailer#interest_email: processed outbound mail in 24.6ms
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 0.3ms | Allocations: 13714)
+
+
+  
+NoMethodError (undefined method `product_path' for #<EmailMailer:0x000055cda5382638>):
+  
+app/mailers/email_mailer.rb:8:in `interest_email'
+app/controllers/items_controller.rb:63:in `send_interest_email'
+Started GET "/send_interest_email?id=5" for 149.43.114.173 at 2020-11-19 23:41:26 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ItemsController#send_interest_email as HTML
+  Parameters: {"id"=>"5"}
+HERE
+{"id"=>"5", "controller"=>"items", "action"=>"send_interest_email"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:59:in `send_interest_email'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:60:in `send_interest_email'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:61:in `send_interest_email'
+#<User:0x00007f0c189704c0>
+  Rendering email_mailer/interest_email.html.erb within layouts/mailer
+  Rendered email_mailer/interest_email.html.erb within layouts/mailer (Duration: 0.1ms | Allocations: 12)
+  Rendering email_mailer/interest_email.text.erb within layouts/mailer
+  Rendered email_mailer/interest_email.text.erb within layouts/mailer (Duration: 0.0ms | Allocations: 4)
+EmailMailer#interest_email: processed outbound mail in 10.0ms
+Completed 500 Internal Server Error in 49ms (ActiveRecord: 1.6ms | Allocations: 30288)
+
+
+  
+NoMethodError (undefined method `item_path' for #<EmailMailer:0x00007f0c189f1840>
+Did you mean?  item_url):
+  
+app/mailers/email_mailer.rb:8:in `interest_email'
+app/controllers/items_controller.rb:63:in `send_interest_email'
+Started GET "/send_interest_email?id=5" for 149.43.114.173 at 2020-11-19 23:41:36 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ItemsController#send_interest_email as HTML
+  Parameters: {"id"=>"5"}
+HERE
+{"id"=>"5", "controller"=>"items", "action"=>"send_interest_email"}
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:59:in `send_interest_email'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:60:in `send_interest_email'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:61:in `send_interest_email'
+#<User:0x000055cda64ccb50>
+  Rendering email_mailer/interest_email.html.erb within layouts/mailer
+  Rendered email_mailer/interest_email.html.erb within layouts/mailer (Duration: 0.1ms | Allocations: 12)
+  Rendering email_mailer/interest_email.text.erb within layouts/mailer
+  Rendered email_mailer/interest_email.text.erb within layouts/mailer (Duration: 0.0ms | Allocations: 4)
+EmailMailer#interest_email: processed outbound mail in 14.2ms
+Completed 500 Internal Server Error in 63ms (ActiveRecord: 2.2ms | Allocations: 30438)
+
+
+  
+NoMethodError (undefined method `item_path' for #<EmailMailer:0x00007f0c189bd838>
+Did you mean?  item_url):
+  
+app/mailers/email_mailer.rb:8:in `interest_email'
+app/controllers/items_controller.rb:63:in `send_interest_email'
+Started GET "/send_interest_email?id=5" for 149.43.114.173 at 2020-11-19 23:42:25 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ItemsController#send_interest_email as HTML
+  Parameters: {"id"=>"5"}
+HERE
+{"id"=>"5", "controller"=>"items", "action"=>"send_interest_email"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:59:in `send_interest_email'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:60:in `send_interest_email'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:61:in `send_interest_email'
+#<User:0x00007f0c24886e18>
+  Rendering email_mailer/interest_email.html.erb within layouts/mailer
+  Rendered email_mailer/interest_email.html.erb within layouts/mailer (Duration: 0.1ms | Allocations: 12)
+  Rendering email_mailer/interest_email.text.erb within layouts/mailer
+  Rendered email_mailer/interest_email.text.erb within layouts/mailer (Duration: 0.0ms | Allocations: 4)
+EmailMailer#interest_email: processed outbound mail in 5.3ms
+Delivered mail 5fb702e15bfd2_15c92ae6d3302124503ed@ip-172-31-12-21.mail (6.0ms)
+Date: Thu, 19 Nov 2020 23:42:25 +0000
+From: colgatemarketplace@gmail.com
+To: asong@colgate.edu
+Message-ID: <5fb702e15bfd2_15c92ae6d3302124503ed@ip-172-31-12-21.mail>
+Subject: amy is interested in your Muffin Tin
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5fb702e15af0a_15c92ae6d3302124502ea";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5fb702e15af0a_15c92ae6d3302124502ea
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+Dear: Brian Casey
+===============================================
+ 
+amy is interested in your product Muffin Tin.
+You can contact buyer at amy@amy.com. 
+ 
+Thanks & have a great day! :) 
+
+----==_mimepart_5fb702e15af0a_15c92ae6d3302124502ea
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1> Dear: Brian Casey </h1>
+    <p>
+        amy is interested in your product Muffin Tin <br>
+        You can contact buyer at amy@amy.com. 
+    </p>
+    <p>Thanks & have a great day! :) </p>
+  </body>
+</html>
+  </body>
+</html>
+
+----==_mimepart_5fb702e15af0a_15c92ae6d3302124502ea--
+
+Redirected to https://41e81f201ccf4ef7ae2cc76de19eb154.vfs.cloud9.us-east-1.amazonaws.com/items/5
+Completed 302 Found in 54ms (ActiveRecord: 1.5ms | Allocations: 31084)
+
+
+Started GET "/items/5" for 149.43.114.173 at 2020-11-19 23:42:25 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:19:in `show'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:20:in `show'
+  Rendering items/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Item"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/items/show.html.erb:13
+  Rendered items/show.html.erb within layouts/application (Duration: 7.6ms | Allocations: 4123)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 12.5ms | ActiveRecord: 0.7ms | Allocations: 8794)
+
+
+Started GET "/send_interest_email?id=5" for 149.43.114.173 at 2020-11-19 23:42:27 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ItemsController#send_interest_email as HTML
+  Parameters: {"id"=>"5"}
+HERE
+{"id"=>"5", "controller"=>"items", "action"=>"send_interest_email"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:59:in `send_interest_email'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:60:in `send_interest_email'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:61:in `send_interest_email'
+#<User:0x000055cda5306088>
+  Rendering email_mailer/interest_email.html.erb within layouts/mailer
+  Rendered email_mailer/interest_email.html.erb within layouts/mailer (Duration: 0.1ms | Allocations: 12)
+  Rendering email_mailer/interest_email.text.erb within layouts/mailer
+  Rendered email_mailer/interest_email.text.erb within layouts/mailer (Duration: 0.0ms | Allocations: 4)
+EmailMailer#interest_email: processed outbound mail in 5.3ms
+Delivered mail 5fb702e42083_15c92ae6d330223c5056e@ip-172-31-12-21.mail (2.5ms)
+Date: Thu, 19 Nov 2020 23:42:28 +0000
+From: colgatemarketplace@gmail.com
+To: asong@colgate.edu
+Message-ID: <5fb702e42083_15c92ae6d330223c5056e@ip-172-31-12-21.mail>
+Subject: amy is interested in your Muffin Tin
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5fb702e41575_15c92ae6d330223c504dc";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5fb702e41575_15c92ae6d330223c504dc
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+Dear: Brian Casey
+===============================================
+ 
+amy is interested in your product Muffin Tin.
+You can contact buyer at amy@amy.com. 
+ 
+Thanks & have a great day! :) 
+
+----==_mimepart_5fb702e41575_15c92ae6d330223c504dc
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1> Dear: Brian Casey </h1>
+    <p>
+        amy is interested in your product Muffin Tin <br>
+        You can contact buyer at amy@amy.com. 
+    </p>
+    <p>Thanks & have a great day! :) </p>
+  </body>
+</html>
+  </body>
+</html>
+
+----==_mimepart_5fb702e41575_15c92ae6d330223c504dc--
+
+Redirected to https://41e81f201ccf4ef7ae2cc76de19eb154.vfs.cloud9.us-east-1.amazonaws.com/items/5
+Completed 302 Found in 28ms (ActiveRecord: 0.3ms | Allocations: 10792)
+
+
+Started GET "/items/5" for 149.43.114.173 at 2020-11-19 23:42:28 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:19:in `show'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:20:in `show'
+  Rendering items/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Item"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/items/show.html.erb:13
+  Rendered items/show.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1852)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 7.8ms | ActiveRecord: 0.3ms | Allocations: 6465)
+
+
+Started GET "/send_interest_email?id=5" for 149.43.114.173 at 2020-11-19 23:42:31 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ItemsController#send_interest_email as HTML
+  Parameters: {"id"=>"5"}
+HERE
+{"id"=>"5", "controller"=>"items", "action"=>"send_interest_email"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:59:in `send_interest_email'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:60:in `send_interest_email'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:61:in `send_interest_email'
+#<User:0x000055cda65d87d8>
+  Rendering email_mailer/interest_email.html.erb within layouts/mailer
+  Rendered email_mailer/interest_email.html.erb within layouts/mailer (Duration: 0.1ms | Allocations: 12)
+  Rendering email_mailer/interest_email.text.erb within layouts/mailer
+  Rendered email_mailer/interest_email.text.erb within layouts/mailer (Duration: 0.1ms | Allocations: 4)
+EmailMailer#interest_email: processed outbound mail in 5.1ms
+Delivered mail 5fb702e72efa7_15c92ae6d3302098507d8@ip-172-31-12-21.mail (2.4ms)
+Date: Thu, 19 Nov 2020 23:42:31 +0000
+From: colgatemarketplace@gmail.com
+To: asong@colgate.edu
+Message-ID: <5fb702e72efa7_15c92ae6d3302098507d8@ip-172-31-12-21.mail>
+Subject: amy is interested in your Muffin Tin
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5fb702e72e548_15c92ae6d3302098506f5";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5fb702e72e548_15c92ae6d3302098506f5
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+Dear: Brian Casey
+===============================================
+ 
+amy is interested in your product Muffin Tin.
+You can contact buyer at amy@amy.com. 
+ 
+Thanks & have a great day! :) 
+
+----==_mimepart_5fb702e72e548_15c92ae6d3302098506f5
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1> Dear: Brian Casey </h1>
+    <p>
+        amy is interested in your product Muffin Tin <br>
+        You can contact buyer at amy@amy.com. 
+    </p>
+    <p>Thanks & have a great day! :) </p>
+  </body>
+</html>
+  </body>
+</html>
+
+----==_mimepart_5fb702e72e548_15c92ae6d3302098506f5--
+
+Redirected to https://41e81f201ccf4ef7ae2cc76de19eb154.vfs.cloud9.us-east-1.amazonaws.com/items/5
+Completed 302 Found in 20ms (ActiveRecord: 0.3ms | Allocations: 10789)
+
+
+Started GET "/items/5" for 149.43.114.173 at 2020-11-19 23:42:31 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:19:in `show'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:20:in `show'
+  Rendering items/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Item"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/items/show.html.erb:13
+  Rendered items/show.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1852)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 7.5ms | ActiveRecord: 0.3ms | Allocations: 6467)
+
+
+Started GET "/send_interest_email?id=5" for 149.43.114.173 at 2020-11-19 23:42:33 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ItemsController#send_interest_email as HTML
+  Parameters: {"id"=>"5"}
+HERE
+{"id"=>"5", "controller"=>"items", "action"=>"send_interest_email"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:59:in `send_interest_email'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:60:in `send_interest_email'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:61:in `send_interest_email'
+#<User:0x00007f0c24850160>
+  Rendering email_mailer/interest_email.html.erb within layouts/mailer
+  Rendered email_mailer/interest_email.html.erb within layouts/mailer (Duration: 0.1ms | Allocations: 12)
+  Rendering email_mailer/interest_email.text.erb within layouts/mailer
+  Rendered email_mailer/interest_email.text.erb within layouts/mailer (Duration: 0.1ms | Allocations: 4)
+EmailMailer#interest_email: processed outbound mail in 5.0ms
+Delivered mail 5fb702e95586d_15c92ae6d33021b0509bd@ip-172-31-12-21.mail (2.4ms)
+Date: Thu, 19 Nov 2020 23:42:33 +0000
+From: colgatemarketplace@gmail.com
+To: asong@colgate.edu
+Message-ID: <5fb702e95586d_15c92ae6d33021b0509bd@ip-172-31-12-21.mail>
+Subject: amy is interested in your Muffin Tin
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5fb702e954e25_15c92ae6d33021b050854";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5fb702e954e25_15c92ae6d33021b050854
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+Dear: Brian Casey
+===============================================
+ 
+amy is interested in your product Muffin Tin.
+You can contact buyer at amy@amy.com. 
+ 
+Thanks & have a great day! :) 
+
+----==_mimepart_5fb702e954e25_15c92ae6d33021b050854
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1> Dear: Brian Casey </h1>
+    <p>
+        amy is interested in your product Muffin Tin <br>
+        You can contact buyer at amy@amy.com. 
+    </p>
+    <p>Thanks & have a great day! :) </p>
+  </body>
+</html>
+  </body>
+</html>
+
+----==_mimepart_5fb702e954e25_15c92ae6d33021b050854--
+
+Redirected to https://41e81f201ccf4ef7ae2cc76de19eb154.vfs.cloud9.us-east-1.amazonaws.com/items/5
+Completed 302 Found in 26ms (ActiveRecord: 0.3ms | Allocations: 10784)
+
+
+Started GET "/items/5" for 149.43.114.173 at 2020-11-19 23:42:33 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:19:in `show'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:20:in `show'
+  Rendering items/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Item"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/items/show.html.erb:13
+  Rendered items/show.html.erb within layouts/application (Duration: 11.8ms | Allocations: 1852)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 22ms (Views: 15.9ms | ActiveRecord: 0.3ms | Allocations: 6453)
+
+
+Started GET "/items/5" for 149.43.114.173 at 2020-11-19 23:45:10 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:19:in `show'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:20:in `show'
+  Rendering items/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Item"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/items/show.html.erb:13
+  Rendered items/show.html.erb within layouts/application (Duration: 6.8ms | Allocations: 4078)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 40ms (Views: 11.8ms | ActiveRecord: 1.7ms | Allocations: 25088)
+
+
+Started GET "/users/5?userID=4" for 149.43.114.173 at 2020-11-19 23:45:12 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#show as HTML
+  Parameters: {"userID"=>"4", "id"=>"5"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:4
+  Rendered users/show.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1472)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 29ms (Views: 25.4ms | ActiveRecord: 0.3ms | Allocations: 6315)
+
+
+Started GET "/send_interest_email?id=5" for 149.43.114.173 at 2020-11-19 23:45:16 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ItemsController#send_interest_email as HTML
+  Parameters: {"id"=>"5"}
+HERE
+{"id"=>"5", "controller"=>"items", "action"=>"send_interest_email"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:59:in `send_interest_email'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:60:in `send_interest_email'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:61:in `send_interest_email'
+Completed 500 Internal Server Error in 174ms (ActiveRecord: 0.3ms | Allocations: 111114)
+
+
+  
+NameError (undefined local variable or method `seller' for #<ItemsController:0x000055cda48cfdd0>
+Did you mean?  @seller):
+  
+app/controllers/items_controller.rb:62:in `send_interest_email'
+Started GET "/send_interest_email?id=5" for 149.43.114.173 at 2020-11-19 23:45:24 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ItemsController#send_interest_email as HTML
+  Parameters: {"id"=>"5"}
+HERE
+{"id"=>"5", "controller"=>"items", "action"=>"send_interest_email"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:59:in `send_interest_email'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:60:in `send_interest_email'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:61:in `send_interest_email'
+asong@colgate.edu
+  Rendering email_mailer/interest_email.html.erb within layouts/mailer
+  Rendered email_mailer/interest_email.html.erb within layouts/mailer (Duration: 0.1ms | Allocations: 12)
+  Rendering email_mailer/interest_email.text.erb within layouts/mailer
+  Rendered email_mailer/interest_email.text.erb within layouts/mailer (Duration: 0.1ms | Allocations: 4)
+EmailMailer#interest_email: processed outbound mail in 5.3ms
+Delivered mail 5fb703943aaa5_15c92ae6d330223c511db@ip-172-31-12-21.mail (2.4ms)
+Date: Thu, 19 Nov 2020 23:45:24 +0000
+From: colgatemarketplace@gmail.com
+To: asong@colgate.edu
+Message-ID: <5fb703943aaa5_15c92ae6d330223c511db@ip-172-31-12-21.mail>
+Subject: amy is interested in your Muffin Tin
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5fb7039439ff1_15c92ae6d330223c5106b";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5fb7039439ff1_15c92ae6d330223c5106b
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+Dear: Brian Casey
+===============================================
+ 
+amy is interested in your product Muffin Tin.
+You can contact buyer at amy@amy.com. 
+ 
+Thanks & have a great day! :) 
+
+----==_mimepart_5fb7039439ff1_15c92ae6d330223c5106b
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1> Dear: Brian Casey </h1>
+    <p>
+        amy is interested in your product Muffin Tin <br>
+        You can contact buyer at amy@amy.com. 
+    </p>
+    <p>Thanks & have a great day! :) </p>
+  </body>
+</html>
+  </body>
+</html>
+
+----==_mimepart_5fb7039439ff1_15c92ae6d330223c5106b--
+
+Redirected to https://41e81f201ccf4ef7ae2cc76de19eb154.vfs.cloud9.us-east-1.amazonaws.com/items/5
+Completed 302 Found in 50ms (ActiveRecord: 1.9ms | Allocations: 30658)
+
+
+Started GET "/items/5" for 149.43.114.173 at 2020-11-19 23:45:24 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:19:in `show'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:20:in `show'
+  Rendering items/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Item"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/items/show.html.erb:13
+  Rendered items/show.html.erb within layouts/application (Duration: 6.6ms | Allocations: 4118)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 10.9ms | ActiveRecord: 0.6ms | Allocations: 8788)
+
+
+Started GET "/items/5" for 149.43.114.173 at 2020-11-19 23:45:39 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:19:in `show'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:20:in `show'
+  Rendering items/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Item"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/items/show.html.erb:13
+  Rendered items/show.html.erb within layouts/application (Duration: 6.9ms | Allocations: 4101)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 42ms (Views: 12.0ms | ActiveRecord: 1.9ms | Allocations: 25071)
+
+
+Started GET "/send_interest_email?id=5" for 149.43.114.173 at 2020-11-19 23:45:41 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ItemsController#send_interest_email as HTML
+  Parameters: {"id"=>"5"}
+HERE
+{"id"=>"5", "controller"=>"items", "action"=>"send_interest_email"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:59:in `send_interest_email'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:60:in `send_interest_email'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:61:in `send_interest_email'
+asong@colgate.edu
+  Rendering email_mailer/interest_email.html.erb within layouts/mailer
+  Rendered email_mailer/interest_email.html.erb within layouts/mailer (Duration: 0.1ms | Allocations: 12)
+  Rendering email_mailer/interest_email.text.erb within layouts/mailer
+  Rendered email_mailer/interest_email.text.erb within layouts/mailer (Duration: 0.0ms | Allocations: 4)
+EmailMailer#interest_email: processed outbound mail in 20.8ms
+Delivered mail 5fb703a555073_15c92ae6d33021b0513b@ip-172-31-12-21.mail (2.5ms)
+Date: Thu, 19 Nov 2020 23:45:41 +0000
+From: colgatemarketplace@gmail.com
+To: asong@colgate.edu
+Message-ID: <5fb703a555073_15c92ae6d33021b0513b@ip-172-31-12-21.mail>
+Subject: amy is interested in your Muffin Tin
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5fb703a550958_15c92ae6d33021b0512be";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5fb703a550958_15c92ae6d33021b0512be
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+Dear: Brian Casey
+===============================================
+ 
+amy is interested in your product Muffin Tin.
+You can contact buyer at amy@amy.com. 
+ 
+Thanks & have a great day! :) 
+
+----==_mimepart_5fb703a550958_15c92ae6d33021b0512be
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1> Dear: Brian Casey </h1>
+    <p>
+        amy is interested in your product Muffin Tin <br>
+        You can contact buyer at amy@amy.com. 
+    </p>
+    <p>Thanks & have a great day! :) </p>
+  </body>
+</html>
+  </body>
+</html>
+
+----==_mimepart_5fb703a550958_15c92ae6d33021b0512be--
+
+Redirected to https://41e81f201ccf4ef7ae2cc76de19eb154.vfs.cloud9.us-east-1.amazonaws.com/items/5
+Completed 302 Found in 48ms (ActiveRecord: 0.4ms | Allocations: 16414)
+
+
+Started GET "/items/5" for 149.43.114.173 at 2020-11-19 23:45:41 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:19:in `show'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:20:in `show'
+  Rendering items/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Item"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/items/show.html.erb:13
+  Rendered items/show.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1856)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 8.3ms | ActiveRecord: 0.3ms | Allocations: 6468)
+
+
+Started GET "/send_interest_email?id=5" for 149.43.114.173 at 2020-11-19 23:45:44 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ItemsController#send_interest_email as HTML
+  Parameters: {"id"=>"5"}
+HERE
+{"id"=>"5", "controller"=>"items", "action"=>"send_interest_email"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:59:in `send_interest_email'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:60:in `send_interest_email'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:61:in `send_interest_email'
+asong@colgate.edu
+  Rendering email_mailer/interest_email.html.erb within layouts/mailer
+  Rendered email_mailer/interest_email.html.erb within layouts/mailer (Duration: 0.1ms | Allocations: 12)
+  Rendering email_mailer/interest_email.text.erb within layouts/mailer
+  Rendered email_mailer/interest_email.text.erb within layouts/mailer (Duration: 0.0ms | Allocations: 4)
+EmailMailer#interest_email: processed outbound mail in 5.0ms
+Delivered mail 5fb703a8479d9_15c92ae6d3303f60515d2@ip-172-31-12-21.mail (2.4ms)
+Date: Thu, 19 Nov 2020 23:45:44 +0000
+From: colgatemarketplace@gmail.com
+To: asong@colgate.edu
+Message-ID: <5fb703a8479d9_15c92ae6d3303f60515d2@ip-172-31-12-21.mail>
+Subject: amy is interested in your Muffin Tin
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5fb703a846f5f_15c92ae6d3303f60514a7";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5fb703a846f5f_15c92ae6d3303f60514a7
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+Dear: Brian Casey
+===============================================
+ 
+amy is interested in your product Muffin Tin.
+You can contact buyer at amy@amy.com. 
+ 
+Thanks & have a great day! :) 
+
+----==_mimepart_5fb703a846f5f_15c92ae6d3303f60514a7
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1> Dear: Brian Casey </h1>
+    <p>
+        amy is interested in your product Muffin Tin <br>
+        You can contact buyer at amy@amy.com. 
+    </p>
+    <p>Thanks & have a great day! :) </p>
+  </body>
+</html>
+  </body>
+</html>
+
+----==_mimepart_5fb703a846f5f_15c92ae6d3303f60514a7--
+
+Redirected to https://41e81f201ccf4ef7ae2cc76de19eb154.vfs.cloud9.us-east-1.amazonaws.com/items/5
+Completed 302 Found in 26ms (ActiveRecord: 0.3ms | Allocations: 10785)
+
+
+Started GET "/items/5" for 149.43.114.173 at 2020-11-19 23:45:44 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:19:in `show'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:20:in `show'
+  Rendering items/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Item"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/items/show.html.erb:13
+  Rendered items/show.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1852)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 7.8ms | ActiveRecord: 0.3ms | Allocations: 6473)
+
+
