@@ -45,6 +45,14 @@
       </div>
     </div>
     <div class="row">
+      <div class="col-md-3">
+        <%= f.label :category %>
+      </div>
+      <div class="col-md-2">
+        <%= f.select :category, ['', 'Electronic', 'Book', 'Furniture']%>
+      </div>
+    </div>
+    <div class="row">
       <div class="col-md-2">
         <%= f.submit "Create new item" %>
       </div>
