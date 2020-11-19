@@ -52,6 +52,12 @@ class ItemsController < ApplicationController
       redirect_to root_path and return
     end
   end
+  
+  def send_interest_email
+    @item = Item.find(params[:id])
+    @seller = User.find(@item.user_id).name
+    @buyer = current_user
+  end
 
   private
     def record_not_found
