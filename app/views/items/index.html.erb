@@ -1,17 +1,9 @@
-  <div>
-      <% if user_signed_in? %>
-      <p>
-      Logged in as <%= current_user.name %>.
-      <%= link_to 'Edit profile', edit_user_registration_path%> |
-      <%= link_to "Log out", destroy_user_session_path, method: :delete%>
-      </p>
-    <% else %>
-      <p>
-      <%= link_to "Sign up", new_user_registration_path%> |
-      <%= link_to "Login", new_user_session_path%>
-      </p>
-    <% end %>
+
+
+  <div class="center jumbotron">
+    <h1>Welcome to Colgate Marketplace! </h1>
   </div>
+
   
   <%= form_tag(search_item_path, :method => "get") do %>  
   <div class="input-group">  
@@ -80,3 +72,4 @@
       <% end %>
     </div>
   </div>
+  

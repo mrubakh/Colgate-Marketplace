@@ -3358,3 +3358,289 @@ Processing by ItemsController#show as HTML
 [Webpacker] Everything's up-to-date. Nothing to do
 Completed 200 OK in 6ms (Views: 4.0ms | ActiveRecord: 0.2ms | Allocations: 3188)
   [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "mariam@colgate.edu"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password") VALUES (?, ?, ?, ?, ?)[0m  [["name", "mariam"], ["email", "mariam@colgate.edu"], ["created_at", "2020-11-09 05:06:10.250542"], ["updated_at", "2020-11-09 05:06:10.250542"], ["encrypted_password", "$2a$04$JQb2c8RNtSqxgpPnc7rabeS18l9IBhsEBBPhFGskAzg9W.TGTlGli"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "mariam@colgate.edu"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password") VALUES (?, ?, ?, ?, ?)[0m  [["name", "mariam"], ["email", "mariam@colgate.edu"], ["created_at", "2020-11-09 05:06:10.274742"], ["updated_at", "2020-11-09 05:06:10.274742"], ["encrypted_password", "$2a$04$Q3obfYd.IkoURzNnAHZPLudzZwfoZigVsFMmIM3zgYBvxz0fedDXe"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered items/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 280)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 11ms (Views: 4.1ms | ActiveRecord: 0.0ms | Allocations: 5776)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "mariam@colgate.edu"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password") VALUES (?, ?, ?, ?, ?)[0m  [["name", "mariam"], ["email", "mariam@colgate.edu"], ["created_at", "2020-11-09 05:06:10.293368"], ["updated_at", "2020-11-09 05:06:10.293368"], ["encrypted_password", "$2a$04$v1XoEFZMEOGGfluUoVhnCuRBxMXepmgk8uiKaghd983Uen1c3emd."]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mItem Create (0.2ms)[0m  [1m[32mINSERT INTO "items" ("name", "price", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "apple"], ["price", 10.0], ["user_id", 1], ["created_at", "2020-11-09 05:06:10.311094"], ["updated_at", "2020-11-09 05:06:10.311094"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mItem Create (0.1ms)[0m  [1m[32mINSERT INTO "items" ("name", "price", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "zebra"], ["price", 20.0], ["user_id", 1], ["created_at", "2020-11-09 05:06:10.313197"], ["updated_at", "2020-11-09 05:06:10.313197"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered items/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 63)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 478)
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY name[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "mariam@colgate.edu"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password") VALUES (?, ?, ?, ?, ?)[0m  [["name", "mariam"], ["email", "mariam@colgate.edu"], ["created_at", "2020-11-09 05:06:10.320919"], ["updated_at", "2020-11-09 05:06:10.320919"], ["encrypted_password", "$2a$04$3lQrVtDjPjpjNmASkBzpFOLXhWxZPreHk.54KcuYKb3vdfI8BF8YW"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering items/show.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered items/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 65)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 2ms (Views: 0.8ms | ActiveRecord: 0.1ms | Allocations: 845)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "mariam@colgate.edu"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password") VALUES (?, ?, ?, ?, ?)[0m  [["name", "mariam"], ["email", "mariam@colgate.edu"], ["created_at", "2020-11-09 05:06:10.349112"], ["updated_at", "2020-11-09 05:06:10.349112"], ["encrypted_password", "$2a$04$zSxer6yhgjNm8h8HRG5SpuqXYUlkCe.8meKQde9ZuezX4qNY.DwHK"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering items/show.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered items/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 63)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.1ms | Allocations: 584)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "aknox@colgate.edu"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "payment", "created_at", "updated_at", "encrypted_password") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "allegra"], ["email", "aknox@colgate.edu"], ["payment", "allegra-knox"], ["created_at", "2020-11-09 05:06:10.356969"], ["updated_at", "2020-11-09 05:06:10.356969"], ["encrypted_password", "$2a$04$cgHDNNegCJJ6wswQmA4PJuK0uBEcTH8Yq4RuNCfcYaTyPM.JTHSeO"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "aknox@email.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "payment", "created_at", "updated_at", "encrypted_password") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "alle"], ["email", "aknox@email.com"], ["payment", "venmo"], ["created_at", "2020-11-09 05:06:10.361785"], ["updated_at", "2020-11-09 05:06:10.361785"], ["encrypted_password", "$2a$04$GLTBnVJFJ3SJS0IlCLfbC.DEw6lkAeuE.DZ0gTmozN/qlH8Wu2KpG"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "n@colgate.edu"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "payment", "created_at", "updated_at", "encrypted_password") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "noahj"], ["email", "n@colgate.edu"], ["payment", "venmo"], ["created_at", "2020-11-09 05:06:10.368032"], ["updated_at", "2020-11-09 05:06:10.368032"], ["encrypted_password", "$2a$04$fqdpqKhdx4Qxt6NPdvSvNeLrgH12.jv90NAWuGnc3ymMmI.67Xp7i"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Create (0.1ms)[0m  [1m[32mINSERT INTO "items" ("name", "price", "description", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "toy"], ["price", 25.55], ["description", "Good toy"], ["user_id", 1], ["created_at", "2020-11-09 05:06:10.372463"], ["updated_at", "2020-11-09 05:06:10.372463"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by UsersController#show as HTML
+  Parameters: {"email"=>"n@colgate.edu", "payment"=>"venmo", "id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered users/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 66)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.1ms | Allocations: 1198)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "mark@colgate.edu"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "payment", "created_at", "updated_at", "encrypted_password") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Mark"], ["email", "mark@colgate.edu"], ["payment", "venmo"], ["created_at", "2020-11-09 05:06:10.383574"], ["updated_at", "2020-11-09 05:06:10.383574"], ["encrypted_password", "$2a$04$ETZVy15AluNPwhRFSSKuTe83xb9avDpDql3U1vnpPM5W.Y/hmkgL2"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "amy@colgate.edu"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "payment", "created_at", "updated_at", "encrypted_password") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Amy"], ["email", "amy@colgate.edu"], ["payment", "cash"], ["created_at", "2020-11-09 05:06:10.387047"], ["updated_at", "2020-11-09 05:06:10.387047"], ["encrypted_password", "$2a$04$OaVq9wI8V/P4O0JplHXoBOIDNJ0iMXxzFD5166VHYLAECjM9tp/Te"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mItem Create (0.2ms)[0m  [1m[32mINSERT INTO "items" ("name", "price", "image", "description", "listed", "status", "deliverable", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Table"], ["price", 13.13], ["image", "pic.jpg"], ["description", "Surface with 4 legs. It is a table."], ["listed", 1], ["status", "available"], ["deliverable", 1], ["user_id", 1], ["created_at", "2020-11-09 05:06:10.389133"], ["updated_at", "2020-11-09 05:06:10.389133"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mItem Create (0.1ms)[0m  [1m[32mINSERT INTO "items" ("name", "price", "image", "description", "listed", "status", "deliverable", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Muffin Tin"], ["price", 2.0], ["image", "muffin.jpg"], ["description", "Tin for making muffins."], ["listed", 1], ["status", "available"], ["deliverable", 1], ["user_id", 1], ["created_at", "2020-11-09 05:06:10.391869"], ["updated_at", "2020-11-09 05:06:10.391869"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mItem Create (0.1ms)[0m  [1m[32mINSERT INTO "items" ("name", "price", "image", "description", "listed", "status", "deliverable", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Microphone"], ["price", 15.99], ["image", "mic.jpg"], ["description", "Great for singing."], ["listed", 1], ["status", "available"], ["deliverable", 1], ["user_id", 2], ["created_at", "2020-11-09 05:06:10.394040"], ["updated_at", "2020-11-09 05:06:10.394040"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/items" for 127.0.0.1 at 2020-11-09 05:06:10 +0000
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY name[0m
+  Rendered items/index.html.erb within layouts/application (Duration: 27.4ms | Allocations: 7892)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /home/ubuntu/environment/Colgate-Marketplace/public/packs-test
+[Webpacker] Hash: 938ecd4dac68dd2bd2ec
+Version: webpack 4.44.2
+Time: 2996ms
+Built at: 11/09/2020 5:06:15 AM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-31c0a7fd2aa09b742314.js    124 KiB  application  [emitted] [immutable]  application
+js/application-31c0a7fd2aa09b742314.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  384 bytes               [emitted]              
+Entrypoint application = js/application-31c0a7fd2aa09b742314.js js/application-31c0a7fd2aa09b742314.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+Completed 200 OK in 5020ms (Views: 5014.2ms | ActiveRecord: 0.2ms | Allocations: 25685)
+  [1m[35m (1.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "mark@colgate.edu"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "payment", "created_at", "updated_at", "encrypted_password") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Mark"], ["email", "mark@colgate.edu"], ["payment", "venmo"], ["created_at", "2020-11-09 05:06:15.431651"], ["updated_at", "2020-11-09 05:06:15.431651"], ["encrypted_password", "$2a$04$DQF8KwQlgtxA5XKAS8A1DuTY7gtOMGraE2FR6mP0w0FNk4U2DRnF."]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "amy@colgate.edu"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "payment", "created_at", "updated_at", "encrypted_password") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Amy"], ["email", "amy@colgate.edu"], ["payment", "cash"], ["created_at", "2020-11-09 05:06:15.435689"], ["updated_at", "2020-11-09 05:06:15.435689"], ["encrypted_password", "$2a$04$XaExspTk6JbiEHKv166vLeny.mcka.ZBM2UR38tO/byq4a9tFYhuy"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mItem Create (0.1ms)[0m  [1m[32mINSERT INTO "items" ("name", "price", "image", "description", "listed", "status", "deliverable", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Table"], ["price", 13.13], ["image", "pic.jpg"], ["description", "Surface with 4 legs. It is a table."], ["listed", 1], ["status", "available"], ["deliverable", 1], ["user_id", 1], ["created_at", "2020-11-09 05:06:15.439889"], ["updated_at", "2020-11-09 05:06:15.439889"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mItem Create (0.1ms)[0m  [1m[32mINSERT INTO "items" ("name", "price", "image", "description", "listed", "status", "deliverable", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Muffin Tin"], ["price", 2.0], ["image", "muffin.jpg"], ["description", "Tin for making muffins."], ["listed", 1], ["status", "available"], ["deliverable", 1], ["user_id", 1], ["created_at", "2020-11-09 05:06:15.443169"], ["updated_at", "2020-11-09 05:06:15.443169"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mItem Create (0.1ms)[0m  [1m[32mINSERT INTO "items" ("name", "price", "image", "description", "listed", "status", "deliverable", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Microphone"], ["price", 15.99], ["image", "mic.jpg"], ["description", "Great for singing."], ["listed", 1], ["status", "available"], ["deliverable", 1], ["user_id", 2], ["created_at", "2020-11-09 05:06:15.446222"], ["updated_at", "2020-11-09 05:06:15.446222"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/items" for 127.0.0.1 at 2020-11-09 05:06:15 +0000
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY name[0m
+  Rendered items/index.html.erb within layouts/application (Duration: 4.1ms | Allocations: 1097)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 26ms (Views: 25.2ms | ActiveRecord: 0.1ms | Allocations: 3431)
+Started GET "/items?order=price" for 127.0.0.1 at 2020-11-09 05:06:15 +0000
+Processing by ItemsController#index as HTML
+  Parameters: {"order"=>"price"}
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY price[0m
+  Rendered items/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1087)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.2ms | Allocations: 3417)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "mark@colgate.edu"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "payment", "created_at", "updated_at", "encrypted_password") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Mark"], ["email", "mark@colgate.edu"], ["payment", "venmo"], ["created_at", "2020-11-09 05:06:15.495728"], ["updated_at", "2020-11-09 05:06:15.495728"], ["encrypted_password", "$2a$04$NV7fzA3zXXg.kC0JVQio9OMRqWcqYuzu4vLGiImg2J9k/s3g.v2kC"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "amy@colgate.edu"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "payment", "created_at", "updated_at", "encrypted_password") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Amy"], ["email", "amy@colgate.edu"], ["payment", "cash"], ["created_at", "2020-11-09 05:06:15.499375"], ["updated_at", "2020-11-09 05:06:15.499375"], ["encrypted_password", "$2a$04$NUqEt8bcipmLMXd/jegSoey1gfuGNiADqrgPairEGqQGJjfz.QAFe"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mItem Create (0.2ms)[0m  [1m[32mINSERT INTO "items" ("name", "price", "image", "description", "listed", "status", "deliverable", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Table"], ["price", 13.13], ["image", "pic.jpg"], ["description", "Surface with 4 legs. It is a table."], ["listed", 1], ["status", "available"], ["deliverable", 1], ["user_id", 1], ["created_at", "2020-11-09 05:06:15.501502"], ["updated_at", "2020-11-09 05:06:15.501502"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mItem Create (0.1ms)[0m  [1m[32mINSERT INTO "items" ("name", "price", "image", "description", "listed", "status", "deliverable", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Muffin Tin"], ["price", 2.0], ["image", "muffin.jpg"], ["description", "Tin for making muffins."], ["listed", 1], ["status", "available"], ["deliverable", 1], ["user_id", 1], ["created_at", "2020-11-09 05:06:15.503633"], ["updated_at", "2020-11-09 05:06:15.503633"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mItem Create (0.1ms)[0m  [1m[32mINSERT INTO "items" ("name", "price", "image", "description", "listed", "status", "deliverable", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Microphone"], ["price", 15.99], ["image", "mic.jpg"], ["description", "Great for singing."], ["listed", 1], ["status", "available"], ["deliverable", 1], ["user_id", 2], ["created_at", "2020-11-09 05:06:15.505743"], ["updated_at", "2020-11-09 05:06:15.505743"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/items" for 127.0.0.1 at 2020-11-09 05:06:15 +0000
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY name[0m
+  Rendered items/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1087)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.1ms | Allocations: 3418)
+Started GET "/items?order=name" for 127.0.0.1 at 2020-11-09 05:06:15 +0000
+Processing by ItemsController#index as HTML
+  Parameters: {"order"=>"name"}
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY name[0m
+  Rendered items/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1087)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 5ms (Views: 4.8ms | ActiveRecord: 0.1ms | Allocations: 3416)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "mark@colgate.edu"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "payment", "created_at", "updated_at", "encrypted_password") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Mark"], ["email", "mark@colgate.edu"], ["payment", "venmo"], ["created_at", "2020-11-09 05:06:15.530767"], ["updated_at", "2020-11-09 05:06:15.530767"], ["encrypted_password", "$2a$04$LoICyGW9081lgi90NM6suORib.RAiJz5w1c7VBAdN1UJ8WR15Hlae"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "amy@colgate.edu"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "payment", "created_at", "updated_at", "encrypted_password") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Amy"], ["email", "amy@colgate.edu"], ["payment", "cash"], ["created_at", "2020-11-09 05:06:15.534287"], ["updated_at", "2020-11-09 05:06:15.534287"], ["encrypted_password", "$2a$04$9RszzP/7v4UL8hHzbECSFeyVpsKfDQHyP7OMWChxPXVuw.O6efnoC"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mItem Create (0.1ms)[0m  [1m[32mINSERT INTO "items" ("name", "price", "image", "description", "listed", "status", "deliverable", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Table"], ["price", 13.13], ["image", "pic.jpg"], ["description", "Surface with 4 legs. It is a table."], ["listed", 1], ["status", "available"], ["deliverable", 1], ["user_id", 1], ["created_at", "2020-11-09 05:06:15.536214"], ["updated_at", "2020-11-09 05:06:15.536214"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mItem Create (0.1ms)[0m  [1m[32mINSERT INTO "items" ("name", "price", "image", "description", "listed", "status", "deliverable", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Muffin Tin"], ["price", 2.0], ["image", "muffin.jpg"], ["description", "Tin for making muffins."], ["listed", 1], ["status", "available"], ["deliverable", 1], ["user_id", 1], ["created_at", "2020-11-09 05:06:15.538220"], ["updated_at", "2020-11-09 05:06:15.538220"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mItem Create (0.1ms)[0m  [1m[32mINSERT INTO "items" ("name", "price", "image", "description", "listed", "status", "deliverable", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Microphone"], ["price", 15.99], ["image", "mic.jpg"], ["description", "Great for singing."], ["listed", 1], ["status", "available"], ["deliverable", 1], ["user_id", 2], ["created_at", "2020-11-09 05:06:15.540275"], ["updated_at", "2020-11-09 05:06:15.540275"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/items" for 127.0.0.1 at 2020-11-09 05:06:15 +0000
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY name[0m
+  Rendered items/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1087)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.2ms | Allocations: 3418)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "mark@colgate.edu"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "payment", "created_at", "updated_at", "encrypted_password") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Mark"], ["email", "mark@colgate.edu"], ["payment", "venmo"], ["created_at", "2020-11-09 05:06:15.554708"], ["updated_at", "2020-11-09 05:06:15.554708"], ["encrypted_password", "$2a$04$YTbmO8elaE.tPYCcPBjMnONMtofdHnuEhrVA4XUyG09UJe/33XxHu"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "amy@colgate.edu"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "payment", "created_at", "updated_at", "encrypted_password") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Amy"], ["email", "amy@colgate.edu"], ["payment", "cash"], ["created_at", "2020-11-09 05:06:15.558194"], ["updated_at", "2020-11-09 05:06:15.558194"], ["encrypted_password", "$2a$04$Q3AAir5JfNi9jiAsSkBh8uFqyV5NuoVwh2ulWEAKqyM5Qs272tEuO"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mItem Create (0.1ms)[0m  [1m[32mINSERT INTO "items" ("name", "price", "image", "description", "listed", "status", "deliverable", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Table"], ["price", 13.13], ["image", "pic.jpg"], ["description", "Surface with 4 legs. It is a table."], ["listed", 1], ["status", "available"], ["deliverable", 1], ["user_id", 1], ["created_at", "2020-11-09 05:06:15.560305"], ["updated_at", "2020-11-09 05:06:15.560305"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mItem Create (0.1ms)[0m  [1m[32mINSERT INTO "items" ("name", "price", "image", "description", "listed", "status", "deliverable", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Muffin Tin"], ["price", 2.0], ["image", "muffin.jpg"], ["description", "Tin for making muffins."], ["listed", 1], ["status", "available"], ["deliverable", 1], ["user_id", 1], ["created_at", "2020-11-09 05:06:15.562354"], ["updated_at", "2020-11-09 05:06:15.562354"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mItem Create (0.1ms)[0m  [1m[32mINSERT INTO "items" ("name", "price", "image", "description", "listed", "status", "deliverable", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Microphone"], ["price", 15.99], ["image", "mic.jpg"], ["description", "Great for singing."], ["listed", 1], ["status", "available"], ["deliverable", 1], ["user_id", 2], ["created_at", "2020-11-09 05:06:15.564357"], ["updated_at", "2020-11-09 05:06:15.564357"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/items" for 127.0.0.1 at 2020-11-09 05:06:15 +0000
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY name[0m
+  Rendered items/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1087)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.1ms | Allocations: 3418)
+Started GET "/items/1" for 127.0.0.1 at 2020-11-09 05:06:15 +0000
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering items/show.html.erb within layouts/application
+  Rendered items/show.html.erb within layouts/application (Duration: 7.5ms | Allocations: 537)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 11.0ms | ActiveRecord: 0.2ms | Allocations: 3188)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m

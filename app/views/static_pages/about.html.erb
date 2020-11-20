@@ -1,0 +1,26 @@
+
+
+<% provide(:title, "About") %>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= yield(:title) %> | Ruby on Rails Tutorial Sample App</title>
+  </head>
+  <body>
+    <h1>About</h1>
+    <p>
+
+      There is a huge disparity between the socio-economic status of students at Colgate. 
+      At the end of the school year, Colgate students scramble to get rid of furniture, while others desperately hunt for deals on used furniture for their dorms. 
+      Distance, price and availability makes it tough to get the items we always want. 
+      Not to mention we live in the middle of nowhere and it can be hard to find stuff if you don’t have a car or don’t want to buy something brand-new, or even just haul it home from the mailroom. 
+      In the past there’s been a google spreadsheet to indicate sellers/buyers, but it was super disorganized, didn’t offer helpful features (like photos), and it was super non-secure (anyone could edit). 
+      Our app makes a reliable, user-friendly way to solve the problem of selling and buying items at the end of our semester. 
+
+    </p>
+    <div>
+        <%= link_to("Back to home", items_path, :class => "btn btn-primary") %>
+    </div>
+  </body>
+
+</html>

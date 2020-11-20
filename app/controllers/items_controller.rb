@@ -22,6 +22,8 @@ class ItemsController < ApplicationController
     end
   end
   
+
+  
   def new 
     @item = current_user.items.build
   end
