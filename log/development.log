@@ -12826,3 +12826,191 @@ Net::SMTPAuthenticationError (530-5.7.0 Authentication Required. Learn more at
 ):
   
 app/controllers/items_controller.rb:63:in `send_interest_email'
+Started GET "/items" for 149.43.114.173 at 2020-11-20 00:17:57 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:2
+  [1m[36mItem Load (0.6ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY name[0m
+  ↳ app/views/items/index.html.erb:48
+  Rendered items/index.html.erb within layouts/application (Duration: 64.7ms | Allocations: 19329)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 164ms (Views: 130.1ms | ActiveRecord: 2.3ms | Allocations: 38434)
+
+
+Started GET "/items/5" for 149.43.114.173 at 2020-11-20 00:17:58 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:19:in `show'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:20:in `show'
+  Rendering items/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Item"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/items/show.html.erb:13
+  Rendered items/show.html.erb within layouts/application (Duration: 31.9ms | Allocations: 9087)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 52ms (Views: 36.6ms | ActiveRecord: 1.3ms | Allocations: 20127)
+
+
+Started GET "/send_interest_email?id=5" for 149.43.114.173 at 2020-11-20 00:18:00 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ItemsController#send_interest_email as HTML
+  Parameters: {"id"=>"5"}
+HERE
+{"id"=>"5", "controller"=>"items", "action"=>"send_interest_email"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:59:in `send_interest_email'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:60:in `send_interest_email'
+asong@colgate.edu
+EmailMailer#interest_email: processed outbound mail in 0.8ms
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.2ms | Allocations: 6367)
+
+
+  
+NoMethodError (undefined method `name' for nil:NilClass):
+  
+app/mailers/email_mailer.rb:7:in `interest_email'
+app/controllers/items_controller.rb:63:in `send_interest_email'
+Started GET "/send_interest_email?id=5" for 149.43.114.173 at 2020-11-20 00:19:13 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ItemsController#send_interest_email as HTML
+  Parameters: {"id"=>"5"}
+HERE
+{"id"=>"5", "controller"=>"items", "action"=>"send_interest_email"}
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:59:in `send_interest_email'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:60:in `send_interest_email'
+EmailMailer#interest_email: processed outbound mail in 0.9ms
+Completed 500 Internal Server Error in 43ms (ActiveRecord: 1.5ms | Allocations: 23077)
+
+
+  
+NoMethodError (undefined method `name' for nil:NilClass):
+  
+app/mailers/email_mailer.rb:7:in `interest_email'
+app/controllers/items_controller.rb:62:in `send_interest_email'
+Started GET "/send_interest_email?id=5" for 149.43.114.173 at 2020-11-20 00:19:15 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ItemsController#send_interest_email as HTML
+  Parameters: {"id"=>"5"}
+HERE
+{"id"=>"5", "controller"=>"items", "action"=>"send_interest_email"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:59:in `send_interest_email'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:60:in `send_interest_email'
+EmailMailer#interest_email: processed outbound mail in 0.9ms
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.2ms | Allocations: 2683)
+
+
+  
+NoMethodError (undefined method `name' for nil:NilClass):
+  
+app/mailers/email_mailer.rb:7:in `interest_email'
+app/controllers/items_controller.rb:62:in `send_interest_email'
+Started GET "/send_interest_email?id=5" for 149.43.114.173 at 2020-11-20 00:19:16 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ItemsController#send_interest_email as HTML
+  Parameters: {"id"=>"5"}
+HERE
+{"id"=>"5", "controller"=>"items", "action"=>"send_interest_email"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:59:in `send_interest_email'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:60:in `send_interest_email'
+EmailMailer#interest_email: processed outbound mail in 0.9ms
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.7ms | Allocations: 2667)
+
+
+  
+NoMethodError (undefined method `name' for nil:NilClass):
+  
+app/mailers/email_mailer.rb:7:in `interest_email'
+app/controllers/items_controller.rb:62:in `send_interest_email'
+Started GET "/send_interest_email?id=5" for 149.43.114.173 at 2020-11-20 00:20:12 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ItemsController#send_interest_email as HTML
+  Parameters: {"id"=>"5"}
+HERE
+{"id"=>"5", "controller"=>"items", "action"=>"send_interest_email"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:59:in `send_interest_email'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:60:in `send_interest_email'
+  Rendering email_mailer/interest_email.html.erb within layouts/mailer
+  Rendered email_mailer/interest_email.html.erb within layouts/mailer (Duration: 1.7ms | Allocations: 1444)
+EmailMailer#interest_email: processed outbound mail in 4.4ms
+Completed 500 Internal Server Error in 49ms (ActiveRecord: 1.4ms | Allocations: 24474)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+     6:   <body>
+     7:     <h1> Dear: <%= @seller.name %> </h1>
+     8:     <p>
+     9:         <%= @buyer.name %> is interested in your product <%= @item.name %> <br>
+    10:         You can contact buyer at <%= @buyer.email %>. 
+    11:     </p>
+    12:     <p>Thanks & have a great day! :) </p>
+  
+app/views/email_mailer/interest_email.html.erb:9
+app/mailers/email_mailer.rb:8:in `interest_email'
+app/controllers/items_controller.rb:62:in `send_interest_email'
+Started GET "/send_interest_email?id=5" for 149.43.114.173 at 2020-11-20 00:20:15 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ItemsController#send_interest_email as HTML
+  Parameters: {"id"=>"5"}
+HERE
+{"id"=>"5", "controller"=>"items", "action"=>"send_interest_email"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:59:in `send_interest_email'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:60:in `send_interest_email'
+  Rendering email_mailer/interest_email.html.erb within layouts/mailer
+  Rendered email_mailer/interest_email.html.erb within layouts/mailer (Duration: 1.0ms | Allocations: 1274)
+EmailMailer#interest_email: processed outbound mail in 2.9ms
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.2ms | Allocations: 4064)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+     6:   <body>
+     7:     <h1> Dear: <%= @seller.name %> </h1>
+     8:     <p>
+     9:         <%= @buyer.name %> is interested in your product <%= @item.name %> <br>
+    10:         You can contact buyer at <%= @buyer.email %>. 
+    11:     </p>
+    12:     <p>Thanks & have a great day! :) </p>
+  
+app/views/email_mailer/interest_email.html.erb:9
+app/mailers/email_mailer.rb:8:in `interest_email'
+app/controllers/items_controller.rb:62:in `send_interest_email'
+Started GET "/send_interest_email?id=5" for 149.43.114.173 at 2020-11-20 00:21:14 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ItemsController#send_interest_email as HTML
+  Parameters: {"id"=>"5"}
+HERE
+{"id"=>"5", "controller"=>"items", "action"=>"send_interest_email"}
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:59:in `send_interest_email'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:60:in `send_interest_email'
+EmailMailer#interest_email: processed outbound mail in 0.8ms
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 1.6ms | Allocations: 22375)
+
+
+  
+NoMethodError (undefined method `name' for nil:NilClass):
+  
+app/mailers/email_mailer.rb:7:in `interest_email'
+app/controllers/items_controller.rb:62:in `send_interest_email'

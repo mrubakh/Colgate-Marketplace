@@ -59,7 +59,6 @@ class ItemsController < ApplicationController
     @item = Item.find(params[:id])
     @seller = User.find(@item.user_id)
     @buyer = current_user
-    logger.debug(@seller.email)
     if EmailMailer.interest_email(@seller, @buyer, @item).deliver_now
       flash[:notice] = "Email has been sent."
     end
