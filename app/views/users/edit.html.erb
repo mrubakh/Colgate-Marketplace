@@ -1,0 +1,18 @@
+ <%= link_to 'Home', root_path %>
+    <h2>Edit Profile</h2>
+    <p>You are logged in as <%= @user.name %> with email <%= @user.email %>.</p>
+    
+    <%= form_for :user, local: true do |f| %>
+      <p>
+        <%= f.label :name %><br>
+        <%= f.text_field :name %>
+      </p>
+      <p>
+        <%= f.label :payment %>
+        (Your preferred payment method--venmo username, cash etc) <br>
+        <%= f.text_field :payment %>
+      </p>
+      <p>
+        <%= f.submit %>
+      </p>
+    <% end %>
