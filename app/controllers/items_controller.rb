@@ -60,7 +60,7 @@ class ItemsController < ApplicationController
     @seller = User.find(@item.user_id)
     @buyer = current_user
     logger.debug(@seller.email)
-    if EmailMailer.interest_email(@seller, @buyer, @item).deliver
+    if EmailMailer.interest_email(@seller, @buyer, @item).deliver_now
       flash[:notice] = "Email has been sent."
     end
     redirect_to item_path(@item.id)
