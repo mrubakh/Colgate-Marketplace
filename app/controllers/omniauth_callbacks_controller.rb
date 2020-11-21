@@ -10,10 +10,6 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
           flash[:notice] = "Please use a @colgate.edu email address to log in."
           redirect_to root_path
         end
-      else
-        email = request.env['omniauth.auth'].info.email
-        flash[:warning] = "No user #{email} configured; contact the administrator"
-        redirect_to root_path and return
       end
   end
 end
