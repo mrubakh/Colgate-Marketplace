@@ -31,6 +31,7 @@ class ItemsController < ApplicationController
     params[:item][:listed] = true
     i = current_user.items.build(item_params)
     current_user.items << i
+    
     if i.valid?
       i.image.attach(params[:item][:image])
       flash[:notice] = "New item \"#{i.name}\" listed"
