@@ -1,37 +1,53 @@
-<h2 class="itemname"><%= "Item details for #{@item.name}" %></h2>
+<body>
+    <div class="lightbox-blanket">
+        <div class="pop-up-container">
+           <div class="pop-up-container-vertical">
+                <div class="pop-up-wrapper">
+                   <div class="go-back">
 
-<h4>Description</h4>
-<div class="item-desc">
-  <p><%= @item.description %> </p>
-</div>
-<h4>Status</h4>
-<div class="item-status">
-  <p><%= @item.status %></p>
-</div>
-<h4>Image</h4>
-<div class="item-image">
-   <% if @item.image.attached?%> 
-   <%= image_tag(@item.image)%> 
-   <% else %>
-   <%= image_tag('image_placeholder.jpg',size: '300')%> 
-   <% end %>
-</div>
-<h4>Deliverable</h4>
-<div class="item-deliverable">
-  <% if @item.listed %> 
-    <p><%= "yes"%></p>
-  <% else %>
-    <p><%= "no" %></p>
-  <% end %>
-</div>
-<h4>Price</h4>
-<div class="item-price">
-  <p><%= number_to_currency(@item.price) %></p>
-</div>
+                    <%= link_to("Back", items_path) %>
 
-<h4>Sold by: </h4>
-<p> <%= link_to(@seller , user_path(:userID => @sellerID)) %> </p>
+                    </div>
+                    <div class="itemlist">
+                        <div class="itemlist-item-wrapper">
+                            <div class="product-details">
+                                <div class="product-left">
+                                    <div class="product-info">
 
-<div>
-  <%= link_to("Back to item list", items_path, :class => "btn btn-primary") %>
-</div>
+                                        <div class="product-title">
+                                           <%= "#{@item.name}" %>
+                                        </div>
+                                        <div class="product-price">
+                                            <p><%= number_to_currency(@item.price) %></p>        
+                                        </div>
+                                    </div>
+
+
+                                    <div class="product-description">
+                                        <%= @item.description %>
+                                    </div>
+                                    <div class="product-available">
+                                        <%= @item.status %> 
+                                    </div>
+
+                                   <div class="product-image">
+                                         <% if @item.image.attached?%> 
+                                         <%= image_tag(@item.image, :width => 300)%>
+                                         <% else %>
+                                         <%= image_tag("image_placeholder.jpg",size: '300')%> 
+                                         <% end %>
+                                   </div>
+                                </div>
+
+
+       
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+</body>
