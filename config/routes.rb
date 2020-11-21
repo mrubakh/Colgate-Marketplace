@@ -12,4 +12,3 @@ Rails.application.routes.draw do
     post '/users/:id/edit' => 'users#update', :as => 'update_user'
     end
  
-end
