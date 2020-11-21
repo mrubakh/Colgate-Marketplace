@@ -4,6 +4,7 @@ class EmailMailer < ApplicationMailer
         @seller = seller
         @buyer = buyer
         @item = item
+        
         mail(to: @seller.email, subject: "#{@buyer.name} is interested in your #{@item.name}")
     end
 end

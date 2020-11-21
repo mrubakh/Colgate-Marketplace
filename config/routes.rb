@@ -8,4 +8,4 @@ Rails.application.routes.draw do
     get '/search' => 'items#search', :as => 'search_item'
     get 'send_interest_email', to: 'items#send_interest_email'
     post '/users/:id/edit' => 'users#update', :as => 'update_user'
-   end
+end

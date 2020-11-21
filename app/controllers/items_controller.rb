@@ -60,9 +60,8 @@ class ItemsController < ApplicationController
     if current_user
       @seller = User.find(@item.user_id)
       @buyer = current_user
-      if EmailMailer.interest_email(@seller, @buyer, @item).deliver_now
-        flash[:notice] = "Email has been sent."
-      end
+      EmailMailer.with(@seller).interest_email(@seller, @buyer, @item).deliver_now
+      flash[:notice] = "Email has been sent."
       redirect_to item_path(@item.id)
     else
       flash[:warning] = "Need to be logged in to contact seller"
