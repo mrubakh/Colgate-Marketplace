@@ -1,20 +1,25 @@
 class UsersController < ApplicationController
-    # def new
-    #     @user = User.new
-    # end
+  def show
+      @user = User.find(params[:userID])
+  end
+  
+  def edit
+    @user = User.find(params[:id])
+  end
     
-    # def create
-    #     @user = User.new(user_params)
-    #     if @user.save
-    #         flash[:notice] = "New user #{@user.email} created"
-    #         redirect_to root_path and return
-    #     else
-    #         flash[:alert] = "Failed to save new user"
-    #         redirect_to new_user_path and return
-    #     end
-    # end
-    
-    def show
-        @user = User.find(params[:userID])
+  def update
+    @user = User.find(params[:id])
+    if @user.update_attributes(user_params)
+    flash[:success] = "Edit Successful."
+    redirect_to root_path
+    else
+      flash[:notice] = "Did not update successfully"
+      render 'edit'
     end
+  end
+  
+  private
+  def user_params
+      params.require(:user).permit(:name, :payment)
+  end
 end
