@@ -1,4 +1,7 @@
 class Item < ApplicationRecord
+    enum category: {:Books => 0, :Electronics => 1, :Furniture => 2}
+    
+    
     belongs_to :user
     has_one_attached :image
     
@@ -11,6 +14,6 @@ class Item < ApplicationRecord
     }
     
     def self.search(query)
-        Item.all.where("lower(name) LIKE ? OR lower(category) LIKE ? OR lower(description) LIKE ?","%"+query+"%","%"+query+"%","%"+query+"%")
+        Item.all.where("lower(name) LIKE ? OR category = ? OR lower(description) LIKE ?","%"+query+"%",Item.categories[query.capitalize],"%"+query+"%")
     end
 end
