@@ -46,4 +46,24 @@ Feature: Search Items in Colgate Marketplace app
         And I should see "Desk"
         And I should not see "Headphones"
         
+    Scenario: Searching by description
+        Given I am on the items index page
+        When I search "solid"
+        Then I should see "Desk"
+        And I should not see "Book"
+        And I should not see "Headphones"
+        
+    Scenario: Searching by description
+        Given I am on the items index page
+        When I search "bad search"
+        Then I should not see "Desk"
+        And I should not see "Book"
+        And I should not see "Headphones"
+        
+    Scenario: Searching by description
+        Given I am on the items index page
+        When I search "go"
+        Then I should not see "Desk"
+        And I should see "Book"
+        And I should not see "Headphones"
     

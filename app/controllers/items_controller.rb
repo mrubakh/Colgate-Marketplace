@@ -30,6 +30,7 @@ class ItemsController < ApplicationController
     params[:item][:status] = "available"
     params[:item][:listed] = true
     i = current_user.items.build(item_params)
+    
     current_user.items << i
     
     if i.valid?

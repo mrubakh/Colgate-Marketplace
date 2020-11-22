@@ -12,6 +12,6 @@ class Item < ApplicationRecord
     # }
     
     def self.search(query)
-        Item.all.where("lower(name) LIKE ? OR lower(category) LIKE ? OR lower(description) LIKE ?",query,query,query) 
+        Item.all.where("lower(name) LIKE ? OR lower(category) LIKE ? OR lower(description) LIKE ?","%"+query+"%","%"+query+"%","%"+query+"%")
     end
 end
