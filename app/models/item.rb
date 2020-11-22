@@ -10,4 +10,8 @@ class Item < ApplicationRecord
     #     with: /\.(gif|jpg|png|jpeg)\z/i,
     #     message: 'must be a url for gif, jpg, jpeg, or png image'
     # }
+    
+    def self.search(query)
+        Item.all.where("lower(name) LIKE ? OR lower(category) LIKE ? OR lower(description) LIKE ?",query,query,query) 
+    end
 end

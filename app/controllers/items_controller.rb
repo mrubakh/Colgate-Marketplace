@@ -47,7 +47,8 @@ class ItemsController < ApplicationController
   def search
     if !params[:search].empty?
       @phrase = params[:search]
-      @items = Item.all.where("lower(name) LIKE :phrase", phrase: @phrase) 
+      @phrase = @phrase.downcase
+      @items = Item.search(@phrase)
       render "items/index" and return
     else
       flash[:alert] = "Empty Search"
@@ -61,6 +62,6 @@ class ItemsController < ApplicationController
     end
     
     def item_params
-      params.require(:item).permit(:name, :description, :price, :image, :deliverable, :listed, :status)
+      params.require(:item).permit(:name, :description, :price, :image, :deliverable, :status, :listed, :category)
     end
 end
