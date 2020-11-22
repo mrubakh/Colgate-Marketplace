@@ -29,6 +29,7 @@ class ItemsController < ApplicationController
   def create
     params[:item][:status] = "available"
     i = current_user.items.build(item_params)
+    
     current_user.items << i
     if i.valid?
       i.image.attach(params[:item][:image])
@@ -60,6 +61,6 @@ class ItemsController < ApplicationController
     end
     
     def item_params
-      params.require(:item).permit(:name, :description, :price, :image, :deliverable, :status, :category)
+      params.require(:item).permit(:name, :description, :price, :image, :deliverable, :status, :listed, :category)
     end
 end
