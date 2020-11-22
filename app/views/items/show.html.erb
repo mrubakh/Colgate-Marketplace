@@ -26,9 +26,13 @@
          <% end %>
       </div>
       <div>
-        <p> <%= link_to(@seller.name, user_path(:userID => @sellerID)) %> </p>
-        <% params[:id] = @item.id %>
-        <p> <%= link_to("contact seller" ,:controller => "items", :action => "send_interest_email", :id => @item.id) %> </p>
+         <% if @seller.name && @seller.name!="" %>
+            <p> <%= link_to(@seller.name, user_path(:userID => @sellerID)) %> </p>
+         <% else %>
+            <p> <%= link_to(@seller.email, user_path(:userID => @sellerID)) %> </p>
+         <% end %>
+         <% params[:id] = @item.id %>
+         <p> <%= link_to("contact seller" ,:controller => "items", :action => "send_interest_email", :id => @item.id) %> </p>
       </div>
       <div class="update-and-delete">
          <% if user_signed_in? and @seller == current_user%>
