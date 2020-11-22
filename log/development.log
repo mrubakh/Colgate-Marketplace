@@ -18941,3 +18941,566 @@ Completed 200 OK in 15ms (Views: 13.7ms | ActiveRecord: 0.3ms | Allocations: 558
 
 
 >>>>>>> 24c8f99cf8a2286ca36c72f0e9e66165572820d0
+Started GET "/" for 149.43.114.173 at 2020-11-22 15:14:25 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (2.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (6.0.3.4) lib/active_record/migration.rb:586:in `check_pending!'
+activerecord (6.0.3.4) lib/active_record/migration.rb:564:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:19:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for 149.43.114.173 at 2020-11-22 15:14:47 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (6.0.3.4) lib/active_record/migration.rb:586:in `check_pending!'
+activerecord (6.0.3.4) lib/active_record/migration.rb:564:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:19:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddFieldsToItems (20201119173231)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.4ms)[0m  [1m[35mALTER TABLE "items" ADD "category" varchar[0m
+  [1m[36mprimary::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20201119173231"]]
+  [1m[35m (7.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 149.43.114.173 at 2020-11-22 15:14:51 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY name[0m
+  ↳ app/views/items/index.html.erb:36
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:66
+  Rendered items/index.html.erb within layouts/application (Duration: 72.2ms | Allocations: 25986)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 364ms (Views: 341.0ms | ActiveRecord: 1.6ms | Allocations: 57563)
+
+
+Started GET "/items/5" for 149.43.114.173 at 2020-11-22 15:14:53 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:19:in `show'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:20:in `show'
+  Rendering items/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Item"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/items/show.html.erb:13
+  Rendered items/show.html.erb within layouts/application (Duration: 22.3ms | Allocations: 7162)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:36
+Completed 200 OK in 37ms (Views: 30.3ms | ActiveRecord: 1.0ms | Allocations: 13142)
+
+
+Started GET "/send_interest_email?id=5" for 149.43.114.173 at 2020-11-22 15:14:55 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ItemsController#send_interest_email as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:60:in `send_interest_email'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:61:in `send_interest_email'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:62:in `send_interest_email'
+  Rendering email_mailer/interest_email.html.erb within layouts/mailer
+  Rendered email_mailer/interest_email.html.erb within layouts/mailer (Duration: 0.4ms | Allocations: 175)
+  Rendering email_mailer/interest_email.text.erb within layouts/mailer
+  Rendered email_mailer/interest_email.text.erb within layouts/mailer (Duration: 0.3ms | Allocations: 157)
+EmailMailer#interest_email: processed outbound mail in 10.3ms
+Delivered mail 5fba806fc4314_10102b23bbb4d444716d3@ip-172-31-12-21.mail (214.5ms)
+Date: Sun, 22 Nov 2020 15:14:55 +0000
+From: colgatemarketplace@gmail.com
+To: asong@colgate.edu
+Message-ID: <5fba806fc4314_10102b23bbb4d444716d3@ip-172-31-12-21.mail>
+Subject: amy is interested in your Muffin Tin
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5fba806fc2cc3_10102b23bbb4d44471579";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5fba806fc2cc3_10102b23bbb4d44471579
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+Dear: Brian Casey
+===============================================
+ 
+amy is interested in your product Muffin Tin.
+You can contact buyer at amy@amy.com. 
+ 
+Thanks & have a great day! :) 
+
+----==_mimepart_5fba806fc2cc3_10102b23bbb4d44471579
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1> Dear: Brian Casey </h1>
+    <p>
+        amy is interested in your product Muffin Tin <br>
+        You can contact buyer at amy@amy.com. 
+    </p>
+    <p>Thanks & have a great day! :) </p>
+  </body>
+</html>
+  </body>
+</html>
+
+----==_mimepart_5fba806fc2cc3_10102b23bbb4d44471579--
+
+Completed 500 Internal Server Error in 292ms (ActiveRecord: 0.3ms | Allocations: 25419)
+
+
+  
+Net::SMTPAuthenticationError (535-5.7.8 Username and Password not accepted. Learn more at
+):
+  
+app/controllers/items_controller.rb:64:in `send_interest_email'
+Started GET "/items/5" for 149.43.114.173 at 2020-11-22 15:15:56 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mItem Load (1.0ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:19:in `show'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:20:in `show'
+  Rendering items/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Item"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/items/show.html.erb:13
+  Rendered items/show.html.erb within layouts/application (Duration: 6.4ms | Allocations: 1868)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:36
+Completed 200 OK in 43ms (Views: 38.1ms | ActiveRecord: 1.3ms | Allocations: 7487)
+
+
+Started GET "/users/5?userID=4" for 149.43.114.173 at 2020-11-22 15:15:57 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#show as HTML
+  Parameters: {"userID"=>"4", "id"=>"5"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3:in `show'
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 1.2ms | Allocations: 273)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:36
+Completed 200 OK in 19ms (Views: 11.4ms | ActiveRecord: 0.2ms | Allocations: 6090)
+
+
+Started GET "/items" for 149.43.114.173 at 2020-11-22 15:16:00 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY name[0m
+  ↳ app/views/items/index.html.erb:36
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:66
+  Rendered items/index.html.erb within layouts/application (Duration: 6.4ms | Allocations: 2592)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 12.8ms | ActiveRecord: 0.4ms | Allocations: 6348)
+
+
+Started GET "/items/5" for 149.43.114.173 at 2020-11-22 15:16:01 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:19:in `show'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:20:in `show'
+  Rendering items/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Item"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/items/show.html.erb:13
+  Rendered items/show.html.erb within layouts/application (Duration: 11.9ms | Allocations: 1861)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:36
+Completed 200 OK in 26ms (Views: 20.4ms | ActiveRecord: 0.4ms | Allocations: 7474)
+
+
+Started GET "/send_interest_email?id=5" for 149.43.114.173 at 2020-11-22 15:16:03 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ItemsController#send_interest_email as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:60:in `send_interest_email'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:61:in `send_interest_email'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:62:in `send_interest_email'
+  Rendering email_mailer/interest_email.html.erb within layouts/mailer
+  Rendered email_mailer/interest_email.html.erb within layouts/mailer (Duration: 0.1ms | Allocations: 13)
+  Rendering email_mailer/interest_email.text.erb within layouts/mailer
+  Rendered email_mailer/interest_email.text.erb within layouts/mailer (Duration: 0.0ms | Allocations: 4)
+EmailMailer#interest_email: processed outbound mail in 11.8ms
+Delivered mail 5fba80b321981_10102b23bbb4d81871876@ip-172-31-12-21.mail (152.3ms)
+Date: Sun, 22 Nov 2020 15:16:03 +0000
+From: colgatemarketplace@gmail.com
+To: asong@colgate.edu
+Message-ID: <5fba80b321981_10102b23bbb4d81871876@ip-172-31-12-21.mail>
+Subject: amy is interested in your Muffin Tin
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5fba80b320cc1_10102b23bbb4d818717c1";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5fba80b320cc1_10102b23bbb4d818717c1
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+Dear: Brian Casey
+===============================================
+ 
+amy is interested in your product Muffin Tin.
+You can contact buyer at amy@amy.com. 
+ 
+Thanks & have a great day! :) 
+
+----==_mimepart_5fba80b320cc1_10102b23bbb4d818717c1
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1> Dear: Brian Casey </h1>
+    <p>
+        amy is interested in your product Muffin Tin <br>
+        You can contact buyer at amy@amy.com. 
+    </p>
+    <p>Thanks & have a great day! :) </p>
+  </body>
+</html>
+  </body>
+</html>
+
+----==_mimepart_5fba80b320cc1_10102b23bbb4d818717c1--
+
+Completed 500 Internal Server Error in 190ms (ActiveRecord: 0.3ms | Allocations: 11193)
+
+
+  
+Net::SMTPAuthenticationError (535-5.7.8 Username and Password not accepted. Learn more at
+):
+  
+app/controllers/items_controller.rb:64:in `send_interest_email'
+Started GET "/items/5" for 149.43.114.173 at 2020-11-22 15:16:20 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mItem Load (0.8ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:19:in `show'
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:20:in `show'
+  Rendering items/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.9ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Item"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/items/show.html.erb:13
+  Rendered items/show.html.erb within layouts/application (Duration: 56.2ms | Allocations: 11452)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:36
+Completed 200 OK in 128ms (Views: 75.9ms | ActiveRecord: 4.5ms | Allocations: 38409)
+
+
+Started GET "/send_interest_email?id=5" for 149.43.114.173 at 2020-11-22 15:16:22 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ItemsController#send_interest_email as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:60:in `send_interest_email'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:61:in `send_interest_email'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:62:in `send_interest_email'
+  Rendering email_mailer/interest_email.html.erb within layouts/mailer
+  Rendered email_mailer/interest_email.html.erb within layouts/mailer (Duration: 1.1ms | Allocations: 181)
+  Rendering email_mailer/interest_email.text.erb within layouts/mailer
+  Rendered email_mailer/interest_email.text.erb within layouts/mailer (Duration: 1.1ms | Allocations: 157)
+EmailMailer#interest_email: processed outbound mail in 12.5ms
+Delivered mail 5fba80c7117ca_11612abdffb269ec66922@ip-172-31-12-21.mail (163.6ms)
+Date: Sun, 22 Nov 2020 15:16:23 +0000
+From: colgatemarketplace@gmail.com
+To: asong@colgate.edu
+Message-ID: <5fba80c7117ca_11612abdffb269ec66922@ip-172-31-12-21.mail>
+Subject: amy is interested in your Muffin Tin
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5fba80c71067b_11612abdffb269ec6681a";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5fba80c71067b_11612abdffb269ec6681a
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+Dear: Brian Casey
+===============================================
+ 
+amy is interested in your product Muffin Tin.
+You can contact buyer at amy@amy.com. 
+ 
+Thanks & have a great day! :) 
+
+----==_mimepart_5fba80c71067b_11612abdffb269ec6681a
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1> Dear: Brian Casey </h1>
+    <p>
+        amy is interested in your product Muffin Tin <br>
+        You can contact buyer at amy@amy.com. 
+    </p>
+    <p>Thanks & have a great day! :) </p>
+  </body>
+</html>
+  </body>
+</html>
+
+----==_mimepart_5fba80c71067b_11612abdffb269ec6681a--
+
+Completed 500 Internal Server Error in 255ms (ActiveRecord: 0.3ms | Allocations: 25361)
+
+
+  
+Net::SMTPAuthenticationError (535-5.7.8 Username and Password not accepted. Learn more at
+):
+  
+app/controllers/items_controller.rb:64:in `send_interest_email'
+Started GET "/send_interest_email?id=5" for 149.43.114.173 at 2020-11-22 15:19:58 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (3.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ItemsController#send_interest_email as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:60:in `send_interest_email'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:61:in `send_interest_email'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:62:in `send_interest_email'
+  Rendering email_mailer/interest_email.html.erb within layouts/mailer
+  Rendered email_mailer/interest_email.html.erb within layouts/mailer (Duration: 3.5ms | Allocations: 458)
+  Rendering email_mailer/interest_email.text.erb within layouts/mailer
+  Rendered email_mailer/interest_email.text.erb within layouts/mailer (Duration: 0.6ms | Allocations: 157)
+EmailMailer#interest_email: processed outbound mail in 49.6ms
+Delivered mail 5fba819f1f6f8_12cb2afbdeadae0860895@ip-172-31-12-21.mail (195.4ms)
+Date: Sun, 22 Nov 2020 15:19:59 +0000
+From: colgatemarketplace@gmail.com
+To: asong@colgate.edu
+Message-ID: <5fba819f1f6f8_12cb2afbdeadae0860895@ip-172-31-12-21.mail>
+Subject: amy is interested in your Muffin Tin
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5fba819f1a26b_12cb2afbdeadae0860723";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5fba819f1a26b_12cb2afbdeadae0860723
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+Dear: Brian Casey
+===============================================
+ 
+amy is interested in your product Muffin Tin.
+You can contact buyer at amy@amy.com. 
+ 
+Thanks & have a great day! :) 
+
+----==_mimepart_5fba819f1a26b_12cb2afbdeadae0860723
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1> Dear: Brian Casey </h1>
+    <p>
+        amy is interested in your product Muffin Tin <br>
+        You can contact buyer at amy@amy.com. 
+    </p>
+    <p>Thanks & have a great day! :) </p>
+  </body>
+</html>
+  </body>
+</html>
+
+----==_mimepart_5fba819f1a26b_12cb2afbdeadae0860723--
+
+Completed 500 Internal Server Error in 410ms (ActiveRecord: 1.7ms | Allocations: 47508)
+
+
+  
+Net::SMTPAuthenticationError (535-5.7.8 Username and Password not accepted. Learn more at
+):
+  
+app/controllers/items_controller.rb:64:in `send_interest_email'
