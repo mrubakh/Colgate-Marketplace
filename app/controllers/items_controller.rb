@@ -58,6 +58,7 @@ class ItemsController < ApplicationController
   end
   
   def send_interest_email
+    # will refactor in next iteration
     @item = Item.find(params[:id])
     if current_user
       @seller = User.find(@item.user_id)
