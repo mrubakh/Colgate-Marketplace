@@ -5,8 +5,8 @@
   <div class="input-group">  
     <%= search_field_tag :search, params[:search], placeholder: "Search", class: "form-control", id: "searchBar"%>  
     <div class="input-group-btn">  
-      <%= button_tag "Search", :class => 'btn btn-info glyphicon glyphicon-search', :name => nil, id: "searchButton" %>  
-      <%= link_to "Clear Search", request.path, class:"cancel-button" %>
+      <%= button_tag "Search", :class => 'btn btn-info glyphicon glyphicon-search', :name => nil, id: "searchButton" %>
+      <%= button_to "Clear Search", request.path, class:"cancel-button", :class => 'btn btn-info glyphicon'%>
      </div>  
   </div> 
   <% end %>
