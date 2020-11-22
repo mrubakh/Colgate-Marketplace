@@ -34,9 +34,9 @@ Rails.application.configure do
   config.active_storage.service = :test
 
   # Don't care if the mailer can't send.
-  config.action_mailer.raise_delivery_errors = false
-
-  config.action_mailer.perform_caching = false
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.perform_caching = true
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
@@ -55,7 +55,30 @@ Rails.application.configure do
 
   # Suppress logger output for asset requests.
   config.assets.quiet = true
+  config.action_mailer.perform_deliveries = true
+  # ActionMailer::Base.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    address: "smtp.gmail.com",
+    port: 587,
+    authentication: "plain",
+    enable_starttls_auto: true,
+    user_name: ENV['GMAIL_USERNAME'],
+    password: ENV['GMAIL_PASSWORD'],
+    domain: "smtp.gmail.com",
+    openssl_verify_mode: "none",
+  }
+  # config.action_mailer.smtp_settings = {
+  #   :address              => "smtp.gmail.com",
+  #   :port                 => 587,
+  #   :domain               => "smtp.gmail.com",
+  #   :user_name            => ENV['GMAIL_USERNAME'],
+  #   :password             => ENV['GMAIL_PASSWORD'],
+  #   :authentication       => "plain",
+  #   :enable_starttls_auto => true,
+  #   :openssl_verify_mode => "none"
+  # }
 
+  config.action_mailer.default_url_options = { host: '41e81f201ccf4ef7ae2cc76de19eb154.vfs.cloud9.us-east-1.amazonaws.com'}
   # Raises error for missing translations.
   # config.action_view.raise_on_missing_translations = true
 
@@ -64,7 +87,6 @@ Rails.application.configure do
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
   config.hosts << "b0e039c9a0a5492b96a19f83a6c53d34.vfs.cloud9.us-east-1.amazonaws.com"
   config.hosts << "8b35d34d5db44622b5394745a18cff1b.vfs.cloud9.us-east-1.amazonaws.com"
-  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
   config.hosts << "41e81f201ccf4ef7ae2cc76de19eb154.vfs.cloud9.us-east-1.amazonaws.com"
   config.hosts << "79d7873481b94c4d8c9d6428428b578d.vfs.cloud9.us-east-1.amazonaws.com"
   config.hosts << "a39ad15c1554449c8dc41e6e9e51d34e.vfs.cloud9.us-east-1.amazonaws.com"

@@ -4,7 +4,7 @@ class ItemsController < ApplicationController
   
   def has_user
     unless current_user
-      flash[:warning] = 'You must be logged in to list an item.'
+      flash[:warning] = 'You must be logged in to perform this action.'
       redirect_to new_user_path
     end
   end
@@ -53,6 +53,20 @@ class ItemsController < ApplicationController
     else
       flash[:alert] = "Empty Search"
       redirect_to root_path and return
+    end
+  end
+  
+  def send_interest_email
+    @item = Item.find(params[:id])
+    if current_user
+      @seller = User.find(@item.user_id)
+      @buyer = current_user
+      EmailMailer.with(@seller).interest_email(@seller, @buyer, @item).deliver_now
+      flash[:notice] = "Email has been sent."
+      redirect_to item_path(@item.id)
+    else
+      flash[:warning] = "Need to be logged in to contact seller"
+      redirect_to item_path(@item.id)
     end
   end
 

@@ -31,6 +31,9 @@
 
 <h4>Sold by: </h4>
 <p> <%= link_to(@seller , user_path(:userID => @sellerID)) %> </p>
+<%= @item %>
+<% params[:id] = @item.id %>
+<p> <%= link_to("contact seller" ,:controller => "items", :action => "send_interest_email", :id => @item.id) %> </p>
 
 <div>
   <%= link_to("Back to item list", items_path, :class => "btn btn-primary") %>
