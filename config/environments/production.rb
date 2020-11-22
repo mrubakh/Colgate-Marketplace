@@ -79,7 +79,7 @@ Rails.application.configure do
   }
   
   
-  config.action_mailer.default_url_options = { host: '41e81f201ccf4ef7ae2cc76de19eb154.vfs.cloud9.us-east-1.amazonaws.com'}
+  config.action_mailer.default_url_options = { host: 'https://agile-shelf-13440.herokuapp.com/'}
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation cannot be found).
