@@ -16,10 +16,10 @@ Given('I am on the items index page, not logged in') do
   visit root_path
 end
 Then('I should see {string}') do |string|
-  page.has_content? string
+  page.should have_content(string)
 end
 But('I should not see {string}') do |string|
-  !page.has_content?(string)
+  page.should_not have_content(string)
 end
 When('I press {string}') do |string|
   page.click_on string
