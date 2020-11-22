@@ -10,7 +10,7 @@ User.delete_all
 Item.delete_all
 
 u1 = User.create!(name: "Brian Casey", email: "asong@colgate.edu", payment: "venmo at bcasey13", password: "gogate")
-u2 = User.create!(name: "Lady Gaga", email: "gaga@email.com", payment: "cash", password: "rarara")
+u2 = User.create!(name: "Lady Gaga", email: "aknox@colgate.edu", payment: "cash", password: "rarara")
 u3 = User.create!(name: "Meg Imperato", email: "mimperato@colgate.edu", payment: "cash", password: "password")
 
 Item.create!(name: "Table", price: 13.13, description: "Surface with 4 legs. It is a table.", listed: true, status: "available", deliverable: true, user: u1)
