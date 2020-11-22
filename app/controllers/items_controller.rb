@@ -1,6 +1,6 @@
 class ItemsController < ApplicationController
   
-  before_action :has_user, :only => [:new, :create]
+  before_action :has_user, :only => [:new, :create, :update]
   
   def has_user
     unless current_user
@@ -19,6 +19,28 @@ class ItemsController < ApplicationController
       @item = Item.find(params[:id])
       @seller = User.find(@item.user_id)
       @sellerID = @item.user_id
+    end
+  end
+  
+  def edit
+    @item = Item.find(params[:id])
+  end
+  
+  def update
+    @item = Item.find(params[:id])
+    if (current_user.items.include?(@item) and @item.update_attributes(item_params))
+      redirect_to item_path (@item), :notice => "#{@item.name} updated."
+    else
+      flash[:alert] = "#{@item.name} could not be updated: " + @item.errors.full_messages.join(",")
+      render 'edit'
+    end
+  end
+  
+  def destroy
+    @item = Item.find(params[:id])
+    if (current_user.items.include?(@item))
+      @item.destroy
+      redirect_to items_path, :notice => "#{@item.name} deleted."
     end
   end
   

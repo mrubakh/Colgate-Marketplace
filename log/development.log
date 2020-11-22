@@ -20498,3 +20498,82 @@ Completed 200 OK in 85ms (Views: 48.0ms | ActiveRecord: 1.9ms | Allocations: 508
 
 Started POST "/users/auth/google_oauth2" for 149.43.114.173 at 2020-11-22 22:23:01 +0000
 Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/" for 149.43.114.173 at 2020-11-22 22:27:17 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY name[0m
+  ↳ app/views/items/index.html.erb:39
+  Rendered items/index.html.erb within layouts/application (Duration: 47.8ms | Allocations: 17934)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 1.5ms | Allocations: 493)
+  Rendered layouts/_footer.html.erb (Duration: 0.9ms | Allocations: 90)
+Completed 200 OK in 229ms (Views: 208.0ms | ActiveRecord: 1.6ms | Allocations: 79706)
+
+
+Started GET "/items/5" for 149.43.114.173 at 2020-11-22 22:27:19 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:19:in `show'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:20:in `show'
+  Rendering items/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Item"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/items/show.html.erb:22
+  Rendered items/show.html.erb within layouts/application (Duration: 22.9ms | Allocations: 7588)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 121)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 81ms (Views: 54.8ms | ActiveRecord: 1.7ms | Allocations: 24323)
+
+
+Started GET "/items/5" for 149.43.114.173 at 2020-11-22 22:28:29 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:19:in `show'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:20:in `show'
+  Rendering items/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Item"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/items/show.html.erb:22
+  Rendered items/show.html.erb within layouts/application (Duration: 5.2ms | Allocations: 2476)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.7ms | Allocations: 466)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 87)
+Completed 200 OK in 24ms (Views: 18.9ms | ActiveRecord: 0.3ms | Allocations: 13182)
+
+
+Started GET "/send_interest_email?id=5" for 149.43.114.173 at 2020-11-22 22:28:30 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ItemsController#send_interest_email as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:84:in `send_interest_email'
+Redirected to https://41e81f201ccf4ef7ae2cc76de19eb154.vfs.cloud9.us-east-1.amazonaws.com/items/5
+Completed 302 Found in 3ms (ActiveRecord: 0.1ms | Allocations: 1001)
+
+
+Started GET "/items/5" for 149.43.114.173 at 2020-11-22 22:28:30 +0000
+Cannot render console from 149.43.114.173! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:19:in `show'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:20:in `show'
+  Rendering items/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Item"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/items/show.html.erb:22
+  Rendered items/show.html.erb within layouts/application (Duration: 4.3ms | Allocations: 2006)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 121)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 24ms (Views: 14.6ms | ActiveRecord: 0.3ms | Allocations: 10800)
+
+
