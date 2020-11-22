@@ -2,11 +2,12 @@
   <div class="input-group">  
     <%= search_field_tag :search, params[:search], placeholder: "Search", class: "form-control", id: "searchBar"%>  
     <div class="input-group-btn">  
-      <%= button_tag "", :class => 'btn btn-info glyphicon glyphicon-search',:name => nil, id: "searchButton"%>  
-    </div>  
-  </div>  
+      <%= button_tag "Search", :class => 'btn btn-info glyphicon glyphicon-search' %>  
+      <%= link_to "Clear Search", request.path, class:"cancel-button" %>
+     </div>  
+  </div> 
   <% end %>
-
+  
   <div class="row">
     <div class="col-md-3">
       <h3>Items</h3>
