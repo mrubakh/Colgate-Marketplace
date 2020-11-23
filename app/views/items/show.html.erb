@@ -31,8 +31,14 @@
          <% else %>
             <p> <%= link_to(@seller.email, user_path(:userID => @sellerID)) %> </p>
          <% end %>
-         <% params[:id] = @item.id %>
-         <p> <%= link_to("contact seller" ,:controller => "items", :action => "send_interest_email", :id => @item.id) %> </p>
+      </div>
+      <% params[:id] = @item.id %>
+      <div id="contact-seller" class="btn btn-info">
+        <%= link_to("Contact seller" ,:controller => "items", :action => "send_interest_email", :id => @item.id) %> 
+      </div>
+      <div></div>
+      <div>
+        <%= link_to("Back to item list", items_path, :class => "btn btn-primary") %>
       </div>
       <div class="update-and-delete">
          <% if user_signed_in? and @seller == current_user%>
