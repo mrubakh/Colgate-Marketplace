@@ -1,7 +1,7 @@
-Feature: Update an item on Colgate Marketplace app
+Feature: Destroy an item on Colgate Marketplace app
     As a user
-    so that I can keep buyers up to date,
-    I want to be able to modify the items I am selling.
+    so that I can remove sold items or decide not to sell,
+    I want to be able to delete the items I am selling.
     
      Background: the user has not yet been registered
         Given these Users:
