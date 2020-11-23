@@ -13,8 +13,8 @@ u1 = User.create!(name: "Brian Casey", email: "asong@colgate.edu", payment: "ven
 u2 = User.create!(name: "Lady Gaga", email: "aknox@colgate.edu", payment: "cash", password: "rarara")
 u3 = User.create!(name: "Meg Imperato", email: "mimperato@colgate.edu", payment: "cash", password: "password")
 
-Item.create!(name: "Table", price: 13.13, description: "Surface with 4 legs. It is a table.", listed: true, status: "available", deliverable: true, user: u1)
-Item.create!(name: "Muffin Tin", price: 2.00, description: "Tin for making muffins.", listed: true, status: "available", deliverable: true, user: u1)
-Item.create!(name: "Microphone", price: 15.99, description: "Great for singing.", listed: true, status: "available", deliverable: true, user: u2)
+Item.create!(name: "Table", price: 13.13, description: "Surface with 4 legs. It is a table.", listed: true, status: "available", deliverable: true, user: u1, category: "Furniture")
+Item.create!(name: "Muffin Tin", price: 2.00, description: "Tin for making muffins.", listed: true, status: "available", deliverable: true, user: u1, category: "Furniture")
+Item.create!(name: "Microphone", price: 15.99, description: "Great for singing.", listed: true, status: "available", deliverable: true, user: u2, category: "Electronics")
 
 
