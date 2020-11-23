@@ -69,14 +69,14 @@ class ItemsController < ApplicationController
   end
   
   def search
-    if params[:search] == nil || params[:search].empty?
-      flash[:alert] = "Empty Search"
-      redirect_to root_path and return
-    elsif !params[:search].empty?
+    if !params[:search].empty?
       @phrase = params[:search]
       @phrase = @phrase.downcase
       @items = Item.search(@phrase)
       render "items/index" and return
+    else
+      flash[:alert] = "Empty Search"
+      redirect_to root_path and return
     end
   end
   
