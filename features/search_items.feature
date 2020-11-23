@@ -10,9 +10,9 @@ Feature: Search Items in Colgate Marketplace app
             | val | vrome@colgate.edu | passyy | cash |
         Given these Items:
             | name | description | status  | deliverable | price | category |
-            | Book | Good book |  available | yes | 10.99 | Book |
-            | Desk | Solid Desk |  available | yes | 109.29 | furniture|
-            | Headphones | These are beats brand |  available | yes | 109.29 | electronic |
+            | Book | Good book |  available | yes | 10.99 | Books |
+            | Desk | Solid Desk |  available | yes | 109.29 | Furniture |
+            | Headphones | These are beats brand |  available | yes | 109.29 | Electronics |
     
     
     Scenario: Empty Search Bar

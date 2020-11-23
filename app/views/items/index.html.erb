@@ -31,6 +31,9 @@
         <th>
           <%= link_to('Price', items_path(:order => 'price')) %>
         </th>
+        <th>
+          <%= link_to('Category', items_path(:order => 'category')) %>
+        </th>
         
         
       </tr>
@@ -57,6 +60,9 @@
             </td>
             <td class="item-price">
               <%= number_to_currency(p.price) %>
+            </td>
+            <td class="category">
+              <%= p.category %>
             </td>
           </tr>
         <% end %>
