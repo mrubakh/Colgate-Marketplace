@@ -89,7 +89,7 @@ class ItemsController < ApplicationController
       flash[:notice] = "Email has been sent."
       redirect_to item_path(@item.id)
     else
-      flash[:warning] = "Need to be logged in to contact seller"
+      flash[:alert] = "Need to be logged in to contact seller"
       redirect_to item_path(@item.id)
     end
   end
