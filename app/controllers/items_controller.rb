@@ -5,7 +5,7 @@ class ItemsController < ApplicationController
   def has_user
     unless current_user
       flash[:warning] = 'You must be logged in to perform this action.'
-      redirect_to new_user_path
+      redirect_to items_path
     end
   end
   
@@ -51,6 +51,7 @@ class ItemsController < ApplicationController
   def create
     params[:item][:status] = "available"
     params[:item][:listed] = true
+    
     i = current_user.items.build(item_params)
     
     current_user.items << i
