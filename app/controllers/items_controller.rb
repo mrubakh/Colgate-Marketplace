@@ -96,10 +96,6 @@ class ItemsController < ApplicationController
   end
 
   private
-    def record_not_found
-      redirect_to action: "index"
-    end
-    
     def item_params
       params.require(:item).permit(:name, :description, :price, :image, :deliverable, :status, :listed, :category)
     end
