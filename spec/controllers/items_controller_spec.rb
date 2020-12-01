@@ -44,4 +44,11 @@ RSpec.describe ItemsController, type: :controller do
             expect(assigns(:item)).to eq(p)
         end
     end
+    
+    # context "create" do
+    #     it "checks parameters" do
+    #         p = Item.create!(name: 'apple', description: "fruit", price: 10, user_id: @u1.id)
+    #         expect(p.valid?).to eq(true)
+    #     end
+    # end
 end

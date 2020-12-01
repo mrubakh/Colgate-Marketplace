@@ -15,9 +15,6 @@ RSpec.describe "index page", type: :feature do
    visit "/items"
   end
 
-  # after :each do 
-  #     OmniAuth.config.mock_auth[:google] = nil
-  # end
   it "should have links from each item name to 'show' pages" do
     expect(page).to have_link("Table")
     expect(page).to have_link("Muffin Tin")
