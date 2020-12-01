@@ -32,6 +32,13 @@ RSpec.describe "index page", type: :feature do
     expect(page).to have_content("available")
   end
   
+  it "should show an error message when a non-logged in user attempts to contact seller" do 
+    click_link("Table")
+    expect(page).to have_link("Contact seller")
+    click_link("Contact seller")
+    expect(page).to have_content("Need to be logged in to contact seller")
+  end
+  
   it "should send email when user clicks to contact seller" do 
     OmniAuth.config.mock_auth[:google_oauth2] = OmniAuth::AuthHash.new({
       :provider => 'google_oauth2',
