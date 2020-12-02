@@ -29,9 +29,9 @@ RSpec.describe "index page", type: :feature do
    it "should allow seller to edit the item" do
     login
     click_link("Table")
-    expect(page).to have_link("Delete item")
-    click_link("Delete item")
-    expect(page).to have_content("Table deleted.")
+    expect(page).to have_link("Unlist item")
+    click_link("Unlist item")
+    expect(page).to have_content("Table unlisted.")
   end
  end
   
