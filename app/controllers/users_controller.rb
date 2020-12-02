@@ -5,6 +5,10 @@ class UsersController < ApplicationController
   
   def edit
     @user = User.find(params[:id])
+    if(@user != current_user)
+      flash[:alert] = "You can only edit your own profile."
+      redirect_to root_path and return
+    end
   end
     
   def update
