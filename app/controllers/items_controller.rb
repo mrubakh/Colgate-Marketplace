@@ -1,6 +1,6 @@
 class ItemsController < ApplicationController
   
-  before_action :has_user, :only => [:new, :create, :update]
+  before_action :has_user, :only => [:new, :create, :update, :unlist]
   
   def has_user
     unless current_user
@@ -36,11 +36,13 @@ class ItemsController < ApplicationController
     end
   end
   
-  def destroy
+  def unlist
     @item = Item.find(params[:id])
-    if (current_user.items.include?(@item))
-      @item.destroy
-      redirect_to items_path, :notice => "#{@item.name} deleted."
+    if (current_user.items.include?(@item) && @item.update_attribute(:listed, false))
+      redirect_to items_path, :notice => "#{@item.name} unlisted."
+    else
+      flash[:alert] = "#{@item.name} could not be unlisted: " + @item.errors.full_messages.join(",")
+      render 'edit'
     end
   end
   
