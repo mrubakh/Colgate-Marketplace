@@ -1,6 +1,5 @@
 require 'simplecov'
 require 'login_helper'
-SimpleCov.start
 require 'rails_helper'
 
 RSpec.describe UsersController, type: :feature do

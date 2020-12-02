@@ -43,5 +43,5 @@ RSpec.describe ItemsController, type: :controller do
             expect(response).to render_template("show")
             expect(assigns(:item)).to eq(p)
         end
-    end
+    end 
 end

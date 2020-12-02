@@ -28,7 +28,7 @@ class ItemsController < ApplicationController
   
   def update
     @item = Item.find(params[:id])
-    if (current_user.items.include?(@item) and @item.update_attributes(item_params))
+    if (current_user.items.include?(@item) && @item.update_attributes(item_params))
       redirect_to item_path (@item), :notice => "#{@item.name} updated."
     else
       flash[:alert] = "#{@item.name} could not be updated: " + @item.errors.full_messages.join(",")
@@ -81,7 +81,6 @@ class ItemsController < ApplicationController
   end
   
   def send_interest_email
-    # will refactor in next iteration
     @item = Item.find(params[:id])
     if current_user
       @seller = User.find(@item.user_id)
@@ -96,10 +95,6 @@ class ItemsController < ApplicationController
   end
 
   private
-    def record_not_found
-      redirect_to action: "index"
-    end
-    
     def item_params
       params.require(:item).permit(:name, :description, :price, :image, :deliverable, :status, :listed, :category)
     end

@@ -1,5 +1,4 @@
 require 'simplecov'
-SimpleCov.start
 
 Given('these Users:') do |table|
   # table is a Cucumber::MultilineArgument::DataTable

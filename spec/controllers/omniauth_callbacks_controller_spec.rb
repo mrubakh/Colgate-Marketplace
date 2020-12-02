@@ -2,7 +2,6 @@ require 'rails_helper'
 require 'login_helper'
 require 'capybara/rails'
 require 'simplecov'
-SimpleCov.start
 #As a user, so that I can be assured only Colgate-affiliates can use the marketplace, I want only colgate emails to be able to list items.
 
 describe OmniauthCallbacksController, type: :feature do

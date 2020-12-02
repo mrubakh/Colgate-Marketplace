@@ -40,4 +40,12 @@ RSpec.describe "index page", type: :feature do
     page.all(".itemname").each { |x| names << x.text }
     expect(names).not_to include("Backpack")
   end
+  
+  it "should not allow user to create an item if not logged in" do 
+    expect(page).to have_content("Log in with Google SSO")
+    expect(page).not_to have_content("List an item")
+    visit(new_item_path)
+    expect(page).to have_content("You must be logged in to perform this action.")
+  end
 end
+
