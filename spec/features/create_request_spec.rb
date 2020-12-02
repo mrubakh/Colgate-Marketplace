@@ -20,31 +20,31 @@ RSpec.describe "index page", type: :feature do
     before :each do
        @u1 = User.create!(name: "Mark", email: "mrubakh@colgate.edu", payment: "venmo", password: "abcdef")
        @u2 = User.create!(name: "Amy", email: "amy@colgate.edu", payment: "cash", password: "ghijkl")
-       @item = Item.create!(name: "Table", price: 13.13, description: "Surface with 4 legs. It is a table.", listed: true, status: "available", deliverable: true, user_id:1)
+       Item.create!(name: "Table", price: 13.13, description: "Surface with 4 legs. It is a table.", listed: true, status: "available", deliverable: true, user_id:1)
        Item.create!(name: "Muffin Tin", price: 2.00, description: "Tin for making muffins.", listed: true, status: "available", deliverable: true, user_id: @u2.id)
        Item.create!(name: "Microphone", price: 15.99, description: "Great for singing.", listed: true, status: "available", deliverable: true, user_id: @u2.id)
        visit "/items"
     end
+    
+    it "should not allow seller to create an invalid item" do 
+        login
+        expect(page).to have_link("List an item")
+        visit(new_item_path)
+        expect(page).to have_content("List an Item")
+        click_button("Save Changes")
+        expect(page).to have_content("Error creating new product:")
+    end
 
-   it "should allow seller to edit the item" do
-    login
-    click_link("Table")
-    expect(page).to have_link("Edit item")
-    click_link("Edit item")
-    expect(page).to have_content("List an Item")
-    click_button("Save Changes")
-    expect(page).to have_current_path('/items/1?notice=Table+updated.')
+   it "should allow seller to create an item" do
+        login
+        expect(page).to have_link("List an item")
+        visit(new_item_path)
+        expect(page).to have_content("List an Item")
+        fill_in("Name", with: "test")
+        fill_in("Description", with: "test description")
+        fill_in("Price", with: 13 )
+        click_button("Save Changes")
+        expect(page).to have_content('New item "test" listed')
   end
   
-  it "should allow non-seller to edit the item" do
-    item = @item
-    allow(Item).to receive(:find).and_return(item)
-    allow(item).to receive(:update_attributes).and_return(false)
-    login
-    click_link("Table")
-    click_link("Edit item")
-    click_button("Save Changes")
-    expect(page).to have_content("Table could not be updated")
-  end
  end
-  
