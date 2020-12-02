@@ -45,7 +45,7 @@ Feature: Destroy an item on Colgate Marketplace app
         
         When I press "Delete item"
         #press ok on popup isn't implemented yet
-        And I press ok
+        And I press "ok"
         Then I should be on the items index page
         And I should not see "gold spoon"
         
