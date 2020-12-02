@@ -1,3 +1,5 @@
+require 'simplecov'
+
 Given('these Users:') do |table|
   # table is a Cucumber::MultilineArgument::DataTable
   table.hashes.each do |h|
