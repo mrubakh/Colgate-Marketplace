@@ -4,9 +4,19 @@ require 'capybara/rails'
 
 RSpec.describe "index page", type: :feature do
  OmniAuth.config.test_mode = true
- 
+  before :all do 
+    OmniAuth.config.mock_auth[:google_oauth2] = OmniAuth::AuthHash.new({
+    :provider => 'google_oauth2',
+    :uid => '1',
+    :info => {
+      :email => "mrubakh@colgate.edu"
+    },
+    :credentials => {
+      :token => "token",
+      :secret => "secret"
+    }})
+  end
   before :each do
-   login 
   # @u1 = User.create!(name: "Mark", email: "mrubakh@colgate.edu", payment: "venmo", password: "abcdef")
    @u2 = User.create!(name: "Amy", email: "amy@colgate.edu", payment: "cash", password: "ghijkl")
    Item.create!(name: "Table", price: 13.13, description: "Surface with 4 legs. It is a table.", listed: true, status: "available", deliverable: true, user_id:1)
@@ -37,26 +47,10 @@ RSpec.describe "index page", type: :feature do
   end
   
   it "should send email when user clicks to contact seller" do 
-    OmniAuth.config.mock_auth[:google_oauth2] = OmniAuth::AuthHash.new({
-      :provider => 'google_oauth2',
-      :uid => '1',
-      :info => {
-        :email => "mrubakh@colgate.edu"
-      },
-      :credentials => {
-        :token => "token",
-        :secret => "secret"
-      }})
-
     login
     click_link("Table")
     expect(page).to have_link("Contact seller")
     click_link("Contact seller")
     expect(page).to have_content("Email has been sent.")
   end
-  
-  # it "should allow seller to edit the item" do
-  #   click_link("Table")
-  #   expect(page).to have_link("Edit item")
-  # end
 end
