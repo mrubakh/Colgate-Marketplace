@@ -27,9 +27,9 @@
          </div>
          <div>
             <% if @seller.name && @seller.name!="" %>
-               <p> <%= link_to(@seller.name, user_path(:userID => @sellerID)) %> </p>
+               <p> <%= link_to(@seller.name, user_path(@sellerID)) %> </p>
             <% else %>
-               <p> <%= link_to(@seller.email, user_path(:userID => @sellerID)) %> </p>
+               <p> <%= link_to(@seller.email, user_path(@sellerID)) %> </p>
             <% end %>
          </div>
          <% params[:id] = @item.id %>

@@ -1,6 +1,9 @@
 class UsersController < ApplicationController
   def show
-      @user = User.find(params[:userID])
+      @user = User.find(params[:id])
+      @faveitems = Item.all
+      @listeditems = Item.all.where("listed==?", true).where("user_id==?", @user.id)
+      @unlisteditems = Item.all.where("listed==?", false).where("user_id==?", @user.id)
   end
   
   def edit
@@ -14,8 +17,8 @@ class UsersController < ApplicationController
   def update
     @user = User.find(params[:id])
     if @user.update_attributes(user_params)
-    flash[:success] = "Edit Successful."
-    redirect_to root_path
+    flash[:notice] = "Edit Successful."
+    redirect_to user_path(@user.id)
     else
       flash[:notice] = "Did not update successfully"
       render 'edit'

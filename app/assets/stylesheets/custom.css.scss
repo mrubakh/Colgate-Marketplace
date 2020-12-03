@@ -278,11 +278,6 @@ body.homepage {
 
 
 
-
-
-
-
-
 .popup {
     background: #BA68C8
 }
@@ -354,17 +349,24 @@ form label {
     padding-top: 7px;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.user-profiles {
+	display: inline;
+}
+.user-show-block{
+	padding-top: 5%;
+	display: block;
+}
+.user-items h3{
+	padding: 0;
+	padding-left: 5%;
+	margin: 0;
+}
+.user-items{
+	border: 2px solid black;
+}
+.item-card{
+	border: 2px solid green;
+	display: inline-block;
+	height: 150px;
+	width: 150px;
+}
