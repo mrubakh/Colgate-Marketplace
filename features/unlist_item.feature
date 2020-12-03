@@ -49,3 +49,4 @@ Feature: Unlist an item on Colgate Marketplace app
         Then I should be on the items index page
         And I should not see "gold spoon"
         
+       

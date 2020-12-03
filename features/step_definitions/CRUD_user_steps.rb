@@ -23,3 +23,6 @@ Then('I should be on the items index page') do
   #index can be / or /items
   expect(page).to have_current_path(/\/|\/items/)
 end
+Then('I should be on show user {string}') do |string|
+  expect(page).to have_current_path('/users/'+string)
+end

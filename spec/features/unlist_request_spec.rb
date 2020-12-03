@@ -23,6 +23,7 @@ RSpec.describe "index page", type: :feature do
        Item.create!(name: "Table", price: 13.13, description: "Surface with 4 legs. It is a table.", listed: true, status: "available", deliverable: true, user_id:1)
        Item.create!(name: "Muffin Tin", price: 2.00, description: "Tin for making muffins.", listed: true, status: "available", deliverable: true, user_id: @u2.id)
        Item.create!(name: "Microphone", price: 15.99, description: "Great for singing.", listed: true, status: "available", deliverable: true, user_id: @u2.id)
+       Item.create!(name: "Chapstick", price: 1.99, description: "Lightly used.", listed: false, status: "available", deliverable: true, user_id: 1)
        visit "/items"
     end
 
@@ -33,5 +34,34 @@ RSpec.describe "index page", type: :feature do
     click_link("Unlist item")
     expect(page).to have_content("Table unlisted.")
   end
+  
+  it "should let user relist their unlisted items" do
+    login 
+    visit user_path(1)
+    click_link("Chapstick")
+    expect(page).to have_link("Relist item")
+    click_link "Relist item"
+    expect(page).to have_content("Chapstick relisted.")
+  end
+  
+  it "should throw error messages for failed unlist" do
+    login 
+    click_link("Table")
+    expect(page).to have_link("Unlist item")
+    expect_any_instance_of(Item).to receive(:update_attribute).and_return(false)
+    click_link "Unlist item"
+    expect(page).to have_content("Table could not be unlisted")
+  end 
+  
+  it "should throw error messages for failed relist" do
+    login 
+    visit user_path(1)
+    click_link("Chapstick")
+    expect(page).to have_link("Relist item")
+    expect_any_instance_of(Item).to receive(:update_attribute).and_return(false)
+    click_link "Relist item"
+    expect(page).to have_content("Chapstick could not be relisted")
+  end 
  end
+ 
   

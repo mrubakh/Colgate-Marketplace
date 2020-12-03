@@ -33,39 +33,41 @@
           </div>
       </div>
   </div>
-  <div class="user-items">
+  <div>
     <h3>My favorited items:</h3>
     
     
   </div>
-  <div class = "user-items">
-    <h3>My listed items:</h3>
-    <% @listeditems.each do |item| %>
-      <%= link_to item_path(item) do %>
-      <div class="item-card"> 
-        <% if item.image.attached?%> 
-              <%= image_tag(item.image, :width => 100)%>
-              <% else %>
-              <%= image_tag("image_placeholder.jpg",size: '100')%> 
-              <% end %>
-        <%= item.name %> 
-      </div>
-      <%end %>
-    <%end%>
-  </div>
-  <div class = "user-items">
-    <h3>My unlisted items:</h3>
-    <% @unlisteditems.each do |item| %>
-      <%= link_to item_path(item) do %>
-      <div class="item-card"> 
-        <% if item.image.attached?%> 
-              <%= image_tag(item.image, :width => 100)%>
-              <% else %>
-              <%= image_tag("image_placeholder.jpg",size: '100')%> 
-              <% end %>
-        <%= item.name %> 
-      </div>
+  <div id = "user-lists">
+    <div class = "user-items">
+      <h3>My listed items:</h3>
+      <% @listeditems.each do |item| %>
+        <%= link_to item_path(item) do %>
+        <div class="item-card"> 
+          <% if item.image.attached?%> 
+            <%= image_tag(item.image, :width => 100)%>
+            <% else %>
+            <%= image_tag("image_placeholder.jpg",size: '100')%> 
+            <% end %>
+          <%= item.name %> 
+        </div>
+        <%end %>
       <%end%>
-    <%end%>
+    </div>
+    <div class = "user-items" id="unlisted">
+      <h3>My unlisted items:</h3>
+      <% @unlisteditems.each do |item| %>
+        <%= link_to item_path(item) do %>
+        <div class="item-card"> 
+          <% if item.image.attached?%> 
+            <%= image_tag(item.image, :width => 100)%>
+            <% else %>
+            <%= image_tag("image_placeholder.jpg",size: '100')%> 
+            <% end %>
+          <%= item.name %> 
+        </div>
+        <%end%>
+      <%end%>
+    </div>
   </div>
 </div>
