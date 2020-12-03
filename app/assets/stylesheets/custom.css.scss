@@ -357,7 +357,7 @@ form label {
 	display: block;
 }
 .user-items h3{
-	padding: 0;
+	padding: 15px;
 	padding-left: 5%;
 	margin: 0;
 }
@@ -366,6 +366,8 @@ form label {
 }
 .item-card{
 	border: 2px solid green;
+	padding: 20px;
+	text-align: center;
 	display: inline-block;
 	height: 150px;
 	width: 150px;

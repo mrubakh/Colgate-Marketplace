@@ -41,13 +41,31 @@
   <div class = "user-items">
     <h3>My listed items:</h3>
     <% @listeditems.each do |item| %>
-    <div class="item-card"> <%= item.name %> </div>
+      <%= link_to item_path(item) do %>
+      <div class="item-card"> 
+        <% if item.image.attached?%> 
+              <%= image_tag(item.image, :width => 100)%>
+              <% else %>
+              <%= image_tag("image_placeholder.jpg",size: '100')%> 
+              <% end %>
+        <%= item.name %> 
+      </div>
+      <%end %>
     <%end%>
   </div>
   <div class = "user-items">
     <h3>My unlisted items:</h3>
     <% @unlisteditems.each do |item| %>
-    <div class="item-card"> <%= item.name %> </div>
+      <%= link_to item_path(item) do %>
+      <div class="item-card"> 
+        <% if item.image.attached?%> 
+              <%= image_tag(item.image, :width => 100)%>
+              <% else %>
+              <%= image_tag("image_placeholder.jpg",size: '100')%> 
+              <% end %>
+        <%= item.name %> 
+      </div>
+      <%end%>
     <%end%>
   </div>
 </div>

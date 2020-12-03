@@ -10,4 +10,5 @@ Rails.application.routes.draw do
     get 'send_interest_email', to: 'items#send_interest_email'
     post '/users/:id/edit' => 'users#update', :as => 'update_user'
     get 'unlist', to: 'items#unlist'
+    get 'relist', to: 'items#relist'
 end
