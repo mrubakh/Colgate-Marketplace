@@ -11,7 +11,7 @@
                   <div class="user-profiles">
                       <% if @user[:id] == current_user.id %>
                         <%= link_to("Edit profile", edit_user_path(current_user.id), :class => "btn btn-primary") %>
-                        <a href='#fave-items'><button class="btn btn-primary">Go to my favorites</button></a>
+                        <!--<a href='#fave-items'><button class="btn btn-primary">Go to my favorites</button></a>-->
                       <% end %>
                       <%= link_to 'Back to home', root_path, :class => "btn btn-primary"%>
                       
