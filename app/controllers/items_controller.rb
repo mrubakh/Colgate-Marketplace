@@ -40,7 +40,6 @@ class ItemsController < ApplicationController
 
       end
     end
-    #redirect_to item_path (@item)
   end
   
   def update
