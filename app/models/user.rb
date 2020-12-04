@@ -6,6 +6,8 @@ class User < ApplicationRecord
          :omniauthable, omniauth_providers: [:google_oauth2]
          
   has_many :items
+  has_many :favorite_items
+  has_many :favorites, :through => :favorite_items, :source => :item
 
 #User checked and created here with SSO
   def self.from_omniauth(access_token)

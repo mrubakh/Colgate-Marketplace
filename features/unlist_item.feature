@@ -1,7 +1,7 @@
-Feature: Destroy an item on Colgate Marketplace app
+Feature: Unlist an item on Colgate Marketplace app
     As a user
     so that I can remove sold items or decide not to sell,
-    I want to be able to delete the items I am selling.
+    I want to be able to unlist the items I am selling.
     
      Background: the user has not yet been registered
         Given these Users:
@@ -19,7 +19,7 @@ Feature: Destroy an item on Colgate Marketplace app
         Then I should see "Book"
         When I press "Book"
         Then I should be on the show item "1" page
-        And I should not see "Delete item"
+        And I should not see "Unlist item"
         
     Scenario: Edit an item that I did list
         #make an item
@@ -40,12 +40,12 @@ Feature: Destroy an item on Colgate Marketplace app
         And I should see "gold spoon"
         When I press "gold spoon"
         Then I should be on the show item "4" page
-        And I should see "Delete item"
+        And I should see "Unlist item"
         
         
-        When I press "Delete item"
+        When I press "Unlist item"
         #press ok on popup isn't implemented yet
-        And I press ok
+        And I press "ok"
         Then I should be on the items index page
         And I should not see "gold spoon"
         

@@ -7,6 +7,8 @@ Rails.application.routes.draw do
     root to: "items#index"
     
     get '/search' => 'items#search', :as => 'search_item'
+    patch '/favorite/:id' => 'items#favorite',:as => 'favorite_item'
     get 'send_interest_email', to: 'items#send_interest_email'
     post '/users/:id/edit' => 'users#update', :as => 'update_user'
+    get 'unlist', to: 'items#unlist'
 end

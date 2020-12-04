@@ -1,6 +1,4 @@
 require 'simplecov'
-SimpleCov.start
-
 
 Given('I am logged in') do
     OmniAuth.config.test_mode = true

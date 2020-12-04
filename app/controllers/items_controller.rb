@@ -1,6 +1,6 @@
 class ItemsController < ApplicationController
   
-  before_action :has_user, :only => [:new, :create, :update]
+  before_action :has_user, :only => [:new, :create, :update, :unlist]
   
   def has_user
     unless current_user
@@ -26,9 +26,25 @@ class ItemsController < ApplicationController
     @item = Item.find(params[:id])
   end
   
+  def favorite
+    respond_to do |format|
+      @item = Item.find(params[:id])
+      if params[:commit] == "Unfavorite"
+        current_user.favorites.destroy(@item)
+        format.html { redirect_to @item, notice: 'Successfully Unfavorited.' }
+        format.js
+      else 
+        current_user.favorites << @item
+        format.html { redirect_to @item, notice: 'Successfully Favorited.' }
+        format.js
+
+      end
+    end
+  end
+  
   def update
     @item = Item.find(params[:id])
-    if (current_user.items.include?(@item) and @item.update_attributes(item_params))
+    if (current_user.items.include?(@item) && @item.update_attributes(item_params))
       redirect_to item_path (@item), :notice => "#{@item.name} updated."
     else
       flash[:alert] = "#{@item.name} could not be updated: " + @item.errors.full_messages.join(",")
@@ -36,11 +52,13 @@ class ItemsController < ApplicationController
     end
   end
   
-  def destroy
+  def unlist
     @item = Item.find(params[:id])
-    if (current_user.items.include?(@item))
-      @item.destroy
-      redirect_to items_path, :notice => "#{@item.name} deleted."
+    if (current_user.items.include?(@item) && @item.update_attribute(:listed, false))
+      redirect_to items_path, :notice => "#{@item.name} unlisted."
+    else
+      flash[:alert] = "#{@item.name} could not be unlisted: " + @item.errors.full_messages.join(",")
+      render 'edit'
     end
   end
   
@@ -81,7 +99,6 @@ class ItemsController < ApplicationController
   end
   
   def send_interest_email
-    # will refactor in next iteration
     @item = Item.find(params[:id])
     if current_user
       @seller = User.find(@item.user_id)
@@ -96,10 +113,6 @@ class ItemsController < ApplicationController
   end
 
   private
-    def record_not_found
-      redirect_to action: "index"
-    end
-    
     def item_params
       params.require(:item).permit(:name, :description, :price, :image, :deliverable, :status, :listed, :category)
     end
