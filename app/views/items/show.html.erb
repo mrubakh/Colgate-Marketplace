@@ -3,10 +3,27 @@
       <div class="go-back">
          <%= link_to("Back", items_path) %>
       </div>
+      <% if user_signed_in? %>
+         <%= form_with(id: :favoriteform, model: @item, url: "/favorite/"+@item.id.to_s, data: { type: :html }) do |f| %>
+            <% if current_user.favorites.include? @item %>
+              <div class = "favBtn"><%= f.submit "Unfavorite" %></div>
+            <% else %>
+             <div class = "favBtn"><%= f.submit "Favorite" %></div>
+            <% end %>
+         <% end %>
+      <% end %>
+      
+      
+      
       <div class="itemlist itemlist-item-wrapper product-details product-left">
          <div class="product-info">
             <div class="product-title">
                <%= "#{@item.name}" %>
+               <% if user_signed_in? %>
+                  <% if current_user.favorites.include? @item %>
+                     <%= image_tag("favorite.jpg",size: '25')%> 
+                  <% end %>
+               <% end %>
             </div>
             <div class="product-price">
                <p><%= number_to_currency(@item.price) %></p>

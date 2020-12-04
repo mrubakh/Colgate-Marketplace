@@ -26,6 +26,23 @@ class ItemsController < ApplicationController
     @item = Item.find(params[:id])
   end
   
+  def favorite
+    respond_to do |format|
+      @item = Item.find(params[:id])
+      if params[:commit] == "Unfavorite"
+        current_user.favorites.destroy(@item)
+        format.html { redirect_to @item, notice: 'Successfully Unfavorited.' }
+        format.js
+      else 
+        current_user.favorites << @item
+        format.html { redirect_to @item, notice: 'Successfully Favorited.' }
+        format.js
+
+      end
+    end
+    #redirect_to item_path (@item)
+  end
+  
   def update
     @item = Item.find(params[:id])
     if (current_user.items.include?(@item) && @item.update_attributes(item_params))
