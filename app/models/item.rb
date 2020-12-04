@@ -1,8 +1,8 @@
 class Item < ApplicationRecord
     enum category: {:Books => 0, :Electronics => 1, :Furniture => 2}
     
-    
     belongs_to :user
+    has_many :favorited_by, through: :favorites, source: :user
     has_one_attached :image
     
     validates :name, :presence => true
