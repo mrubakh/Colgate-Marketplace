@@ -18,6 +18,8 @@ RSpec.describe UsersController, type: :feature do
       }})
       login 
       expect(page).to have_content("Logged in as test@colgate.edu")
+      expect(page).to have_content("View profile")
+      visit '/users/1'
       expect(page).to have_content("Edit profile")
       visit '/users/1/edit'
       fill_in "Name", with: "Allegra"
@@ -32,5 +34,14 @@ RSpec.describe UsersController, type: :feature do
       expect_any_instance_of(User).to receive(:update_attributes).and_return(false)
       click_button "Save User"
       expect(page).to have_content("Did not update successfully")
+  end
+  it "should not let me edit someone else's profile" do
+      login 
+      u = User.create!(name: "Alex", email: "alex@colgate.edu", payment: "cash", password: "password")
+      visit edit_user_path(u.id)
+      expect(page).to have_content("You can only edit your own profile")
+      
+      visit user_path(u.id)
+      expect(page).not_to have_content("Edit profile")
   end
 end

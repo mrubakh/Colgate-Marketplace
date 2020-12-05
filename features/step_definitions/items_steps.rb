@@ -17,7 +17,6 @@ Given('I am logged in') do
     visit root_path
     click_link 'Log in with Google SSO'
 end
-
 Then('I should be on the new item page') do
   expect(page).to have_current_path('/items/new')
 end

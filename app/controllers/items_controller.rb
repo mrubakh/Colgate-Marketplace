@@ -62,6 +62,16 @@ class ItemsController < ApplicationController
     end
   end
   
+  def relist
+    @item = Item.find(params[:id])
+    if (current_user.items.include?(@item) && @item.update_attribute(:listed, true))
+      redirect_to items_path, :notice => "#{@item.name} relisted."
+    else
+      flash[:alert] = "#{@item.name} could not be relisted: " + @item.errors.full_messages.join(",")
+      render 'edit'
+    end
+  end
+  
   def new 
     @item = current_user.items.build
   end

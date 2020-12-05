@@ -4,8 +4,6 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
 
 $gray-medium-light: #eaeaea;
-
-
 body.homepage {
 	padding-top: 60px;
 	margin: 0;
@@ -13,6 +11,40 @@ body.homepage {
 	color: #666;
 	background-color: #ffffff;
 }
+.body-container{
+	width: 90%;
+	position: relative;
+	left: 5%;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+#header-block{
+	position: static;
+}
+
+//search stuff 
+#searchBar{
+	width: 60%;
+}
+#searchBar, #searchButton, #clearButton {
+	border-radius: 3px;
+	margin-right: 15px;
+}
+#items-text-container {
+	width: 95%;
+	margin-left: 2.5%;
+	padding-bottom: 15px;
+}
+#items-text-container *, #search-container{
+	display: inline-block;
+}
+
+#items-text-container .btn-primary {
+	margin-left: 15px;
+	margin-right: 25%;
+}
+//end of search
 
 section {
 	overflow: auto;
@@ -269,20 +301,6 @@ i {
 .navbar {
 	position: relative;
 }
-
-body.homepage {
-	margin: 0;
-	padding: 0;
-}
-
-
-
-
-
-
-
-
-
 .popup {
     background: #BA68C8
 }
@@ -354,17 +372,51 @@ form label {
     padding-top: 7px;
   }
 }
+//user show view stuff
+.user-show-block{
+	padding-top: 5%;
+	display: block;
+}
+.user-items h3{
+	padding: 15px;
+	padding-left: 20px;
+	margin: 0;
+	text-align: left;
+}
+.user-items{
+	border: 1px solid grey;
+	display: inline-block;
+	padding-top: 0;
+	width: 45%;
+	background-color: #eeeeee;
+	text-align: left;
+	margin-top: 15px;
+	padding-left: 1%;
+	border-radius: 2px;
+}
+#fave-items{
+	width: 100%;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+#unlisted{
+	vertical-align: top;
+	float: right;
+}
+.item-card{
+	border: 1px solid grey;
+	background-color: white;
+	border-radius: 3px;
+	margin-bottom: 15px;
+	padding: 20px;
+	text-align: center;
+	display: inline-block;
+	height: 200px;
+	width: 150px;
+	vertical-align: middle;
+}
+.alert, .notice{
+	position: absolute;
+	top: 0;
+	z-index: 1;
+	left: 0;
+}

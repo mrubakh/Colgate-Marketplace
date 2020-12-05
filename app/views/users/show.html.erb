@@ -1,16 +1,68 @@
-<h1> 
-<% if @user.name && @user.name!="" %>
-<%= @user[:name] + "'s Profile" %> </h1>
-<% else %>
-<%= @user[:email] + "'s Profile" %> </h1>
-<% end %>
-<div> <%= "Email: " + @user[:email] %> </div>
-<% if @user.payment == nil %>
-  <p>No preferred payment method listed</p>
-<% else %>
-<div> <%= "Preferred payment method: " + @user[:payment] %> </div>
-<%end %>
-
-
-<%= link_to("Back to item list", items_path, :class => "btn btn-primary") %>
-
+<div class="rounded bg-white mt-5">
+  <div class="body-container">
+    <div class="row">
+        <div class="col-md-4 border-right">
+            <div class="d-flex flex-column align-items-center text-center p-3 py-5">
+                <h1> <% if @user.name && @user.name!="" %>
+                    <%= @user[:name] + "'s Profile" %> </h1>
+                  <% else %>
+                    <%= @user[:email] + "'s Profile" %> </h1>
+                  <% end %>
+                  <div class="user-profiles">
+                      <% if @user[:id] == current_user.id %>
+                        <%= link_to("Edit profile", edit_user_path(current_user.id), :class => "btn btn-primary") %>
+                        <a href='#fave-items'><button class="btn btn-primary">Go to my favorites</button></a>
+                      <% end %>
+                      <%= link_to 'Back to home', root_path, :class => "btn btn-primary"%>
+                      
+                  </div>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div class="p-3 py-5">
+                <div class="row mt-2">
+                  <div class="user-show-block">
+                    <% if @user.name && @user.name!="" %>
+                      <p><%= "Display name: " + @user[:name]%></p>
+                    <%end%>
+                    <p><%= "Contact info: " + @user[:email]%></p>
+                    <% if @user.payment == nil %>
+                      <p>No preferred payment method listed</p>
+                    <% else %>
+                      <p><%= "Preferred payment method: " + @user[:payment] %>
+                    <%end %>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id = "user-lists">
+      <div class = "user-items">
+        <h3>Listed items:</h3>
+        <% @listeditems.each do |item| %>
+          <%= render partial: 'layouts/card_view', locals: {item: item}%>
+        <%end%>
+      </div>
+      <% if current_user.id == @user.id %>
+      <div class = "user-items" id="unlisted">
+        <h3>My unlisted items:</h3>
+        <% @unlisteditems.each do |item| %>
+          <%= render partial: 'layouts/card_view', locals: {item: item}%>
+        <%end%>
+      </div>
+      <%end%>
+       <% if current_user.id == @user.id %>
+        <div class = "user-items" id ="fave-items">
+          <h3>My favorited items:</h3>
+          <% if current_user.favorites.length == 0 %>
+            <p>No favorited items yet! <%= link_to "See what's available", root_path %></p>
+          <%else%>
+            <% current_user.favorites.each do |item| %>
+              <%= render partial: 'layouts/card_view', locals: {item: item}%>
+            <%end%>
+          <%end%>
+        </div>
+       <%end%>
+    </div>
+  </div>
+</div>

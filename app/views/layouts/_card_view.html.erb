@@ -1,0 +1,17 @@
+<%= link_to item_path(item) do %>
+    <div class="item-card"> 
+        <% if item.image.attached?%> 
+          <%= image_tag(item.image, :width => 100)%>
+        <% else %>
+          <%= image_tag("image_placeholder.jpg",size: '100')%> 
+        <% end %>
+    <%= item.name %> <br>
+    <%= item.price %><br>
+    <% if item.deliverable %>
+        Deliverable
+    <%else%> 
+        Not deliverable
+    <%end%>
+    <%= item.category %>
+    </div>
+<%end %>
