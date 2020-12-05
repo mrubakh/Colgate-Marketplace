@@ -38,8 +38,6 @@
           <th>
             <%= link_to('Category', items_path(:order => 'category')) %>
           </th>
-          
-          
         </tr>
       </thead>
       <tbody>
@@ -48,6 +46,11 @@
             <tr class="item">
               <td class="itemname">
                 <%= link_to "#{p.name}", item_path(p) %>
+                 <% if user_signed_in? %>
+                  <% if current_user.favorites.include? p %>
+                    <%= image_tag("favorite.jpg",size: '10')%> 
+                  <% end %>
+                <% end %>
               </td>
               <td class="item-desc">
                 <%= p.description %>
