@@ -1,7 +1,6 @@
 class UsersController < ApplicationController
   def show
       @user = User.find(params[:id])
-      @faveitems = Array.new
       @listeditems = Item.all.where("listed==?", true).where("user_id==?", @user.id)
       @unlisteditems = Item.all.where("listed==?", false).where("user_id==?", @user.id)
   end

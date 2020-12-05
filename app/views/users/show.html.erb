@@ -11,7 +11,7 @@
                   <div class="user-profiles">
                       <% if @user[:id] == current_user.id %>
                         <%= link_to("Edit profile", edit_user_path(current_user.id), :class => "btn btn-primary") %>
-                        <!--<a href='#fave-items'><button class="btn btn-primary">Go to my favorites</button></a>-->
+                        <a href='#fave-items'><button class="btn btn-primary">Go to my favorites</button></a>
                       <% end %>
                       <%= link_to 'Back to home', root_path, :class => "btn btn-primary"%>
                       
@@ -51,18 +51,18 @@
         <%end%>
       </div>
       <%end%>
-       <!--<#% if current_user.id == @user.id %>-->
-        <!--<div class = "user-items" id ="fave-items">-->
-        <!--  <h3>My favorited items:</h3>-->
-        <!--  <#% if @faveitems.length == 0 %>-->
-        <!--    <p>No favorited items yet! <#%= link_to "See what's available", root_path %></p>-->
-        <!--  <#%else%>-->
-        <!--    <#% @faveitems.each do |item| %>-->
-        <!--      <#%= render partial: 'layouts/card_view', locals: {item: item}%>-->
-        <!--    <#%end%>-->
-        <!--  <#%end%>-->
-        <!--</div>-->
-       <!--<#%end%>-->
+       <% if current_user.id == @user.id %>
+        <div class = "user-items" id ="fave-items">
+          <h3>My favorited items:</h3>
+          <% if current_user.favorites.length == 0 %>
+            <p>No favorited items yet! <%= link_to "See what's available", root_path %></p>
+          <%else%>
+            <% current_user.favorites.each do |item| %>
+              <%= render partial: 'layouts/card_view', locals: {item: item}%>
+            <%end%>
+          <%end%>
+        </div>
+       <%end%>
     </div>
   </div>
 </div>
