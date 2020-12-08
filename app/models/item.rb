@@ -18,7 +18,7 @@ class Item < ApplicationRecord
     def image_type
       return unless image.attached?
       if !image.content_type.in?(%('image/jpeg image/png 'image/gif))
-          errors.add(:image, "needs to be a jpeg or png!")
+          errors.add(:image, "needs to be a jpeg, png, or gif!")
       end
     end
 end
