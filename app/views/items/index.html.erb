@@ -9,8 +9,7 @@
           <%= link_to "List an item", new_item_path, :class => "btn btn-primary glyphicon glyphicon-plus button-font" %>
         <% end %>
         <%= form_tag(search_item_path, :method => "get") do %>  
-        <%= javascript_include_tag 'jquery.easy-autocomplete' %>
-        <div class="input-group">  
+        <div class="input-group" id="search-container">  
           <%= search_field_tag :search, params[:search], placeholder: "Search", class: "form-control", id: "searchBar"%>  
           <div class="input-group-btn">  
             <%= button_tag "Search", :class => 'btn btn-info glyphicon glyphicon-search', :name => nil, id: "searchButton" %>
