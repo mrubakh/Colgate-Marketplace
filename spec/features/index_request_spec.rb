@@ -47,5 +47,22 @@ RSpec.describe "index page", type: :feature do
     visit(new_item_path)
     expect(page).to have_content("You must be logged in to perform this action.")
   end
+  
+  it "should not allow the user to query an item by search" do 
+    fill_in :search, with: "M"
+    click_button 'Search'
+    expect(page).to have_content("Muffin Tin")
+    expect(page).to have_content("Microphone")
+    expect(page).to_not have_content("Table")
+  end
+  
+  it "should redirect to root path for empty searches" do 
+    fill_in :search, with: ""
+    click_button 'Search'
+    expect(page).to have_content("Muffin Tin")
+    expect(page).to have_content("Microphone")
+    expect(page).to have_content("Table")
+  end
+
 end
 

@@ -20,7 +20,7 @@ RSpec.describe "index page", type: :feature do
     before :each do
        @u1 = User.create!(name: "Mark", email: "mrubakh@colgate.edu", payment: "venmo", password: "abcdef")
        @u2 = User.create!(name: "Amy", email: "amy@colgate.edu", payment: "cash", password: "ghijkl")
-       Item.create!(name: "Table", price: 13.13, description: "Surface with 4 legs. It is a table.", listed: true, status: "available", deliverable: true, user_id:1)
+       @i1 = Item.create!(name: "Table", price: 13.13, description: "Surface with 4 legs. It is a table.", listed: true, status: "available", deliverable: true, user_id:1)
        Item.create!(name: "Muffin Tin", price: 2.00, description: "Tin for making muffins.", listed: true, status: "available", deliverable: true, user_id: @u2.id)
        Item.create!(name: "Microphone", price: 15.99, description: "Great for singing.", listed: true, status: "available", deliverable: true, user_id: @u2.id)
        visit "/items"
@@ -47,4 +47,29 @@ RSpec.describe "index page", type: :feature do
         expect(page).to have_content('New item "test" listed')
   end
   
+  it "should  allow seller to upload a valid image" do 
+        login
+        expect(page).to have_link("List an item")
+        visit(new_item_path)
+        expect(page).to have_content("List an Item")
+        fill_in("Name", with: "test")
+        fill_in("Description", with: "test description")
+        fill_in("Price", with: 13 )
+        page.attach_file('item_image', Rails.root + 'public/apple-touch-icon.png')
+        click_button("Save Changes")
+        expect(page).to have_content('New item "test" listed')
+  end
+  
+  it "should not allow seller to upload an invalid image" do 
+        login
+        expect(page).to have_link("List an item")
+        visit(new_item_path)
+        expect(page).to have_content("List an Item")
+        fill_in("Name", with: "test")
+        fill_in("Description", with: "test description")
+        fill_in("Price", with: 13 )
+        page.attach_file('item_image', Rails.root + 'public/robots.txt')
+        click_button("Save Changes")
+        expect(page).to have_content('Error creating new product')
+  end
  end
