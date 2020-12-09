@@ -6,7 +6,7 @@ Rails.application.routes.draw do
     resources :users, :only=>[:show, :edit, :update]
     root to: "items#index"
     
-    get '/search' => 'items#search', :as => 'search_item'
+    get 'item_search', to: 'items#search'
     patch '/favorite/:id' => 'items#favorite',:as => 'favorite_item'
     get 'send_interest_email', to: 'items#send_interest_email'
     post '/users/:id/edit' => 'users#update', :as => 'update_user'

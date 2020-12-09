@@ -28,10 +28,7 @@ body.homepage {
 	word-spacing: -8px;
 }
 
-//search stuff 
-#searchBar{
-	width: 60%;
-}
+
 #searchBar, #searchButton, #clearButton {
 	border-radius: 3px;
 	margin-right: 15px;
@@ -43,7 +40,7 @@ body.homepage {
 	padding-bottom: 15px;
 }
 
-#items-text-container *, #search-container{
+#items-text-container *{
 	display: inline-block;
 }
 
