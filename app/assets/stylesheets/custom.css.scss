@@ -4,14 +4,13 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
 
 $gray-medium-light: #eaeaea;
-
 body.homepage {
 	padding-top: 60px;
 	margin: 0;
 	padding: 0;
 	color: #666;
+	background-color: #ffffff;
 }
-
 .body-container{
 	width: 90%;
 	position: relative;
@@ -29,20 +28,15 @@ body.homepage {
 }
 
 //search stuff 
-#searchBar{
-	width: 60%;
-}
 #searchBar, #searchButton, #clearButton {
 	border-radius: 3px;
 	margin-right: 15px;
 }
-
 #items-text-container {
 	width: 95%;
 	margin-left: 2.5%;
 	padding-bottom: 15px;
 }
-
 #items-text-container *, #search-container{
 	display: inline-block;
 }
@@ -51,6 +45,7 @@ body.homepage {
 	margin-left: 15px;
 	margin-right: 25%;
 }
+//end of search
 
 section {
 	overflow: auto;
@@ -68,7 +63,12 @@ textarea {
 	margin-bottom: 10px;
 }
 
-h1, h3{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
 	line-height: 1;
 }
 
@@ -77,6 +77,15 @@ h1 {
 	letter-spacing: -2px;
 	margin-bottom: 30px;
 	text-align: center;
+}
+
+h2 {
+	font-size: 1.2em;
+	letter-spacing: -1px;
+	margin-bottom: 30px;
+	text-align: center;
+	font-weight: normal;
+	color: #777;
 }
 
 p {
@@ -99,19 +108,30 @@ p {
 	text-decoration: none;
 }
 
-
 footer {
-	position: fixed;
-	bottom: 0;
-	width: 100%;
-	padding: 1rem;
-	text-align: center;
-	small {
-		float: right;
-	}
+	margin-top: 45px;
+	padding-top: 5px;
+	border-top: 1px solid $gray-medium-light;
 	color: $gray-light;
+	a {
+		color: $gray;
+		&:hover {
+			color: $gray-darker;
+		}
+	}
+	small {
+		float: left;
+	}
+	ul {
+		float: right;
+		list-style: none;
+		li {
+			float: left;
+			margin-left: 15px;
+		}
+	}
 }
-    
+
 .table {
 	border-collapse: collapse;
 	margin: 25px 0;
@@ -211,6 +231,11 @@ footer {
 	width: 100%;
 }
 
+.product-right {
+	display: inline-block;
+	vertical-align: top;
+	width: 49%;
+}
 
 .product-title {
 	font-size: 28px;
@@ -245,6 +270,16 @@ i {
 	font-size: 20px;
 }
 
+.random-background {
+	background-color: #36a88e;
+	/*top colour*/
+	background-image: -webkit-linear-gradient(top, #36a88e, #f35b47);
+	background-image: -moz-linear-gradient(top, #36a88e, #f35b47);
+	background-image: -o-linear-gradient(top, #36a88e, #f35b47);
+	background-image: linear-gradient(to bottom, #36a88e, #f35b47);
+	height: 200vh;
+	width: relative;
+}
 
 .itemlist {
 	max-width: 1024px;
@@ -267,12 +302,42 @@ i {
 .navbar {
 	position: relative;
 }
+.popup {
+    background: #BA68C8
+}
+
+
+.form-control:focus {
+    box-shadow: none;
+    border-color: #BA68C8
+}
 
 .profile-button {
     background: #BA68C8;
     box-shadow: none;
     border: none
 }
+
+.profile-button:hover {
+    background: #682773
+}
+
+.profile-button:focus {
+    background: #682773;
+    box-shadow: none
+}
+
+.profile-button:active {
+    background: #682773;
+    box-shadow: none
+}
+
+.back:hover {
+    color: #682773;
+    cursor: pointer
+}
+
+
 
 .panel {
   box-shadow: none;
@@ -284,6 +349,7 @@ i {
 .panel-body *:first-child {
   margin-top: 0;
 }
+
 
 .panel-default > .panel-heading {
     color: #333333;
@@ -307,7 +373,6 @@ form label {
     padding-top: 7px;
   }
 }
-
 //user show view stuff
 .user-show-block{
 	padding-top: 5%;

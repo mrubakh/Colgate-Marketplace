@@ -19,8 +19,7 @@ Feature: Search Items in Colgate Marketplace app
         Given I am on the items index page
         Then I should see "Book"
         When I search ""
-        Then I should see "Empty Search"
-        And I should see "Book"
+        Then I should see "Book"
         And I should see "Desk"
         And I should see "Headphones"
     
