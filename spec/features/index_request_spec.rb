@@ -63,6 +63,12 @@ RSpec.describe "index page", type: :feature do
     expect(page).to have_content("Microphone")
     expect(page).to have_content("Table")
   end
-
+  
+  it "should return the correct JSON for autocomplete" do 
+    visit "/item_search.json?q=m"
+    expect(page).to have_content('[{"id":null,"name":"Muffin Tin"},{"id":null,"name":"Microphone"}]')
+    visit "/item_search.json?q=apples"
+    expect(page).to have_content([])
+  end
 end
 
