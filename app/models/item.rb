@@ -9,7 +9,7 @@ class Item < ApplicationRecord
     validates :price, :presence => true, format: { with: /\A\d+(?:\.\d{0,2})?\z/ }, numericality: { greater_than: 0, less_than: 1000000 }
     validates :description, :presence => true, length: {maximum: 100}
     validate :image_type
-    #size_range: 1..3.megabytes
+
     def self.search(query)
         Item.all.where("lower(name) LIKE ? OR category = ? OR lower(description) LIKE ?","%"+query+"%",Item.categories[query.capitalize],"%"+query+"%")
     end

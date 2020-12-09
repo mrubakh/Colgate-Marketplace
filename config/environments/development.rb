@@ -52,6 +52,8 @@ Rails.application.configure do
   # number of complex assets.
   config.assets.debug = true
   config.assets.compile = true
+  
+  config.web_console.whitelisted_ips = '69.204.8.105'
 
   # Suppress logger output for asset requests.
   config.assets.quiet = true

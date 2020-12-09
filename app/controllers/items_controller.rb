@@ -79,14 +79,11 @@ class ItemsController < ApplicationController
   def create
     params[:item][:status] = "available"
     params[:item][:listed] = true
-
     
     i = current_user.items.build(item_params)
-    
     current_user.items << i
     
     if i.valid?
-      # i.image.attach(params[:item][:image])
       flash[:notice] = "New item \"#{i.name}\" listed"
       redirect_to items_path and return
     else
@@ -98,14 +95,15 @@ class ItemsController < ApplicationController
   end
   
   def search
-    if !params[:search].empty?
+    if params[:search] == nil
+      q = params[:q].downcase
+      @item = Item.search(q)
+      render json: @item.select(:name)
+    else
       @phrase = params[:search]
       @phrase = @phrase.downcase
       @items = Item.search(@phrase)
       render "items/index" and return
-    else
-      flash[:alert] = "Empty Search"
-      redirect_to root_path and return
     end
   end
   
