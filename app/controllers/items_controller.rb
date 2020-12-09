@@ -95,7 +95,7 @@ class ItemsController < ApplicationController
   end
   
   def search
-    if params[:search] == nil
+    if params[:search].nil?
       q = params[:q].downcase
       @item = Item.search(q)
       render json: @item.select(:name)
