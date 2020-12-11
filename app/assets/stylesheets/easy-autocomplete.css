@@ -8,7 +8,8 @@
  */
 
 .easy-autocomplete {
-  position: relative;
+  position: absolute;
+  padding-top: 12px;
 }
 .easy-autocomplete input {
   position: relative;
@@ -245,7 +246,7 @@
 
 .easy-autocomplete-container {
   left: 0;
-  position: absolute;
+  position: relative;
   width: 100%;
   z-index: 2;
 }

@@ -1,6 +1,6 @@
 document.addEventListener("turbolinks:load", function() {
 
-  $input = $("#searchBar")
+  $input = $("#searchBar");
 
   var options = {
     url: function(phrase) {
@@ -8,6 +8,7 @@ document.addEventListener("turbolinks:load", function() {
     },
     getValue: "name",
     theme: "square",
+
   };
   
   $input.easyAutocomplete(options);

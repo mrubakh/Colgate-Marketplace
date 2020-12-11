@@ -31,15 +31,21 @@ body.homepage {
 #searchBar, #searchButton, #clearButton {
 	border-radius: 3px;
 	margin-right: 15px;
+	position: relative;
 }
+
+
 #items-text-container {
 	width: 95%;
 	margin-left: 2.5%;
 	padding-bottom: 15px;
 }
+
 #items-text-container *, #search-container{
 	display: inline-block;
+	position: relative;
 }
+
 
 #items-text-container .btn-primary {
 	margin-left: 15px;
@@ -109,27 +115,16 @@ p {
 }
 
 footer {
-	margin-top: 45px;
-	padding-top: 5px;
-	border-top: 1px solid $gray-medium-light;
-	color: $gray-light;
-	a {
-		color: $gray;
-		&:hover {
-			color: $gray-darker;
-		}
-	}
+	position: fixed;
+ 	bottom: 0;
+ 	width: 100%;
+ 	padding: 1rem;
+ 	text-align: center;
+
 	small {
-		float: left;
-	}
-	ul {
 		float: right;
-		list-style: none;
-		li {
-			float: left;
-			margin-left: 15px;
-		}
 	}
+	color: $gray-light;
 }
 
 .table {
@@ -411,7 +406,7 @@ form label {
 	padding: 20px;
 	text-align: center;
 	display: inline-block;
-	height: 200px;
+	height: 220px;
 	width: 150px;
 	vertical-align: middle;
 }
@@ -420,4 +415,10 @@ form label {
 	top: 0;
 	z-index: 1;
 	left: 0;
+}
+
+
+.about_class {
+	margin-left: 15px;
+	margin-right: 15px;
 }
